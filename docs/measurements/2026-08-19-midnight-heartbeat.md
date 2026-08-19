@@ -113,8 +113,18 @@ the silence is the whole ±10 min, not the quarter-second. Serving-half
 counters for `2026-08-18T23:50Z`–`2026-08-19T00:10Z` are the other half of
 the correlation.
 
+**Added by the maintainer after this was merged.** Those counters do not exist, and the answer is
+blunter than the question. The serving half had been off the mixnet since 2026-08-18 14:12:48Z: the
+gateway it was registered with left the topology, and it spent the whole window in a restart loop
+waiting for it. So the silence in this run is a destination that was not there, and none of it is
+about the transport or the reclaim. The timeline, the evidence, and what the failure looks like from
+both ends are in [2026-08-18-gateway-gone.md](2026-08-18-gateway-gone.md). The 154 warning lines
+found on the dialling side afterwards name that gateway and pin it from this end too.
+
 ## Limitations
 
+- The destination was down for the entire window, which nobody knew at the time. Nothing here
+  measures the transport, and the 19/19 is a dead serving half.
 - TCP connect/close only on `:9068`. No LWD gRPC request reached upstream.
 - 20 dials, one night, one machine, one entry gateway.
 - AFTER snapshot caught the last connect in-flight, so 19 finished / 1 open.

@@ -139,6 +139,17 @@ else, on another machine and another gateway, hit the same reset on the night of
 the same way without restarting. Two independent clients emptying and refilling inside the same window
 is hard to explain as a property of either registration.
 
+## A fifth night, and the end of this process
+
+The process kept going one more night. On 18 aug the allowance emptied at 00:00:00.069Z and was
+claimed back at 00:00:00.482Z: 413 ms, 7 sphinx packets refused, which sits inside the range of the
+other four and adds nothing to the argument except another instance of it.
+
+Fourteen hours later the same process ended, and not because of any of this. Its gateway stopped
+answering, the SDK declared it dead, and what followed took the public address down for 23 hours.
+That is [2026-08-18-gateway-gone.md](2026-08-18-gateway-gone.md). It also closes the third limitation
+below: this registration lasted 120 hours in the end, and what ended it was not the allowance.
+
 ## Limitations
 
 - Testnet and free claims. The mainnet path through ticketbooks is unmeasured.
