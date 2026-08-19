@@ -20,3 +20,4 @@ records explain why it looks the way it does.
 | [0011](0011-capacity-is-the-only-abuse-control.md) | Capacity is the only abuse control |
 | [0012](0012-spend-the-attempt-budget-in-whole-rounds.md) | Spend the attempt budget in whole rounds |
 | [0013](0013-bound-the-wait-for-a-registered-gateway.md) | Bound the wait for a registered gateway |
+| [0014](0014-say-degraded-rather-than-exit-when-nothing-answers.md) | Say degraded rather than exit when nothing answers |
