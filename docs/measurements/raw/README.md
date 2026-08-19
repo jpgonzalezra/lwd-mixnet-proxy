@@ -75,6 +75,31 @@ The dialled Nym address is replaced with `public-testnet-server`. The entry gate
 labelled `entry-gateway-A`. Publishing a failure rate next to a named public gateway
 would imply something about that node that these runs never measured.
 
+## The gateway that left
+
+One file sits behind [`../2026-08-18-gateway-gone.md`](../2026-08-18-gateway-gone.md), again the
+container log of the public testnet serving half.
+
+| file | what it is |
+|---|---|
+| `2026-08-18-gateway-gone.log` | three windows: the allowance emptying for the fifth night, the gateway going and the process exiting, and one of the twenty starts that waited on it afterwards |
+
+Unlike the windows above, this one is filtered rather than whole, and heavily. The 45 seconds in
+which the gateway went carry 17,789 `loop cover message` warnings, 724 `delay multipler` warnings and
+18 `Client is not authenticated` errors, every one of them a repeat; the 41 lines kept are what is
+left. The 70 minute wait keeps 27 of its 54 lines, dropping the same cover traffic. Lines that were
+kept are verbatim and in order.
+
+That ratio is worth seeing rather than hiding. The moment this deployment died is 20-odd lines inside
+18,500, which is part of why it went unnoticed for a day.
+
+The redaction that applies elsewhere is not applied here. Every wait line names the gateway this half
+was registered with, and that identity was the last component of an address published on the forum on
+2026-08-13, so there is nothing left to protect. The report says the same.
+
+The three reproductions in that report ran in throwaway containers, and their logs went with them.
+What is quoted there is what was kept.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):

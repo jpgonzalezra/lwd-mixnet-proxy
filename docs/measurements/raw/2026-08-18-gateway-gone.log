@@ -1,0 +1,106 @@
+=== the allowance empties for the fifth night, 2026-08-18 00:00 UTC ===
+2026-08-18T00:00:00.069423Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-18T00:00:00.069465Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-18T00:00:00.101400Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.101436Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.126932Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.126984Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.126998Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.127118Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.127149Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.127161Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.207939Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.207987Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.208001Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.208077Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.208106Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.208120Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.249021Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.249043Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.249048Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.249097Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.249109Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.249113Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.249150Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-18T00:00:00.249161Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-18T00:00:00.249166Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-18T00:00:00.482311Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-08-18T00:00:00.486966Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-18T00:00:00.486999Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-18T00:00:00.487014Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-18T00:00:00.487027Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-18T00:00:00.636753Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-18T00:00:00.636791Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-18T00:00:00.636806Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+
+=== the gateway stops answering, 2026-08-18 14:12 UTC ===
+2026-08-18T14:12:03.466507Z ERROR nym_gateway_client::client: failed to send message without response - There was a network error: IO error: Connection timed out (os error 110)...
+2026-08-18T14:12:03.466641Z  WARN nym_gateway_client::client: There was a network error: IO error: Connection timed out (os error 110)
+2026-08-18T14:12:03.466679Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: There was a network error: IO error: Connection timed out (os error 110)
+2026-08-18T14:12:03.467131Z  INFO nym_gateway_client::client: Attempting gateway reconnection...
+2026-08-18T14:12:03.467152Z  INFO nym_gateway_client::client: reconnection attempt 1...
+2026-08-18T14:12:08.469430Z  INFO nym_gateway_client::client: reconnection attempt 2...
+2026-08-18T14:12:13.470968Z  INFO nym_gateway_client::client: reconnection attempt 3...
+2026-08-18T14:12:18.472331Z  INFO nym_gateway_client::client: reconnection attempt 4...
+2026-08-18T14:12:23.474185Z  INFO nym_gateway_client::client: reconnection attempt 5...
+2026-08-18T14:12:28.476322Z  INFO nym_gateway_client::client: reconnection attempt 6...
+2026-08-18T14:12:33.478276Z  INFO nym_gateway_client::client: reconnection attempt 7...
+2026-08-18T14:12:38.480136Z  INFO nym_gateway_client::client: reconnection attempt 8...
+2026-08-18T14:12:43.482060Z  INFO nym_gateway_client::client: reconnection attempt 9...
+2026-08-18T14:12:48.484362Z  INFO nym_gateway_client::client: reconnection attempt 10
+2026-08-18T14:12:48.484890Z ERROR nym_gateway_client::client: failed to reconnect after 10 attempts
+2026-08-18T14:12:48.484934Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: There was a network error: IO error: Broken pipe (os error 32)
+2026-08-18T14:12:48.485395Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet to the gateway 20 times in a row - assuming the gateway is dead
+2026-08-18T14:12:48.485421Z ERROR nym_client_core::client::mix_traffic: Signalling shutdown from the MixTrafficController
+2026-08-18T14:12:48.485672Z  INFO nym_task::cancellation::manager: sending cancellation after receiving shutdown signal
+2026-08-18T14:12:48.485892Z  INFO nym_client_core_surb_storage: PersistentReplyStorage is flushing all reply-related data to underlying storage
+2026-08-18T14:12:48.485933Z  INFO nym_sqlx_pool_guard: Closing sqlite pool: /state/persistent_reply_store.sqlite
+2026-08-18T14:12:48.486797Z  INFO nym_sqlx_pool_guard: Closing sqlite pool: /state/credentials_database.db
+2026-08-18T14:12:48.486889Z  WARN lwd_mixnet_server: the mixnet listener closed
+2026-08-18T14:12:48.486931Z  INFO lwd_mixnet_server: shutting down
+2026-08-18T14:12:48.487447Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487490Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487508Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487523Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487538Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487553Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487568Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487583Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487598Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487613Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487627Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487642Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487657Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487672Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487686Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487701Z ERROR nym_sqlx_pool_guard::imp: Failed to read symlink: background task failed
+2026-08-18T14:12:48.487746Z ERROR nym_client_core_surb_storage: failed to flush our reply-related data to the persistent storage: failed to rename our databse file - background task failed
+
+=== one wait-and-exit cycle, the one covering the external heartbeat window ===
+2026-08-18T23:34:30.695656Z ERROR nym_client_core::client::base_client: the gateway did not come back online within the specified timeout: timed out while waiting for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+Error: connecting to the mixnet
+Caused by:
+       	timed out while waiting for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+    1: timed out while waiting for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+2026-08-18T23:34:31.642230Z  INFO lwd_mixnet_server: serving /metrics and /health bind=0.0.0.0:9069
+2026-08-18T23:34:33.649058Z  INFO nym_client_core::client::topology_control: going to wait for at most 4200s for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+2026-08-18T23:34:34.038924Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-18T23:39:34.655174Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-18T23:44:35.249197Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-18T23:49:35.865690Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-18T23:54:36.464719Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-18T23:59:37.200670Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:04:37.960894Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:09:38.691360Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:14:39.312843Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:19:39.934700Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:24:40.553805Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:29:41.168439Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:34:41.924824Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:39:42.649857Z  INFO nym_client_core::client::topology_control: gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' is still not online...
+2026-08-19T00:44:42.651777Z ERROR nym_client_core::client::base_client: the gateway did not come back online within the specified timeout: timed out while waiting for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+Error: connecting to the mixnet
+Caused by:
+       	timed out while waiting for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+    1: timed out while waiting for gateway '3xLD3rpA5XWqdzfbTNs2E38tGp9K11QkU9RfQwxJGyC4' to come online
+2026-08-19T00:44:43.538812Z  INFO lwd_mixnet_server: serving /metrics and /health bind=0.0.0.0:9069
