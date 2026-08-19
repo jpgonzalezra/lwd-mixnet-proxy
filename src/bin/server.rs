@@ -87,6 +87,16 @@ struct Arguments {
     /// How long streams already being carried are given to finish once a shutdown is asked for.
     #[arg(long, env = "LWD_MIXNET_SHUTDOWN_GRACE_SECS", default_value_t = 10)]
     shutdown_grace_secs: u64,
+
+    /// How long startup may spend waiting for the registered gateway before this half gives up and
+    /// exits.
+    ///
+    /// This half asks the SDK to wait out a gateway that is briefly unbonded rather than fail
+    /// startup, and the SDK's own deadline for that is 70 minutes. One gateway was out of the
+    /// topology for 23 hours and then came back, which is far past brief and still recoverable:
+    /// waiting 70 minutes per attempt only makes the outage look like a process coming up.
+    #[arg(long, env = "LWD_MIXNET_GATEWAY_WAIT_SECS", default_value_t = 300)]
+    gateway_wait_secs: u64,
 }
 
 #[derive(Clone)]
@@ -135,7 +145,21 @@ async fn main() -> Result<()> {
         });
     }
 
-    let mut client = connect(&arguments, settings.idle_timeout).await?;
+    let gateway_wait = Duration::from_secs(arguments.gateway_wait_secs);
+    let connecting = connect(&arguments, settings.idle_timeout);
+    let mut client = match tokio::time::timeout(gateway_wait, connecting).await {
+        Ok(connected) => connected?,
+        Err(_) => {
+            tracing::error!(
+                waited_secs = arguments.gateway_wait_secs,
+                "gave up connecting to the mixnet. the lines above name the gateway this half is \
+                 registered with: if they say it is not online, it is out of the topology. it may \
+                 return, and every restart tries again; if it does not, re-registering picks \
+                 another gateway and changes the published address"
+            );
+            anyhow::bail!("connecting to the mixnet: no gateway within {gateway_wait:?}");
+        }
+    };
     health.advance_to(State::Registered);
 
     // Printed rather than logged so it survives whatever the log filter is set to: an operator
@@ -237,7 +261,8 @@ async fn connect(arguments: &Arguments, idle_timeout: Duration) -> Result<Mixnet
                 .await
                 .context("building a client with persistent storage")?
                 // A registered gateway that is temporarily unbonded should delay startup rather
-                // than fail it: registration itself was observed to fail on 2 of 15 attempts.
+                // than fail it: registration itself was observed to fail on 2 of 15 attempts. The
+                // SDK takes a bool and waits 70 minutes on it, so the caller bounds it.
                 .with_wait_for_gateway(true)
                 .with_stream_idle_timeout(idle_timeout)
                 .build()
