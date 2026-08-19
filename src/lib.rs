@@ -22,3 +22,4 @@ pub mod health;
 pub mod metrics;
 pub mod shutdown;
 pub mod splice;
+pub mod streaks;
