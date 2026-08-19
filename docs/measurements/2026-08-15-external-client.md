@@ -136,7 +136,8 @@ the dialling-half numbers behind that reading are here.
   the mixnet. Probe metrics moved; application bytes did not.
 - Small samples: 30 local connections, 20 bench trials.
 - Overnight was idle cover traffic. No dial was in flight inside the 00:00 UTC reclaim
-  window, so the cost to a live stream is still unobserved from this side.
+  window on 16 Aug. That sample was taken later:
+  [2026-08-19-midnight-heartbeat.md](2026-08-19-midnight-heartbeat.md).
 - One machine, one entry gateway, one afternoon's weather.
 - Two SDK clients shared the host during the overlapping bench window.
 - The client only reported healthy at 16:11:22Z after coming up at 16:07:56Z; early

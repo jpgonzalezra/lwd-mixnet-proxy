@@ -1,0 +1,114 @@
+lwd-mixnet-client midnight heartbeat
+====================================
+bind=127.0.0.1:9068
+metrics=http://127.0.0.1:9070/metrics
+window_start_utc=2026-08-18T23:50:00.0000000+00:00
+midnight_utc=2026-08-19T00:00:00.0000000+00:00
+window_end_utc=2026-08-19T00:10:00.0000000+00:00
+interval_seconds=60
+skip_wait=False
+
+=== BEFORE @ 2026-08-18T23:50:00.9675442+00:00 ===
+health: {"state":"serving"}
+
+
+# HELP lwd_mixnet_client_connections_in_flight Local connections currently being carried.
+# TYPE lwd_mixnet_client_connections_in_flight gauge
+lwd_mixnet_client_connections_in_flight 0
+# HELP lwd_mixnet_client_connections_total Local connections accepted from the wallet.
+# TYPE lwd_mixnet_client_connections_total counter
+lwd_mixnet_client_connections_total 0
+# HELP lwd_mixnet_client_connections_unestablished_total Connections closed because no stream ever answered. Against lwd_mixnet_client_connections_total this is the failure rate the wallet sees.
+# TYPE lwd_mixnet_client_connections_unestablished_total counter
+lwd_mixnet_client_connections_unestablished_total 0
+# HELP lwd_mixnet_client_establishment_seconds Time from accepting a local connection to holding a stream that answered.
+# TYPE lwd_mixnet_client_establishment_seconds histogram
+lwd_mixnet_client_establishment_seconds_bucket{le="0.5"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="0.8"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="1.2800000000000002"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="2.0480000000000005"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="3.276800000000001"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="5.242880000000002"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="8.388608000000003"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="13.421772800000006"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="21.47483648000001"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="34.359738368000016"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="+Inf"} 0
+lwd_mixnet_client_establishment_seconds_sum 0
+lwd_mixnet_client_establishment_seconds_count 0
+# HELP lwd_mixnet_client_first_round_failures_total Connections whose first round of streams all went unanswered. Against lwd_mixnet_client_connections_total this is the transport's own failure rate, before any retry.
+# TYPE lwd_mixnet_client_first_round_failures_total counter
+lwd_mixnet_client_first_round_failures_total 0
+# HELP lwd_mixnet_client_rounds_total Rounds of streams opened. Above one per connection is retry doing its job.
+# TYPE lwd_mixnet_client_rounds_total counter
+lwd_mixnet_client_rounds_total 0
+# HELP lwd_mixnet_client_streams_opened_total Mixnet streams opened, across every round.
+# TYPE lwd_mixnet_client_streams_opened_total counter
+lwd_mixnet_client_streams_opened_total 0
+
+
+connect ok=True ms=229 utc=2026-08-18T23:50:01.2549087+00:00 err=
+connect ok=True ms=211 utc=2026-08-18T23:51:01.4815549+00:00 err=
+connect ok=True ms=213 utc=2026-08-18T23:52:01.7116073+00:00 err=
+connect ok=True ms=212 utc=2026-08-18T23:53:01.9313931+00:00 err=
+connect ok=True ms=210 utc=2026-08-18T23:54:02.1584207+00:00 err=
+connect ok=True ms=214 utc=2026-08-18T23:55:02.3775985+00:00 err=
+connect ok=True ms=211 utc=2026-08-18T23:56:02.6028007+00:00 err=
+connect ok=True ms=210 utc=2026-08-18T23:57:02.8282401+00:00 err=
+connect ok=True ms=213 utc=2026-08-18T23:58:03.0535273+00:00 err=
+connect ok=True ms=215 utc=2026-08-18T23:59:03.2744361+00:00 err=
+connect ok=True ms=213 utc=2026-08-19T00:00:03.4979763+00:00 err=
+connect ok=True ms=213 utc=2026-08-19T00:01:03.7231432+00:00 err=
+connect ok=True ms=213 utc=2026-08-19T00:02:03.9486406+00:00 err=
+connect ok=True ms=213 utc=2026-08-19T00:03:04.1692204+00:00 err=
+connect ok=True ms=213 utc=2026-08-19T00:04:04.4322604+00:00 err=
+connect ok=True ms=215 utc=2026-08-19T00:05:04.6562868+00:00 err=
+connect ok=True ms=210 utc=2026-08-19T00:06:04.8750888+00:00 err=
+connect ok=True ms=201 utc=2026-08-19T00:07:05.0787326+00:00 err=
+connect ok=True ms=211 utc=2026-08-19T00:08:05.2989673+00:00 err=
+connect ok=True ms=213 utc=2026-08-19T00:09:05.5243265+00:00 err=
+
+=== AFTER @ 2026-08-19T00:09:05.5264558+00:00 ===
+health: {"state":"serving"}
+
+
+# HELP lwd_mixnet_client_connections_in_flight Local connections currently being carried.
+# TYPE lwd_mixnet_client_connections_in_flight gauge
+lwd_mixnet_client_connections_in_flight 1
+# HELP lwd_mixnet_client_connections_total Local connections accepted from the wallet.
+# TYPE lwd_mixnet_client_connections_total counter
+lwd_mixnet_client_connections_total 20
+# HELP lwd_mixnet_client_connections_unestablished_total Connections closed because no stream ever answered. Against lwd_mixnet_client_connections_total this is the failure rate the wallet sees.
+# TYPE lwd_mixnet_client_connections_unestablished_total counter
+lwd_mixnet_client_connections_unestablished_total 19
+# HELP lwd_mixnet_client_establishment_seconds Time from accepting a local connection to holding a stream that answered.
+# TYPE lwd_mixnet_client_establishment_seconds histogram
+lwd_mixnet_client_establishment_seconds_bucket{le="0.5"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="0.8"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="1.2800000000000002"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="2.0480000000000005"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="3.276800000000001"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="5.242880000000002"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="8.388608000000003"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="13.421772800000006"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="21.47483648000001"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="34.359738368000016"} 0
+lwd_mixnet_client_establishment_seconds_bucket{le="+Inf"} 0
+lwd_mixnet_client_establishment_seconds_sum 0
+lwd_mixnet_client_establishment_seconds_count 0
+# HELP lwd_mixnet_client_first_round_failures_total Connections whose first round of streams all went unanswered. Against lwd_mixnet_client_connections_total this is the transport's own failure rate, before any retry.
+# TYPE lwd_mixnet_client_first_round_failures_total counter
+lwd_mixnet_client_first_round_failures_total 19
+# HELP lwd_mixnet_client_rounds_total Rounds of streams opened. Above one per connection is retry doing its job.
+# TYPE lwd_mixnet_client_rounds_total counter
+lwd_mixnet_client_rounds_total 38
+# HELP lwd_mixnet_client_streams_discarded_total Streams thrown away before carrying anything, by why.
+# TYPE lwd_mixnet_client_streams_discarded_total counter
+lwd_mixnet_client_streams_discarded_total{reason="unanswered"} 76
+# HELP lwd_mixnet_client_streams_opened_total Mixnet streams opened, across every round.
+# TYPE lwd_mixnet_client_streams_opened_total counter
+lwd_mixnet_client_streams_opened_total 76
+
+
+SUMMARY connects=20 ok=20 fail=0
+Forum ask: correlate unanswered / first_round deltas with 00:00 UTC reclaim on serving half.

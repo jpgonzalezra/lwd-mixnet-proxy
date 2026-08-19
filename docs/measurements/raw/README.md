@@ -74,3 +74,18 @@ client `/metrics` from one afternoon against the public testnet serving address,
 The dialled Nym address is replaced with `public-testnet-server`. The entry gateway is
 labelled `entry-gateway-A`. Publishing a failure rate next to a named public gateway
 would imply something about that node that these runs never measured.
+
+## Midnight heartbeat (forum user Lowo88)
+
+Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):
+the dialling-half BEFORE/AFTER `/metrics` plus connect lines, and the SDK reclaim burst
+on the same process at 00:00 UTC.
+
+| file | what it is |
+|---|---|
+| `2026-08-19-midnight-heartbeat.txt` | window header, BEFORE/AFTER Prometheus blocks, 20 TCP connect lines, summary |
+| `2026-08-19-midnight-reclaim.log` | ANSI-stripped SDK lines from first `run out of bandwidth` through the last Bandwidth-type WARN of the 19 Aug burst |
+
+No serving address or gateway identity appears in either file. The heartbeat script's
+`SUMMARY connects=20 ok=20 fail=0` is local TCP accept only; mixnet establish/discard
+is the `/metrics` delta in the same file.

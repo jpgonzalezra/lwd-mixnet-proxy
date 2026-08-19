@@ -1,0 +1,45 @@
+# lwd-mixnet-client midnight reclaim window (external dialling half)
+# Process started 2026-08-18T00:22:19Z. RestartCount 0.
+# Window: first "run out of bandwidth" through last Bandwidth-type WARN of the burst.
+# ANSI stripped. No gateway identity in these lines.
+2026-08-19T00:00:01.242250Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242287Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242296Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242299Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242313Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242315Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242370Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242376Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242383Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242388Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242393Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242398Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242403Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242407Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242415Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242420Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.242432Z  WARN nym_gateway_client::socket_state: run out of bandwidth when attempting to send the message! we got 0.00 B available, but needed at least 2.36 kiB to send the previous message
+2026-08-19T00:00:01.242439Z  INFO nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-08-19T00:00:01.253915Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-19T00:00:01.253952Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-19T00:00:01.360324Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-19T00:00:01.360402Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-19T00:00:01.360411Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-19T00:00:01.360499Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-19T00:00:01.360532Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-19T00:00:01.360538Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-19T00:00:01.387757Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-19T00:00:01.387810Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-19T00:00:01.387818Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-19T00:00:01.387933Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-19T00:00:01.387947Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-19T00:00:01.387950Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-19T00:00:01.387987Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: gateway returned an error response: insufficient bandwidth available to process the request. required: 2413B, available: 0B
+2026-08-19T00:00:01.388022Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-08-19T00:00:01.388028Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-08-19T00:00:01.540267Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-08-19T00:00:01.540612Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-19T00:00:01.540649Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-19T00:00:01.680154Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-19T00:00:01.680197Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
+2026-08-19T00:00:01.680204Z  WARN nym_gateway_client::socket_state: received illegal message of type 'Bandwidth' in an authenticated client
