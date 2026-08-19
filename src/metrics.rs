@@ -68,6 +68,7 @@ pub struct ClientMetrics {
     connections: IntCounter,
     in_flight: IntGauge,
     unestablished: IntCounter,
+    failed_in_a_row: IntGauge,
     first_round_failures: IntCounter,
     streams_opened: IntCounter,
     streams_discarded: IntCounterVec,
@@ -96,6 +97,13 @@ impl ClientMetrics {
                 "lwd_mixnet_client_connections_unestablished_total",
                 "Connections closed because no stream ever answered. Against \
                  lwd_mixnet_client_connections_total this is the failure rate the wallet sees.",
+            )?,
+            failed_in_a_row: gauge(
+                &registry,
+                "lwd_mixnet_client_connections_failed_in_a_row",
+                "Connections that ended with no stream, back to back, zero again as soon as one \
+                 works. The counters beside it are rates over a process lifetime and say nothing \
+                 about now: a serving half that has gone away shows up here and nowhere else.",
             )?,
             first_round_failures: counter(
                 &registry,
@@ -173,6 +181,11 @@ impl ClientMetrics {
     pub fn gave_up(&self, rounds: &[Round]) {
         self.dialled(rounds);
         self.unestablished.inc();
+    }
+
+    /// How many connections have ended with nothing, one after another.
+    pub fn failed_in_a_row(&self, streak: usize) {
+        self.failed_in_a_row.set(streak as i64);
     }
 
     /// What every dial costs, whichever way it ended.
@@ -434,6 +447,35 @@ mod tests {
         metrics.gave_up(&[unanswered_round(), unanswered_round()]);
 
         assert_eq!(rates(&metrics), (1.0, 1.0));
+    }
+
+    #[test]
+    fn the_streak_gauge_reads_back_what_it_was_told() {
+        let metrics = ClientMetrics::new().unwrap();
+        metrics.failed_in_a_row(3);
+
+        assert_eq!(
+            value_of(
+                metrics.registry(),
+                "lwd_mixnet_client_connections_failed_in_a_row"
+            ),
+            3.0
+        );
+    }
+
+    #[test]
+    fn a_connection_that_works_puts_the_streak_back_to_zero() {
+        let metrics = ClientMetrics::new().unwrap();
+        metrics.failed_in_a_row(19);
+        metrics.failed_in_a_row(0);
+
+        assert_eq!(
+            value_of(
+                metrics.registry(),
+                "lwd_mixnet_client_connections_failed_in_a_row"
+            ),
+            0.0
+        );
     }
 
     #[test]

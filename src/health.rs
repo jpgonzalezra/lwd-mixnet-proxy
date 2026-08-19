@@ -1,11 +1,13 @@
-//! What a supervisor is told about a half that is still coming up.
+//! What a supervisor is told about a half that is coming up, and about one that is up and useless.
 //!
 //! Startup is not instant and not reliable: the client has to find a gateway and register with it,
 //! which does not always succeed. A binary up/down answer cannot tell "still registering" from
-//! "registered and broken", and those want different reactions from whoever is watching.
+//! "registered and broken", and those want different reactions from whoever is watching. Nor can it
+//! tell either of them from a half that is serving while nothing gets through, which is its own
+//! state and the only one here that comes back on its own.
 
 use std::sync::Arc;
-use std::sync::atomic::{AtomicU8, Ordering};
+use std::sync::atomic::{AtomicBool, AtomicU8, Ordering};
 
 /// How far along a half is.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -47,6 +49,7 @@ impl State {
 #[derive(Debug, Clone, Default)]
 pub struct Health {
     state: Arc<AtomicU8>,
+    degraded: Arc<AtomicBool>,
 }
 
 impl Health {
@@ -66,9 +69,26 @@ impl Health {
         self.state.fetch_max(code, Ordering::Relaxed);
     }
 
+    /// Whether the half is up and nothing is getting through it.
+    ///
+    /// Kept apart from `State` because it moves both ways. The states above only advance, and this
+    /// clears the moment one connection works, so a half that recovers says so without restarting.
+    pub fn set_degraded(&self, degraded: bool) {
+        self.degraded.store(degraded, Ordering::Relaxed);
+    }
+
+    pub fn is_degraded(&self) -> bool {
+        self.degraded.load(Ordering::Relaxed)
+    }
+
     /// The body served on the health endpoint.
     pub fn as_json(&self) -> String {
-        format!("{{\"state\":\"{}\"}}\n", self.state().as_str())
+        let state = self.state().as_str();
+        if self.is_degraded() {
+            format!("{{\"state\":\"{state}\",\"degraded\":true}}\n")
+        } else {
+            format!("{{\"state\":\"{state}\"}}\n")
+        }
     }
 }
 
@@ -108,5 +128,24 @@ mod tests {
         let health = Health::starting();
         health.advance_to(State::Registered);
         assert_eq!(health.as_json(), "{\"state\":\"registered\"}\n");
+    }
+
+    #[test]
+    fn a_degraded_half_says_so_beside_the_state_it_is_in() {
+        let health = Health::starting();
+        health.advance_to(State::Serving);
+        health.set_degraded(true);
+        assert_eq!(
+            health.as_json(),
+            "{\"state\":\"serving\",\"degraded\":true}\n"
+        );
+    }
+
+    #[test]
+    fn degradation_clears_where_a_state_would_not() {
+        let health = Health::starting();
+        health.set_degraded(true);
+        health.set_degraded(false);
+        assert_eq!(health.as_json(), "{\"state\":\"starting\"}\n");
     }
 }

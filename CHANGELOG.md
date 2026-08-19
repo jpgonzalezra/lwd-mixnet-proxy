@@ -12,6 +12,15 @@ All notable changes to this project are documented here. The format is loosely b
   the budget is the exponent on the rate a wallet sees: at the worst per-stream rate measured so far,
   4.7% instead of 13%. The extra streams open only when the first round found nothing.
 
+### Added
+- The dialling half now reports itself degraded after three connections in a row that carried
+  nothing: `/health` gains `"degraded": true` and `lwd_mixnet_client_connections_failed_in_a_row`
+  carries the streak. It clears on the first connection that gets through, and neither the status
+  code nor the process changes, because a far side that is gone and a transport that is losing look
+  the same from here and neither is mended by restarting (ADR 0014). Until now a half whose
+  destination had disappeared sat at `serving`: an operator dialling the public instance during its
+  23 hour outage took 19 connections, opened 76 streams, had none answered, and was told nothing.
+
 ### Fixed
 - The serving half no longer waits out the SDK's 70 minute gateway deadline. A gateway that leaves
   the topology never comes back, so that wait turned a dead registration into a restart loop that

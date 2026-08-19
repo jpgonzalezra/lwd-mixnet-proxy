@@ -130,3 +130,4 @@ is never reached, and every stop is a kill.
 | [0011](decisions/0011-capacity-is-the-only-abuse-control.md) | Capacity is the only abuse control |
 | [0012](decisions/0012-spend-the-attempt-budget-in-whole-rounds.md) | Spend the attempt budget in whole rounds |
 | [0013](decisions/0013-bound-the-wait-for-a-registered-gateway.md) | Bound the wait for a registered gateway |
+| [0014](decisions/0014-say-degraded-rather-than-exit-when-nothing-answers.md) | Say degraded rather than exit when nothing answers |

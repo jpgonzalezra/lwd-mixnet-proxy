@@ -223,7 +223,8 @@ a wallet's connection is accepted, so a dial that needed a second round carries 
 first one spent waiting on streams that never answered. Retry buys the second rate down and pays for
 it in that histogram, which is the only place the cost appears.
 
-`/health` reports `starting`, `registered` or `serving`, and answers 200 only for the last. The port
+`/health` reports `starting`, `registered` or `serving`, answers 200 only for the last, and may add
+`"degraded": true` beside it. The port
 is bound before the mixnet client connects, so it can be asked about the slow, unreliable part of
 startup: registering with a gateway takes seconds and was seen to fail outright on 2 of 15 attempts.
 
@@ -235,6 +236,18 @@ to `SIGKILL` after 10 seconds unless `-t` says otherwise.
 The dialling half also exits with an error when its local mixnet client refuses every stream open
 for several connections in a row, since a restart is the only thing known to bring one back — run it
 under something that restarts it, as the compose file does.
+
+**Three connections in a row that carry nothing turn `/health` into
+`{"state":"serving","degraded":true}`**, and put the streak in
+`lwd_mixnet_client_connections_failed_in_a_row`. The status code stays 200 and the process keeps
+going, because neither a restart nor sending the wallet elsewhere fixes a far side that is gone or a
+transport that is losing (ADR 0014). It clears on the first connection that gets through. Read the
+gauge rather than the counters when the question is whether anything works *now*: the counters are
+totals over a process lifetime, and a serving half that vanished barely moves them.
+
+`--no-probe` takes this signal away with it. Nothing comes back from the far side before the wallet's
+own bytes, so a dial can only report that a stream opened, and a destination that is gone looks like
+one that is fine.
 
 Nothing exported or logged identifies a client. The endpoint is unauthenticated, so keep it on
 loopback or a private network: it reveals that the machine runs this proxy and how busy it is.
