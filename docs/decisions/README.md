@@ -19,3 +19,4 @@ records explain why it looks the way it does.
 | [0010](0010-exit-when-the-local-client-degrades.md) | Exit when the local client degrades |
 | [0011](0011-capacity-is-the-only-abuse-control.md) | Capacity is the only abuse control |
 | [0012](0012-spend-the-attempt-budget-in-whole-rounds.md) | Spend the attempt budget in whole rounds |
+| [0013](0013-bound-the-wait-for-a-registered-gateway.md) | Bound the wait for a registered gateway |

@@ -13,6 +13,13 @@ All notable changes to this project are documented here. The format is loosely b
   4.7% instead of 13%. The extra streams open only when the first round found nothing.
 
 ### Fixed
+- The serving half no longer waits out the SDK's 70 minute gateway deadline. A gateway that leaves
+  the topology never comes back, so that wait turned a dead registration into a restart loop that
+  reads as a process still starting up: the public testnet instance spent 23 hours in one on
+  2026-08-18, answering 503 on `/health` the whole time. Startup now gives up after
+  `--gateway-wait-secs` (300 by default) and exits, so the failure shows within minutes.
+  Re-registering is left to the operator because it changes the published address; the README says
+  how (ADR 0013).
 - `lwd_mixnet_client_establishment_seconds` recorded the round that answered rather than the wait it
   is named after. Rounds that came up empty first were left out, each of them a whole probe deadline,
   so a connection the wallet waited 11 s for could land in a 1 s bucket. It now runs from the moment

@@ -186,6 +186,7 @@ in use`; pass `--metrics-bind` per process instead.
 | `LWD_MIXNET_FIRST_REQUEST_TIMEOUT_SECS` | `--first-request-timeout-secs` | `60` |
 | `LWD_MIXNET_IDLE_TIMEOUT_SECS` | `--idle-timeout-secs` | `600` |
 | `LWD_MIXNET_MAX_STREAMS` | `--max-streams` | `256` |
+| `LWD_MIXNET_GATEWAY_WAIT_SECS` | `--gateway-wait-secs` | `300` |
 
 An unset `--state-dir` means the Nym address changes on every restart, so nobody who wrote it down
 can reach this half again. Anything long-lived wants one.
@@ -237,6 +238,41 @@ under something that restarts it, as the compose file does.
 
 Nothing exported or logged identifies a client. The endpoint is unauthenticated, so keep it on
 loopback or a private network: it reveals that the machine runs this proxy and how busy it is.
+
+### When the gateway goes away
+
+The serving half registers with one gateway and keeps it, because the gateway is the last component
+of the address clients dial. A gateway that leaves the network takes the address with it. That
+happened to the public testnet instance on 2026-08-18, and the shape is worth knowing before it
+happens to yours.
+
+From the dialling side it looks like a bad night on the transport. Streams open, none answer, and the
+SDK says why at `WARN` if the filter is at `info`:
+
+```
+failed to send a repliable message - Failed to prepare packets -
+no node with identity <gateway> is known. 0 reply surbs will be returned
+```
+
+From the serving side, startup never finishes. The log fills with `is still not online` for that
+gateway, `/health` answers 503, and the process exits once `--gateway-wait-secs` runs out (ADR 0013).
+Check whether the gateway is still routable before doing anything else, because being bonded is not
+enough to be usable:
+
+```
+curl -s https://validator.nymtech.net/api/v1/unstable/nym-nodes/skimmed/entry-gateways/all \
+  | grep -c <gateway identity>
+```
+
+If it is gone, re-register. **This changes the published address**, and there is no way back to the
+old one, so tell whoever dials it. The keys stay, so only the last component changes:
+
+```
+docker compose stop <service>
+# keep a copy of the whole state directory first, keys included
+mv /state/gateways_registrations.sqlite* /somewhere/safe/
+docker compose up -d <service>          # logs print the new NYM_ADDRESS=
+```
 
 ### The state directory is private key material
 

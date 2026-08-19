@@ -129,3 +129,4 @@ is never reached, and every stop is a kill.
 | [0010](decisions/0010-exit-when-the-local-client-degrades.md) | Exit when the local client degrades |
 | [0011](decisions/0011-capacity-is-the-only-abuse-control.md) | Capacity is the only abuse control |
 | [0012](decisions/0012-spend-the-attempt-budget-in-whole-rounds.md) | Spend the attempt budget in whole rounds |
+| [0013](decisions/0013-bound-the-wait-for-a-registered-gateway.md) | Bound the wait for a registered gateway |
