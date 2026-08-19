@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format is loosely b
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-08-19
+
 ### Security
 - `h2` moves to 0.4.17, which closes RUSTSEC-2026-0258: empty DATA frames were accepted and queued
   with no limit, so a peer could push the receiving side's memory up or overflow a counter. Low
@@ -132,6 +134,7 @@ server sees an ordinary client.
   on one network path. Raw output from every run, including the two that had to be thrown out, is in
   `docs/measurements/`.
 
-[Unreleased]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/releases/tag/v0.1.0
