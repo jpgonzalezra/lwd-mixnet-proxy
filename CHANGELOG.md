@@ -5,42 +5,53 @@ All notable changes to this project are documented here. The format is loosely b
 
 ## [Unreleased]
 
-### Changed
-- `--probe-attempts` now defaults to 6 instead of 4, which is two whole rounds at the default
-  concurrency (ADR 0012). Four left a second round of a single stream, so a connection the transport
-  had already failed once fell back to sequential retry. Failures between rounds are independent, so
-  the budget is the exponent on the rate a wallet sees: at the worst per-stream rate measured so far,
-  4.7% instead of 13%. The extra streams open only when the first round found nothing.
+## [0.1.1] - 2026-08-19
 
 ### Added
-- The dialling half now reports itself degraded after three connections in a row that carried
-  nothing: `/health` gains `"degraded": true` and `lwd_mixnet_client_connections_failed_in_a_row`
-  carries the streak. It clears on the first connection that gets through, and neither the status
-  code nor the process changes, because a far side that is gone and a transport that is losing look
-  the same from here and neither is mended by restarting (ADR 0014). Until now a half whose
-  destination had disappeared sat at `serving`: an operator dialling the public instance during its
-  23 hour outage took 19 connections, opened 76 streams, had none answered, and was told nothing.
+- The dialling half reports itself degraded after three dials in a row that carry nothing: `/health`
+  gains `"degraded": true` and `lwd_mixnet_client_connections_failed_in_a_row` holds the streak. It
+  clears on the first dial that answers. The status code and the process stay as they are, because a
+  far side that is gone and a transport that is losing look the same from here, and restarting mends
+  neither (ADR 0014). The case it exists for: through the 23 hour outage below, an operator dialling
+  the public instance made 19 connections and opened 76 streams. None answered, and their half
+  reported `serving` the whole time. `--no-probe` takes the signal with it, since nothing comes back
+  from the far side before the wallet's own bytes.
+
+### Changed
+- `--probe-attempts` defaults to 6, which is two whole rounds at the default concurrency (ADR 0012).
+  Four left a second round of a single stream, so a connection the transport had already failed once
+  fell back to sequential retry. Failures between rounds are independent, which makes the budget an
+  exponent on the rate a wallet sees: at the worst per-stream rate measured so far, 4.7% instead of
+  13%. The extra streams open only when the first round found nothing.
 
 ### Fixed
-- The serving half no longer waits out the SDK's 70 minute gateway deadline. A gateway that leaves
-  the topology never comes back, so that wait turned a dead registration into a restart loop that
-  reads as a process still starting up: the public testnet instance spent 23 hours in one on
-  2026-08-18, answering 503 on `/health` the whole time. Startup now gives up after
-  `--gateway-wait-secs` (300 by default) and exits, so the failure shows within minutes.
-  Re-registering is left to the operator because it changes the published address; the README says
-  how (ADR 0013).
-- `lwd_mixnet_client_establishment_seconds` recorded the round that answered rather than the wait it
-  is named after. Rounds that came up empty first were left out, each of them a whole probe deadline,
-  so a connection the wallet waited 11 s for could land in a 1 s bucket. It now runs from the moment
-  the connection is accepted. Histograms scraped from earlier builds undercount and do not compare
-  with later ones. The pair of counters beside it is unaffected.
+- The serving half bounds how long startup waits for the gateway it registered with:
+  `--gateway-wait-secs`, 300 by default, after which it says what it was waiting for and exits (ADR
+  0013). The SDK's own deadline is 4200 s, which turns a gateway that has left the topology into a
+  restart loop slow enough to read as a process still coming up. The public testnet instance spent 23
+  hours in one on 2026-08-18, answering 503 on `/health` throughout. That gateway came back the next
+  afternoon, so the loop is the recovery path as well, and bounding it tries 14 times as often.
+  Re-registering stays a manual step, because it changes the published address. The README has the
+  procedure.
+- `lwd_mixnet_client_establishment_seconds` runs from the moment the connection is accepted. It
+  recorded the round that answered, not the wait it is named after. Rounds that came up empty first
+  went missing, each of them a whole probe deadline, so a connection the wallet waited 11 s for could
+  land in a 1 s bucket. Histograms scraped from earlier builds undercount, so don't compare them with
+  later ones. The pair of counters beside it is unaffected.
 
 ### Measurement
-- The public testnet serving half ran 96 hours on one process. Its gateway allowance emptied inside
-  the first second of 00:00 UTC on all four midnights it crossed, and the client refilled it by
-  itself every time, in 202 to 525 ms. An operator running the dialling half elsewhere hit the same
-  window on one of those nights and recovered the same way, so the schedule is not a property of this
-  registration. Report, counters and raw logs in
+- A published Nym address is only as reachable as the gateway inside it. The public testnet serving
+  half lost its gateway on 2026-08-18 and was unreachable for 23 hours. The node stayed bonded in the
+  contract while absent from the API's active entry list, and returned the following afternoon. From
+  the dialling side that looks exactly like a bad afternoon on the transport: an operator's
+  heartbeat that night read 19 of 19 dials unestablished and took it for the network. Both sides,
+  with raw logs, in `docs/measurements/2026-08-18-gateway-gone.md` and
+  `docs/measurements/2026-08-19-midnight-heartbeat.md`.
+- Midnight drains the gateway allowance and the client refills it by itself. The public testnet
+  serving half ran 96 hours on one process, crossing four midnights: the allowance emptied inside the
+  first second of 00:00 UTC every time, refilled in 202 to 525 ms. An operator running the dialling
+  half elsewhere hit the same window on one of those nights and recovered the same way, so the
+  schedule is not a property of this registration. Report, counters and raw logs in
   `docs/measurements/2026-08-15-daily-bandwidth-cliff.md`.
 - The first dialling half measured by someone else. An operator pointed a client at the public
   testnet serving address from their own machine and published the counters: on the old
@@ -114,5 +125,6 @@ server sees an ordinary client.
   on one network path. Raw output from every run, including the two that had to be thrown out, is in
   `docs/measurements/`.
 
-[Unreleased]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/jpgonzalezra/lwd-mixnet-proxy/releases/tag/v0.1.0
