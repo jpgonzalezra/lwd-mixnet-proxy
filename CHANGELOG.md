@@ -5,6 +5,13 @@ All notable changes to this project are documented here. The format is loosely b
 
 ## [Unreleased]
 
+### Security
+- `h2` moves to 0.4.17, which closes RUSTSEC-2026-0258: empty DATA frames were accepted and queued
+  with no limit, so a peer could push the receiving side's memory up or overflow a counter. Low
+  severity, and neither half of this proxy serves HTTP/2. The tree carries a second copy, `h2` 0.3.27,
+  reachable only through the pinned SDK's Cosmos RPC client, where the fix does not exist: the 0.3
+  line has none. That one is in the audit ignore list with its reason (ADR 0009).
+
 ## [0.1.1] - 2026-08-19
 
 ### Added

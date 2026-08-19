@@ -12,6 +12,7 @@ ignore = [
     "RUSTSEC-2026-0212", # libcrux-secrets: aarch64 constant-time swap/select
     "RUSTSEC-2026-0207", # libcrux-sha3: incremental SHAKE output
     "RUSTSEC-2026-0208", # libcrux-sha3: panic in AVX2 SHAKE-256
+    "RUSTSEC-2026-0258", # h2: only the 0.3 copy, whose fix ships on 0.4; the 0.4 copy here is patched
     "RUSTSEC-2023-0071", # rsa: Marvin timing sidechannel
     "RUSTSEC-2026-0104", # rustls-webpki: panic in CRL parsing
     "RUSTSEC-2026-0098", # rustls-webpki: URI name constraints
