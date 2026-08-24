@@ -1,0 +1,91 @@
+=== the gateway resets the connection and the process exits, 2026-08-20 13:05 UTC ===
+2026-08-20T13:05:10.114521Z ERROR nym_gateway_client::client: failed to send message without response - There was a network error: IO error: Broken pipe (os error 32)...
+2026-08-20T13:05:10.114694Z ERROR nym_gateway_client::client: ... and the delegated stream has also errored out - There was a network error: IO error: Connection reset by peer (os error 104)
+2026-08-20T13:05:10.114722Z  INFO nym_gateway_client::client: Attempting gateway reconnection...
+2026-08-20T13:05:10.114737Z  INFO nym_gateway_client::client: reconnection attempt 1...
+2026-08-20T13:05:10.305927Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:15.404385Z  INFO nym_gateway_client::client: reconnection attempt 2...
+2026-08-20T13:05:15.502758Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:20.601313Z  INFO nym_gateway_client::client: reconnection attempt 3...
+2026-08-20T13:05:20.699106Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Connection refused (os error 111), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:25.797342Z  INFO nym_gateway_client::client: reconnection attempt 4...
+2026-08-20T13:05:25.895088Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:30.995087Z  INFO nym_gateway_client::client: reconnection attempt 5...
+2026-08-20T13:05:31.092806Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:36.191683Z  INFO nym_gateway_client::client: reconnection attempt 6...
+2026-08-20T13:05:36.289462Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:41.389062Z  INFO nym_gateway_client::client: reconnection attempt 7...
+2026-08-20T13:05:41.487229Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:46.586538Z  INFO nym_gateway_client::client: reconnection attempt 8...
+2026-08-20T13:05:46.684385Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Connection refused (os error 111), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:51.783190Z  INFO nym_gateway_client::client: reconnection attempt 9...
+2026-08-20T13:05:51.881363Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:56.980328Z  INFO nym_gateway_client::client: reconnection attempt 10
+2026-08-20T13:05:57.078062Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:05:57.176002Z ERROR nym_gateway_client::client: failed to reconnect after 10 attempts
+2026-08-20T13:05:57.176065Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: connection failed: ws://194.29.101.225:9000/: IO error: Connection refused (os error 111)
+2026-08-20T13:05:57.176122Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet(s) to the gateway: Client is not authenticated
+2026-08-20T13:05:57.176555Z ERROR nym_client_core::client::mix_traffic: Failed to send sphinx packet to the gateway 20 times in a row - assuming the gateway is dead
+2026-08-20T13:05:57.176581Z ERROR nym_client_core::client::mix_traffic: Signalling shutdown from the MixTrafficController
+2026-08-20T13:05:57.176834Z  INFO nym_task::cancellation::manager: sending cancellation after receiving shutdown signal
+2026-08-20T13:05:57.176937Z  INFO nym_client_core_surb_storage: PersistentReplyStorage is flushing all reply-related data to underlying storage
+2026-08-20T13:05:57.176977Z  INFO nym_sqlx_pool_guard: Closing sqlite pool: /state/persistent_reply_store.sqlite
+2026-08-20T13:05:57.177477Z  INFO nym_sqlx_pool_guard: Closing sqlite pool: /state/credentials_database.db
+2026-08-20T13:05:57.177960Z  WARN lwd_mixnet_server: the mixnet listener closed
+2026-08-20T13:05:57.177992Z  INFO lwd_mixnet_server: shutting down
+
+=== the first of five starts that could not authenticate, 13:05:58 UTC ===
+2026-08-20T13:05:58.110701Z  INFO lwd_mixnet_server: serving /metrics and /health bind=0.0.0.0:9069
+2026-08-20T13:05:58.111392Z  INFO nym_client_core::client::base_client::non_wasm_helpers: Loading existing surb database
+2026-08-20T13:05:58.198472Z  INFO nym_client_core_surb_storage::backend::fs_backend::manager: Database migration finished!
+2026-08-20T13:05:58.248218Z  INFO nym_sqlx_pool_guard: Closing sqlite pool: /state/persistent_reply_store.sqlite
+2026-08-20T13:05:58.308094Z ERROR nym_client_core::client::base_client::non_wasm_helpers: setup_fs_reply_surb_backend: Failed to setup persistent storage backend for our reply needs: The loaded data is inconsistent - it seems that on the last shutdown the client hasn't finished the data flush. You may have to remove the entire storage manually. We're going to create a fresh database instead. This behaviour might change in the future
+2026-08-20T13:05:58.308330Z  INFO nym_client_core::client::base_client::non_wasm_helpers: Creating fresh surb database
+2026-08-20T13:05:58.625056Z  INFO nym_client_core_surb_storage::backend::fs_backend::manager: Database migration finished!
+2026-08-20T13:05:58.870789Z  INFO nym_client_core::client::base_client: Starting nym client
+2026-08-20T13:05:58.873545Z  INFO nym_client_core::client::base_client: Building nym-api client from provided URLs (with domain fronting support): 3 URLs
+2026-08-20T13:05:58.873870Z  INFO nym_http_api_client: Initializing shared HTTP client
+2026-08-20T13:05:58.925147Z  INFO nym_http_api_client::dns: building new configured resolver
+2026-08-20T13:05:59.523781Z  INFO nym_client_core::client::base_client: Starting statistics control...
+2026-08-20T13:05:59.524432Z  INFO nym_client_core::client::base_client: Obtaining initial network topology
+2026-08-20T13:05:59.524485Z  INFO nym_bandwidth_controller::controller: BandwidthController started successfully
+2026-08-20T13:05:59.525597Z  INFO nym_bandwidth_controller::controller: Ticketbooks stored: 0
+2026-08-20T13:06:00.229587Z  INFO nym_client_core::client::base_client: Starting topology refresher...
+2026-08-20T13:06:00.338177Z  WARN perform_initial_authentication{gateway=6PkVkJ8nq882V1C95uCHUUoBWgo1ZzWHVpDtrhSjwDVn gateway_address=ws://nym-exit.gb-node1.p17o.com:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.gb-node1.p17o.com:9000/ : connection failed: ws://nym-exit.gb-node1.p17o.com:9000/: IO error: Connection refused (os error 111), trying fallback : ws://194.29.101.225:9000/
+2026-08-20T13:06:00.436486Z ERROR nym_client_core::client::base_client: Could not authenticate and start up the gateway connection - connection failed: ws://194.29.101.225:9000/: IO error: Connection refused (os error 111)
+2026-08-20T13:06:00.436645Z  WARN nym_sqlx_pool_guard: SqlitePoolGuard dropped without explicit close(); path=/state/persistent_reply_store.sqlite
+2026-08-20T13:06:00.438405Z  WARN nym_sqlx_pool_guard: SqlitePoolGuard dropped without explicit close(); path=/state/credentials_database.db
+Error: connecting to the mixnet
+
+Caused by:
+    0: gateway client error (6PkVkJ8nq882V1C95uCHUUoBWgo1ZzWHVpDtrhSjwDVn): connection failed: ws://194.29.101.225:9000/: IO error: Connection refused (os error 111)
+    1: connection failed: ws://194.29.101.225:9000/: IO error: Connection refused (os error 111)
+    2: IO error: Connection refused (os error 111)
+    3: Connection refused (os error 111)
+
+=== the sixth start, 13:06:20 UTC ===
+2026-08-20T13:06:20.426547Z  INFO lwd_mixnet_server: serving /metrics and /health bind=0.0.0.0:9069
+2026-08-20T13:06:20.427135Z  INFO nym_client_core::client::base_client::non_wasm_helpers: Loading existing surb database
+2026-08-20T13:06:20.643129Z  INFO nym_client_core_surb_storage::backend::fs_backend::manager: Database migration finished!
+2026-08-20T13:06:20.843680Z  INFO nym_sqlx_pool_guard: Closing sqlite pool: /state/persistent_reply_store.sqlite
+2026-08-20T13:06:20.915972Z ERROR nym_client_core::client::base_client::non_wasm_helpers: setup_fs_reply_surb_backend: Failed to setup persistent storage backend for our reply needs: The loaded data is inconsistent - it seems that on the last shutdown the client hasn't finished the data flush. You may have to remove the entire storage manually. We're going to create a fresh database instead. This behaviour might change in the future
+2026-08-20T13:06:20.916296Z  INFO nym_client_core::client::base_client::non_wasm_helpers: Creating fresh surb database
+2026-08-20T13:06:21.241596Z  INFO nym_client_core_surb_storage::backend::fs_backend::manager: Database migration finished!
+2026-08-20T13:06:21.503897Z  INFO nym_client_core::client::base_client: Starting nym client
+2026-08-20T13:06:21.506678Z  INFO nym_client_core::client::base_client: Building nym-api client from provided URLs (with domain fronting support): 3 URLs
+2026-08-20T13:06:21.506992Z  INFO nym_http_api_client: Initializing shared HTTP client
+2026-08-20T13:06:21.558433Z  INFO nym_http_api_client::dns: building new configured resolver
+2026-08-20T13:06:22.082269Z  INFO nym_client_core::client::base_client: Starting statistics control...
+2026-08-20T13:06:22.082747Z  INFO nym_client_core::client::base_client: Obtaining initial network topology
+2026-08-20T13:06:22.082797Z  INFO nym_bandwidth_controller::controller: BandwidthController started successfully
+2026-08-20T13:06:22.084830Z  INFO nym_bandwidth_controller::controller: Ticketbooks stored: 0
+2026-08-20T13:06:22.681864Z  INFO nym_client_core::client::base_client: Starting topology refresher...
+2026-08-20T13:06:23.102214Z  INFO nym_client_core::client::base_client: Starting received messages buffer controller...
+2026-08-20T13:06:23.102465Z  INFO nym_client_core::client::base_client: Starting mix traffic controller...
+2026-08-20T13:06:23.102585Z  INFO nym_client_core::client::base_client: Starting real traffic stream...
+2026-08-20T13:06:23.102798Z  INFO nym_client_core::client::base_client: Starting loop cover traffic stream...
+2026-08-20T13:06:23.103163Z  INFO lwd_mixnet_server: accepting mixnet streams address=HDfv77FgcWJTf4NFrxCvHRzZx4Zppc2pLiFUx6g2Lt3v.6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK@6PkVkJ8nq882V1C95uCHUUoBWgo1ZzWHVpDtrhSjwDVn upstream=lwd-rs-testnet:9070 handshake_timeout_secs=30 first_request_timeout_secs=60 idle_timeout_secs=600 max_streams=256
+
+=== one topology refresh later the gateway is missing from it, first and last of 16,531 lines ===
+2026-08-20T13:11:23.354430Z  WARN nym_client_core::client::real_messages_control::real_traffic_stream: We're not going to send any loop cover message this time, as the current topology seem to be invalid - no node with identity 6PkVkJ8nq882V1C95uCHUUoBWgo1ZzWHVpDtrhSjwDVn is known
+2026-08-20T13:16:23.237605Z  WARN nym_client_core::client::real_messages_control::real_traffic_stream: We're not going to send any loop cover message this time, as the current topology seem to be invalid - no node with identity 6PkVkJ8nq882V1C95uCHUUoBWgo1ZzWHVpDtrhSjwDVn is known
