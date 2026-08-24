@@ -24,8 +24,8 @@ Four windows of that log are in
 | 13:05:10.114 | the gateway socket dies mid-send: broken pipe, then connection reset by peer. Reconnection starts in the same millisecond |
 | 13:05:10 to 13:05:57 | ten reconnection attempts, one every five seconds. The hostname is unreachable (`os error 101`), the published fallback address refuses (`os error 111`) |
 | 13:05:57.176 | `failed to reconnect after 10 attempts`, then `assuming the gateway is dead`, then shutdown. The reply store is flushed and both sqlite pools are closed |
-| 13:05:58 to 13:06:09 | five starts. Each one reaches gateway authentication in about 2.5 s, is refused, and exits. Compose restarts it each time |
-| 13:06:20 | the sixth start authenticates |
+| 13:05:58 to 13:06:09 | four starts. Each one reaches gateway authentication in about 2.5 s, is refused, and exits. Compose restarts it each time |
+| 13:06:20 | the fifth start authenticates |
 | 13:06:23.103 | accepting mixnet streams again, same address |
 | 13:11:23 to 13:16:23 | the client's own gateway is absent from the topology it fetched. 16,531 warnings in five minutes, then it is back |
 
@@ -45,7 +45,7 @@ branches inside the SDK:
 |---|---|---|
 | what the node did | left the topology and stayed out for ~23 h | stayed in the topology, refused TCP for ~70 s |
 | what startup did | waited for it, 4200 s per attempt | failed authentication in ~2.5 s |
-| what recovered it | re-registering by hand, on a new address | the sixth restart, on the same address |
+| what recovered it | re-registering by hand, on a new address | the fifth restart, on the same address |
 
 So the bounded startup wait from
 [ADR 0013](../decisions/0013-bound-the-wait-for-a-registered-gateway.md) never fired here. What
@@ -72,7 +72,7 @@ with Nym, and small enough to be worth offering a patch for.
 
 ## The reply store is discarded on every start
 
-All six starts logged the same three lines: load the existing surb database, close it, then
+All five starts logged the same three lines: load the existing surb database, close it, then
 
 ```
 setup_fs_reply_surb_backend: Failed to setup persistent storage backend for our reply needs: The

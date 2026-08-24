@@ -107,11 +107,11 @@ container log of the same serving half two days later.
 
 | file | what it is |
 |---|---|
-| `2026-08-20-gateway-restart.log` | four windows: the socket dying and the process exiting, the first of five starts that could not authenticate, the sixth start that could, and the topology refresh afterwards that came back without the gateway in it |
+| `2026-08-20-gateway-restart.log` | four windows: the socket dying and the process exiting, the first of four starts that could not authenticate, the fifth start that could, and the topology refresh afterwards that came back without the gateway in it |
 
 Filtered like the window above and for the same reason. The 47 seconds of reconnection carry 19
 repeats of `Client is not authenticated`, of which one is kept, and the sixteen minutes of the whole
-window carry 16,531 cover traffic warnings, of which the first and the last are kept. Four of the six
+window carry 16,531 cover traffic warnings, of which the first and the last are kept. Three of the five
 starts are identical to the one kept and are not repeated. Everything else is verbatim and in order.
 
 The gateway identity is not redacted here either: it is the last component of the address published

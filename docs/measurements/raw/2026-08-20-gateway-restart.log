@@ -34,7 +34,7 @@
 2026-08-20T13:05:57.177960Z  WARN lwd_mixnet_server: the mixnet listener closed
 2026-08-20T13:05:57.177992Z  INFO lwd_mixnet_server: shutting down
 
-=== the first of five starts that could not authenticate, 13:05:58 UTC ===
+=== the first of four starts that could not authenticate, 13:05:58 UTC ===
 2026-08-20T13:05:58.110701Z  INFO lwd_mixnet_server: serving /metrics and /health bind=0.0.0.0:9069
 2026-08-20T13:05:58.111392Z  INFO nym_client_core::client::base_client::non_wasm_helpers: Loading existing surb database
 2026-08-20T13:05:58.198472Z  INFO nym_client_core_surb_storage::backend::fs_backend::manager: Database migration finished!
@@ -63,7 +63,7 @@ Caused by:
     2: IO error: Connection refused (os error 111)
     3: Connection refused (os error 111)
 
-=== the sixth start, 13:06:20 UTC ===
+=== the fifth start, 13:06:20 UTC ===
 2026-08-20T13:06:20.426547Z  INFO lwd_mixnet_server: serving /metrics and /health bind=0.0.0.0:9069
 2026-08-20T13:06:20.427135Z  INFO nym_client_core::client::base_client::non_wasm_helpers: Loading existing surb database
 2026-08-20T13:06:20.643129Z  INFO nym_client_core_surb_storage::backend::fs_backend::manager: Database migration finished!
