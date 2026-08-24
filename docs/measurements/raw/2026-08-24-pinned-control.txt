@@ -1,0 +1,373 @@
+=== run B: nym-sdk 1.21.5-rc.3, same rig, 2026-08-24 19:14:40Z, stopped at trial 272 ===
+   1  b1    ok           5482 ms
+   2  b20   ok           2989 ms
+   3  b100  ok           3632 ms
+2026-08-24T19:15:06.733980Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 101, avg delay: 20ms (1)
+   4  b400  ok          10461 ms
+   5  b1    ok           1224 ms
+   6  b20   LOST-OUT    20002 ms
+   7  b100  ok           3155 ms
+2026-08-24T19:15:41.739811Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 105, avg delay: 20ms (1)
+   8  b400  ok           9073 ms
+   9  b1    ok           1995 ms
+  10  b20   ok           2112 ms
+  11  b100  LOST-OUT    20001 ms
+2026-08-24T19:16:16.731711Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 10, avg delay: 20ms (1)
+  12  b400  ok           9776 ms
+  13  b1    ok           2098 ms
+  14  b20   ok           2005 ms
+2026-08-24T19:16:26.731699Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 21, avg delay: 20ms (1)
+  15  b100  ok           5611 ms
+2026-08-24T19:16:36.732333Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 7, avg delay: 20ms (1)
+  16  b400  ok           7920 ms
+  17  b1    LOST-OUT    20002 ms
+  18  b20   LOST-OUT    20001 ms
+  19  b100  LOST-OUT    20005 ms
+2026-08-24T19:17:41.732726Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 127, avg delay: 20ms (1)
+2026-08-24T19:17:46.731518Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 127, avg delay: 20ms (1)
+2026-08-24T19:17:51.730532Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 127, avg delay: 20ms (1)
+2026-08-24T19:17:56.731911Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 122, avg delay: 20ms (1)
+  20  b400  NO-ACCEPT   20002 ms
+2026-08-24T19:18:01.740208Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 122, avg delay: 20ms (1)
+2026-08-24T19:18:06.730917Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 122, avg delay: 20ms (1)
+  21  b1    NO-ACCEPT   20007 ms
+2026-08-24T19:18:24.576380Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 122, avg delay: 40ms (2)
+2026-08-24T19:18:24.576575Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 122, avg delay: 40ms (2)
+2026-08-24T19:18:24.576580Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 122, avg delay: 40ms (2)
+  22  b20   LOST-BACK   20001 ms
+  23  b100  ok          18543 ms
+2026-08-24T19:19:01.730109Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 63, avg delay: 20ms (1)
+  24  b400  ok          17567 ms
+  25  b1    ok           9016 ms
+  26  b20   ok          11290 ms
+2026-08-24T19:19:36.734451Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 12, avg delay: 20ms (1)
+  27  b100  LOST-OUT    20004 ms
+2026-08-24T19:19:56.732859Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 192, avg delay: 20ms (1)
+2026-08-24T19:20:01.730036Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 129, avg delay: 20ms (1)
+  28  b400  ok          18678 ms
+  29  b1    ok           6214 ms
+  30  b20   ok           5252 ms
+2026-08-24T19:20:26.730574Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 20, avg delay: 20ms (1)
+  31  b100  ok           6721 ms
+2026-08-24T19:20:36.728852Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 1, General: 46, avg delay: 20ms (1)
+  32  b400  ok          11043 ms
+  33  b1    ok           3810 ms
+  34  b20   ok           3275 ms
+2026-08-24T19:20:51.729669Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 11, avg delay: 20ms (1)
+  35  b100  ok           6292 ms
+2026-08-24T19:21:01.729185Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 24, avg delay: 20ms (1)
+  36  b400  ok           9134 ms
+  37  b1    ok           2162 ms
+  38  b20   LOST-OUT    20001 ms
+  39  b100  ok           8997 ms
+2026-08-24T19:21:41.728418Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 4, General: 60, avg delay: 20ms (1)
+  40  b400  ok          10907 ms
+  41  b1    LOST-OUT    20002 ms
+  42  b20   ok           1803 ms
+  43  b100  LOST-OUT    20002 ms
+2026-08-24T19:22:31.724478Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 169, avg delay: 20ms (1)
+2026-08-24T19:22:36.724799Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 143, avg delay: 20ms (1)
+  44  b400  ok          16157 ms
+  45  b1    ok           4023 ms
+  46  b20   LOST-OUT    20003 ms
+  47  b100  ok           6563 ms
+2026-08-24T19:23:21.720195Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 40, avg delay: 20ms (1)
+  48  b400  ok           9095 ms
+  49  b1    ok           1138 ms
+  50  b20   ok           2956 ms
+  51  b100  ok           2558 ms
+2026-08-24T19:23:36.720915Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 30, avg delay: 20ms (1)
+  52  b400  ok           7464 ms
+  53  b1    LOST-OUT    20002 ms
+  54  b20   LOST-OUT    20003 ms
+  55  b100  ok           4880 ms
+2026-08-24T19:24:26.720019Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 157, avg delay: 20ms (1)
+  56  b400  ok           8052 ms
+  57  b1    LOST-OUT    20003 ms
+  58  b20   ok          10594 ms
+  59  b100  LOST-BACK   20005 ms
+2026-08-24T19:25:26.722851Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 131, avg delay: 20ms (1)
+2026-08-24T19:25:31.718834Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 131, avg delay: 20ms (1)
+2026-08-24T19:25:36.720107Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 11, General: 46, avg delay: 20ms (1)
+  60  b400  LOST-BACK   20002 ms
+  61  b1    ok          11438 ms
+  62  b20   ok          12181 ms
+  63  b100  ok          11547 ms
+2026-08-24T19:26:21.728294Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 90, avg delay: 20ms (1)
+  64  b400  ok          14642 ms
+  65  b1    LOST-OUT    20001 ms
+  66  b20   ok          10625 ms
+  67  b100  LOST-OUT    20000 ms
+2026-08-24T19:27:26.723058Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 110, avg delay: 20ms (1)
+  68  b400  ok          10701 ms
+  69  b1    ok           2508 ms
+  70  b20   ok           4170 ms
+2026-08-24T19:27:41.718564Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 42, avg delay: 20ms (1)
+  71  b100  ok           4666 ms
+2026-08-24T19:27:46.717042Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 218, avg delay: 20ms (1)
+  72  b400  ok           9304 ms
+  73  b1    ok           2105 ms
+  74  b20   ok           2100 ms
+  75  b100  ok           5268 ms
+2026-08-24T19:28:06.718772Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 139, avg delay: 20ms (1)
+  76  b400  ok           8678 ms
+  77  b1    ok           2046 ms
+  78  b20   LOST-OUT    20002 ms
+  79  b100  ok           3330 ms
+2026-08-24T19:28:41.717959Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 103, avg delay: 20ms (1)
+  80  b400  ok           9930 ms
+  81  b1    LOST-OUT    20002 ms
+  82  b20   ok           1499 ms
+  83  b100  ok           5161 ms
+2026-08-24T19:29:16.718125Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 182, avg delay: 20ms (1)
+  84  b400  ok           8906 ms
+  85  b1    LOST-OUT    20003 ms
+  86  b20   ok           2846 ms
+  87  b100  LOST-OUT    20002 ms
+2026-08-24T19:30:11.718251Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 135, avg delay: 20ms (1)
+  88  b400  ok          11454 ms
+  89  b1    ok           2007 ms
+  90  b20   LOST-OUT    20008 ms
+2026-08-24T19:30:41.725604Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 18, avg delay: 20ms (1)
+  91  b100  ok           7512 ms
+2026-08-24T19:30:51.722809Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 65, avg delay: 20ms (1)
+  92  b400  ok           6964 ms
+  93  b1    LOST-OUT    20004 ms
+  94  b20   ok           1304 ms
+2026-08-24T19:31:16.716046Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 51, avg delay: 20ms (1)
+  95  b100  ok           2500 ms
+2026-08-24T19:31:21.714876Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 109, avg delay: 20ms (1)
+  96  b400  ok           6329 ms
+  97  b1    LOST-OUT    20002 ms
+  98  b20   ok           1300 ms
+  99  b100  ok           2560 ms
+2026-08-24T19:31:51.714378Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 128, avg delay: 20ms (1)
+ 100  b400  ok           7392 ms
+ 101  b1    ok           5261 ms
+ 102  b20   LOST-OUT    20005 ms
+ 103  b100  ok           3024 ms
+2026-08-24T19:32:26.740263Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 150, avg delay: 20ms (1)
+ 104  b400  ok           6892 ms
+ 105  b1    LOST-OUT    20001 ms
+ 106  b20   ok           7192 ms
+ 107  b100  ok           5822 ms
+2026-08-24T19:33:06.724776Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 140, avg delay: 20ms (1)
+ 108  b400  ok           7283 ms
+ 109  b1    ok           1914 ms
+ 110  b20   ok           2040 ms
+2026-08-24T19:33:16.714219Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 33, avg delay: 20ms (1)
+ 111  b100  ok           2739 ms
+2026-08-24T19:33:21.713584Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 85, avg delay: 20ms (1)
+ 112  b400  ok           7444 ms
+ 113  b1    ok           1428 ms
+ 114  b20   LOST-OUT    20003 ms
+ 115  b100  ok           2640 ms
+2026-08-24T19:33:51.711463Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 164, avg delay: 20ms (1)
+ 116  b400  ok           7285 ms
+ 117  b1    LOST-OUT    20002 ms
+ 118  b20   ok           3221 ms
+2026-08-24T19:34:21.714223Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 9, avg delay: 20ms (1)
+ 119  b100  ok           2634 ms
+2026-08-24T19:34:26.713571Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 75, avg delay: 20ms (1)
+ 120  b400  ok           6932 ms
+ 121  b1    ok           1218 ms
+2026-08-24T19:34:31.713351Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 8, avg delay: 20ms (1)
+ 122  b20   LOST-OUT    20002 ms
+2026-08-24T19:34:51.713824Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 51, avg delay: 20ms (1)
+ 123  b100  LOST-OUT    20005 ms
+ 124  b400  ok           6738 ms
+ 125  b1    ok           1517 ms
+ 126  b20   ok           1540 ms
+2026-08-24T19:35:21.714803Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 48, avg delay: 20ms (1)
+ 127  b100  ok           2681 ms
+2026-08-24T19:35:26.711611Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 124, avg delay: 20ms (1)
+ 128  b400  ok          13303 ms
+ 129  b1    ok          11876 ms
+ 130  b20   ok           5353 ms
+ 131  b100  ok           2857 ms
+2026-08-24T19:36:01.712425Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 39, avg delay: 20ms (1)
+ 132  b400  ok           6986 ms
+ 133  b1    ok           1362 ms
+ 134  b20   ok           1842 ms
+ 135  b100  ok           4112 ms
+ 136  b400  ok           6567 ms
+ 137  b1    ok           1460 ms
+ 138  b20   ok           2738 ms
+ 139  b100  ok           5651 ms
+2026-08-24T19:36:31.715904Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 57, avg delay: 20ms (1)
+ 140  b400  ok           7247 ms
+ 141  b1    LOST-OUT    20002 ms
+ 142  b20   ok           1819 ms
+ 143  b100  ok           6666 ms
+2026-08-24T19:37:06.712270Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 102, avg delay: 20ms (1)
+ 144  b400  ok           7189 ms
+ 145  b1    LOST-OUT    20000 ms
+ 146  b20   ok           1997 ms
+ 147  b100  ok           3538 ms
+2026-08-24T19:37:41.710824Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 1, General: 2, avg delay: 20ms (1)
+ 148  b400  ok           7437 ms
+ 149  b1    ok           2114 ms
+ 150  b20   ok           2156 ms
+ 151  b100  ok           2535 ms
+2026-08-24T19:37:51.710739Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 207, avg delay: 20ms (1)
+ 152  b400  ok           8084 ms
+ 153  b1    ok           2128 ms
+ 154  b20   ok           2048 ms
+ 155  b100  ok           4551 ms
+2026-08-24T19:38:11.721697Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 62, avg delay: 20ms (1)
+ 156  b400  ok           8308 ms
+ 157  b1    ok           1162 ms
+ 158  b20   ok           1585 ms
+ 159  b100  ok           4201 ms
+2026-08-24T19:38:26.730821Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 116, avg delay: 20ms (1)
+2026-08-24T19:38:31.730814Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 18, avg delay: 20ms (1)
+ 160  b400  ok          13953 ms
+ 161  b1    LOST-OUT    20005 ms
+ 162  b20   ok           1720 ms
+ 163  b100  ok           2431 ms
+2026-08-24T19:39:01.733819Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 212, avg delay: 20ms (1)
+ 164  b400  ok           8067 ms
+ 165  b1    ok           3840 ms
+ 166  b20   ok           2862 ms
+2026-08-24T19:39:16.735964Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 18, avg delay: 20ms (1)
+ 167  b100  ok           6302 ms
+2026-08-24T19:39:26.734017Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 13, avg delay: 20ms (1)
+ 168  b400  ok           6965 ms
+ 169  b1    LOST-OUT    20001 ms
+ 170  b20   ok           1952 ms
+2026-08-24T19:39:51.734583Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 30, avg delay: 20ms (1)
+ 171  b100  ok           2839 ms
+2026-08-24T19:39:56.740699Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 128, avg delay: 20ms (1)
+ 172  b400  ok           7520 ms
+ 173  b1    ok           1789 ms
+ 174  b20   ok           2549 ms
+2026-08-24T19:40:06.732297Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 10, avg delay: 20ms (1)
+ 175  b100  ok           3824 ms
+2026-08-24T19:40:11.734069Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 125, avg delay: 20ms (1)
+ 176  b400  ok          10005 ms
+ 177  b1    ok           1379 ms
+ 178  b20   ok           3771 ms
+ 179  b100  LOST-OUT    20001 ms
+2026-08-24T19:40:46.735191Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 130, avg delay: 20ms (1)
+ 180  b400  ok           7914 ms
+ 181  b1    ok           6182 ms
+ 182  b20   ok           3639 ms
+ 183  b100  ok           3758 ms
+2026-08-24T19:41:11.732672Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 1, General: 9, avg delay: 20ms (1)
+ 184  b400  ok           9021 ms
+ 185  b1    LOST-OUT    20002 ms
+ 186  b20   ok           1645 ms
+ 187  b100  ok           4111 ms
+2026-08-24T19:41:41.733834Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 212, avg delay: 20ms (1)
+ 188  b400  ok           8310 ms
+ 189  b1    LOST-OUT    20002 ms
+ 190  b20   LOST-OUT    20002 ms
+ 191  b100  ok           4000 ms
+2026-08-24T19:42:36.733176Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 90, avg delay: 20ms (1)
+ 192  b400  ok           9547 ms
+ 193  b1    ok           2445 ms
+ 194  b20   ok           1904 ms
+ 195  b100  ok           3245 ms
+2026-08-24T19:42:51.732987Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 176, avg delay: 20ms (1)
+ 196  b400  ok           7913 ms
+ 197  b1    ok           2226 ms
+ 198  b20   ok           2392 ms
+ 199  b100  LOST-OUT    20001 ms
+2026-08-24T19:43:26.733069Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 115, avg delay: 20ms (1)
+2026-08-24T19:43:31.732768Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 2, General: 6, avg delay: 20ms (1)
+ 200  b400  ok          15900 ms
+ 201  b1    LOST-OUT    20002 ms
+ 202  b20   ok           6313 ms
+ 203  b100  LOST-OUT    20003 ms
+2026-08-24T19:44:26.735487Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 177, avg delay: 20ms (1)
+ 204  b400  LOST-BACK   20000 ms
+ 205  b1    LOST-BACK   20002 ms
+ 206  b20   LOST-OUT    20002 ms
+ 207  b100  LOST-BACK   20002 ms
+2026-08-24T19:45:46.730753Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 166, avg delay: 20ms (1)
+ 208  b400  LOST-BACK   20003 ms
+ 209  b1    LOST-OUT    20000 ms
+ 210  b20   LOST-BACK   20008 ms
+ 211  b100  LOST-BACK   20001 ms
+2026-08-24T19:47:06.730925Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 177, avg delay: 20ms (1)
+ 212  b400  LOST-BACK   20006 ms
+ 213  b1    LOST-OUT    20010 ms
+ 214  b20   LOST-BACK   20002 ms
+ 215  b100  LOST-BACK   20004 ms
+2026-08-24T19:48:26.730237Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 173, avg delay: 20ms (1)
+ 216  b400  LOST-BACK   20001 ms
+ 217  b1    LOST-BACK   20006 ms
+ 218  b20   LOST-BACK   20003 ms
+ 219  b100  LOST-BACK   20000 ms
+2026-08-24T19:49:46.730119Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 160, avg delay: 20ms (1)
+ 220  b400  LOST-BACK   20001 ms
+ 221  b1    LOST-BACK   20001 ms
+ 222  b20   LOST-BACK   20005 ms
+ 223  b100  LOST-BACK   20001 ms
+2026-08-24T19:51:06.734737Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 177, avg delay: 20ms (1)
+2026-08-24T19:51:11.728983Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 124, avg delay: 20ms (1)
+2026-08-24T19:51:16.729312Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: Retransmission: 32, General: 6, avg delay: 20ms (1)
+ 224  b400  LOST-BACK   20003 ms
+ 225  b1    LOST-BACK   20008 ms
+ 226  b20   LOST-OUT    20003 ms
+ 227  b100  LOST-OUT    20002 ms
+2026-08-24T19:52:26.729161Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 186, avg delay: 20ms (1)
+ 228  b400  LOST-BACK   20000 ms
+ 229  b1    LOST-BACK   20009 ms
+ 230  b20   LOST-BACK   20004 ms
+ 231  b100  LOST-BACK   20002 ms
+2026-08-24T19:53:46.728458Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 165, avg delay: 20ms (1)
+ 232  b400  LOST-BACK   20006 ms
+ 233  b1    LOST-BACK   20002 ms
+ 234  b20   LOST-OUT    20001 ms
+2026-08-24T19:54:46.751849Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 5, avg delay: 20ms (1)
+ 235  b100  LOST-BACK   20002 ms
+2026-08-24T19:55:06.763431Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 172, avg delay: 20ms (1)
+ 236  b400  LOST-BACK   20002 ms
+ 237  b1    LOST-OUT    20002 ms
+ 238  b20   LOST-BACK   20002 ms
+ 239  b100  LOST-BACK   20001 ms
+2026-08-24T19:56:26.765603Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 177, avg delay: 20ms (1)
+2026-08-24T19:56:31.756891Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 40, avg delay: 20ms (1)
+ 240  b400  LOST-BACK   20003 ms
+ 241  b1    LOST-OUT    20004 ms
+ 242  b20   LOST-BACK   20001 ms
+ 243  b100  LOST-BACK   20002 ms
+2026-08-24T19:57:46.756209Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 178, avg delay: 20ms (1)
+ 244  b400  LOST-BACK   20002 ms
+ 245  b1    LOST-OUT    20002 ms
+ 246  b20   LOST-OUT    20002 ms
+ 247  b100  LOST-BACK   20003 ms
+2026-08-24T19:59:06.758646Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 187, avg delay: 20ms (1)
+ 248  b400  LOST-BACK   20003 ms
+ 249  b1    LOST-BACK   20002 ms
+ 250  b20   LOST-BACK   20002 ms
+ 251  b100  LOST-BACK   20004 ms
+2026-08-24T20:00:26.755520Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 185, avg delay: 20ms (1)
+ 252  b400  LOST-BACK   20004 ms
+ 253  b1    LOST-BACK   20002 ms
+ 254  b20   LOST-BACK   20005 ms
+ 255  b100  LOST-BACK   20001 ms
+2026-08-24T20:01:46.755027Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 183, avg delay: 20ms (1)
+ 256  b400  LOST-BACK   20014 ms
+ 257  b1    LOST-OUT    20010 ms
+ 258  b20   LOST-BACK   20003 ms
+2026-08-24T20:02:46.756049Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 1, avg delay: 20ms (1)
+ 259  b100  LOST-BACK   20001 ms
+2026-08-24T20:03:06.755418Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 187, avg delay: 20ms (1)
+ 260  b400  LOST-BACK   20001 ms
+ 261  b1    LOST-OUT    20003 ms
+ 262  b20   LOST-BACK   20001 ms
+ 263  b100  LOST-BACK   20006 ms
+2026-08-24T20:04:26.755214Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 192, avg delay: 20ms (1)
+ 264  b400  LOST-BACK   20000 ms
+ 265  b1    LOST-OUT    20003 ms
+ 266  b20   LOST-OUT    20002 ms
+ 267  b100  LOST-OUT    20003 ms
+2026-08-24T20:05:46.760377Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 176, avg delay: 20ms (1)
+ 268  b400  LOST-BACK   20003 ms
+ 269  b1    LOST-BACK   20003 ms
+ 270  b20   LOST-OUT    20009 ms
+ 271  b100  LOST-OUT    20002 ms
+2026-08-24T20:07:06.756082Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 202, avg delay: 20ms (1)
+ 272  b400  LOST-BACK   20006 ms

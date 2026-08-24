@@ -12,6 +12,7 @@ report says how it was taken, so the numbers can be argued with. Raw output for 
 | [Dialling through the 00:00 UTC reclaim window](2026-08-19-midnight-heartbeat.md) | one TCP connect a minute for ten minutes either side of midnight, so a live dial sits in the reclaim window | 2026-08-18 / 2026-08-19 |
 | [The gateway left the topology and took the address with it](2026-08-18-gateway-gone.md) | what a published address does when its gateway leaves the network, and why the dialling side cannot tell that from a bad afternoon | 2026-08-18 / 2026-08-19 |
 | [The gateway bounced and took the process with it](2026-08-20-gateway-restart.md) | what a gateway restart of about a minute costs a client that is registered with it | 2026-08-20 |
+| [The silent stream failures were reordering](2026-08-24-reordering-not-loss.md) | where the unexplained residue goes: the first payload overtakes the `Open` that registers its stream, and the pinned SDK discards it | 2026-08-24 |
 
 The first is a bench run against a purpose-built harness ([ADR 0005](../decisions/0005-what-the-measurement-has-to-show.md)
 sets what such a run has to show). The second reads the public testnet deployment in place, which is
@@ -20,7 +21,8 @@ deployment, run by someone else on another machine and gateway. The fourth is th
 again, with connections in flight through 00:00 UTC — the sample the overnight in the third report
 could not take because it was idle. The fifth is the serving half on that same night, which turns out
 to be what the fourth was measuring. The sixth is the same half two days later, losing the same kind
-of node for a minute instead of a day.
+of node for a minute instead of a day. The seventh goes back to the bench rig and finds that the
+failure mode all of this was built around is a race the SDK has since fixed upstream.
 
 A rate measured here is one machine and one pair of gateways in one window. The transport's failure
 rate moves by an order of magnitude between one hour and the next, so absolute numbers do not

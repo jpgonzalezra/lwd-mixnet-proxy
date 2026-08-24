@@ -117,6 +117,26 @@ starts are identical to the one kept and are not repeated. Everything else is ve
 The gateway identity is not redacted here either: it is the last component of the address published
 on 2026-08-19.
 
+## Reordering, not loss
+
+Three files sit behind [`../2026-08-24-reordering-not-loss.md`](../2026-08-24-reordering-not-loss.md),
+all of them stdout from the `repro` binary in `contrib/nym/` (the `lightwalletd-rs` repository),
+one file per run.
+
+| file | what it is |
+|---|---|
+| `2026-08-24-develop-orphans.txt` | run A, 400 trials against `nym-sdk` at `ece291d`: every trial line, the summary, and all 90 `buffering seq 0 until registration` traces |
+| `2026-08-24-pinned-control.txt` | run B, the pinned release, stopped at trial 272: every trial line and every packet-backlog line, which is what invalidates the tail |
+| `2026-08-24-pinned-fresh-client.txt` | run C, a fresh client, 80 trials: trial lines, backlog lines and the summary |
+
+Colour codes are gone and the SDK's own `info` and `warn` noise is dropped, including 1,110
+`duplicate fragment received` warnings in run A alone, which are the layer below doing its job and
+say nothing about the question. Trial lines, orphan traces, backlog lines and the tool's own summary
+are verbatim and in order. Run B has no summary because it was killed before printing one.
+
+No address or gateway identity appears in any of the three: the rig's clients are ephemeral and die
+with the container.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):
