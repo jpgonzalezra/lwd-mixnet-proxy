@@ -85,11 +85,13 @@ The shutdown that preceded them had flushed cleanly, in the log four lines above
 `Closing sqlite pool: /state/persistent_reply_store.sqlite`. So the store is thrown away after a
 shutdown that did finish its flush, and the reply blocks accumulated over days go with it.
 
-That is not free. The SDK attaches 10 reply blocks per message by default
-(`DEFAULT_NUMBER_OF_SURBS`), and a receiver holds back `minimum_reply_surb_storage_threshold`, also
-10, before it will spend any on a reply. Ten is not greater than ten, so on a store that starts empty
-the first reply of a conversation cannot be sent at all until the receiver has asked the sender for
-more and been answered. Every restart puts both halves back in that state.
+That is not free, though it costs less than it first looks. The SDK attaches 10 reply blocks per
+message by default (`DEFAULT_NUMBER_OF_SURBS`), and a receiver holds back
+`minimum_reply_surb_storage_threshold`, also 10, before it will spend any of them on a reply. A
+stream attaches that budget twice before the far side answers, once on the `Open` and once on the
+first write, so even an empty store leaves 20 against the threshold and the reply goes out. What an
+empty store does cost is any reply owed after a single message: 10 against 10, nothing spendable, and
+the receiver has to ask the sender for more before it can answer at all.
 
 ## Five minutes without its own gateway
 
