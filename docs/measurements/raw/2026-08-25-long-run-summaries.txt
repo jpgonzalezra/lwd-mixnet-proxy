@@ -1,0 +1,182 @@
+=== batch 1 ===
+--- summary ---
+trials                       1000
+ok                           1000
+lost outbound                0
+echo failed to write         0
+lost on the way back         0
+dialler errors               0
+failure rate                 0.0%  (0/1000)
+ok latency   p50 3069 ms | p90 7978 ms | p99 10463 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  250       0    0.0%    1519 ms
+    20       250  250       0    0.0%    2054 ms
+   100       250  250       0    0.0%    3589 ms
+   400       250  250       0    0.0%    7692 ms
+echo stages: accepted 1000 | read 1000 | written 1000
+=== batch 2 ===
+--- summary ---
+trials                       1000
+ok                           1000
+lost outbound                0
+echo failed to write         0
+lost on the way back         0
+dialler errors               0
+failure rate                 0.0%  (0/1000)
+ok latency   p50 2643 ms | p90 7256 ms | p99 9759 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  250       0    0.0%    1309 ms
+    20       250  250       0    0.0%    1707 ms
+   100       250  250       0    0.0%    3052 ms
+   400       250  250       0    0.0%    6939 ms
+echo stages: accepted 1000 | read 1000 | written 1000
+=== batch 3 (valid to trial 237, host suspended after) ===
+--- summary ---
+trials                       1000
+ok                           237
+lost outbound                2
+echo failed to write         0
+lost on the way back         1
+dialler errors               760
+failure rate                 76.3%  (763/1000)
+ok latency   p50 2561 ms | p90 7077 ms | p99 9094 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250   60     190   76.0%    1271 ms
+    20       250   59     191   76.4%    1577 ms
+   100       250   59     191   76.4%    2877 ms
+   400       250   59     191   76.4%    6739 ms
+echo stages: accepted 238 | read 238 | written 238
+=== batch 4 ===
+--- summary ---
+trials                       1000
+ok                           999
+lost outbound                0
+echo failed to write         0
+lost on the way back         1
+dialler errors               0
+failure rate                 0.1%  (1/1000)
+ok latency   p50 3216 ms | p90 8329 ms | p99 11562 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  250       0    0.0%    1362 ms
+    20       250  250       0    0.0%    2215 ms
+   100       250  250       0    0.0%    3932 ms
+   400       250  249       1    0.4%    7962 ms
+echo stages: accepted 1000 | read 1000 | written 1000
+=== batch 5 ===
+--- summary ---
+trials                       1000
+ok                           1000
+lost outbound                0
+echo failed to write         0
+lost on the way back         0
+dialler errors               0
+failure rate                 0.0%  (0/1000)
+ok latency   p50 2630 ms | p90 7232 ms | p99 9065 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  250       0    0.0%    1231 ms
+    20       250  250       0    0.0%    1592 ms
+   100       250  250       0    0.0%    3279 ms
+   400       250  250       0    0.0%    7071 ms
+echo stages: accepted 1000 | read 1000 | written 1000
+=== batch 6 ===
+--- summary ---
+trials                       1000
+ok                           1000
+lost outbound                0
+echo failed to write         0
+lost on the way back         0
+dialler errors               0
+failure rate                 0.0%  (0/1000)
+ok latency   p50 2232 ms | p90 6572 ms | p99 7915 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  250       0    0.0%    1189 ms
+    20       250  250       0    0.0%    1506 ms
+   100       250  250       0    0.0%    2600 ms
+   400       250  250       0    0.0%    6435 ms
+echo stages: accepted 1000 | read 1000 | written 1000
+=== batch 7 ===
+--- summary ---
+trials                       1000
+ok                           1000
+lost outbound                0
+echo failed to write         0
+lost on the way back         0
+dialler errors               0
+failure rate                 0.0%  (0/1000)
+ok latency   p50 2352 ms | p90 6955 ms | p99 8267 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  250       0    0.0%    1099 ms
+    20       250  250       0    0.0%    1493 ms
+   100       250  250       0    0.0%    2856 ms
+   400       250  250       0    0.0%    6728 ms
+echo stages: accepted 1000 | read 1000 | written 1000
+
+=== run log, with the invalidation note ===
+run start: 2026-08-25T13:45:27Z
+=== batch 1 start 2026-08-25T13:45:27Z ===
+=== batch 1 end 2026-08-25T14:51:17Z exit=0 ===
+  orphans: 212
+  never-registered: 0
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000
+ok                           1000
+=== batch 2 start 2026-08-25T14:51:17Z ===
+=== batch 2 end 2026-08-25T15:49:34Z exit=0 ===
+  orphans: 224
+  never-registered: 0
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000
+ok                           1000
+=== batch 3 start 2026-08-25T15:49:34Z ===
+=== batch 3 end 2026-08-25T16:40:36Z exit=0 ===
+  orphans: 50
+  never-registered: 0
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000
+ok                           237
+=== batch 4 start 2026-08-25T16:40:36Z ===
+
+*** batch 3 INVALIDA a partir del trial 237: el host se suspendio (tapa cerrada).
+*** Hueco de 2196 s en su log, 16:03:32 -> 16:40:08. Valen sus primeros 237 trials (50 huerfanos, 0 never-registered).
+*** Se rehace como batch 7 al terminar la 6.
+=== batch 4 end 2026-08-25T17:50:01Z exit=0 ===
+  orphans: 255
+  never-registered: 1
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000
+ok                           999
+=== batch 5 start 2026-08-25T17:50:01Z ===
+=== batch 5 end 2026-08-25T18:47:44Z exit=0 ===
+  orphans: 232
+  never-registered: 0
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000
+ok                           1000
+=== batch 6 start 2026-08-25T18:47:44Z ===
+=== batch 6 end 2026-08-25T19:38:48Z exit=0 ===
+  orphans: 209
+  never-registered: 0
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000
+ok                           1000
+run end: 2026-08-25T19:38:48Z
+=== batch 7 (reemplazo de la 3) start 2026-08-25T19:39:20Z ===
+=== batch 7 end 2026-08-25T20:32:52Z exit=0 ===
+  orphans: 234
+  never-registered: 0
+trials 1000 | budgets [1, 20, 100, 400] interleaved | timeout 20s
+trials                       1000

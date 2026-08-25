@@ -137,6 +137,26 @@ are verbatim and in order. Run B has no summary because it was killed before pri
 No address or gateway identity appears in any of the three: the rig's clients are ephemeral and die
 with the container.
 
+## Six thousand trials
+
+Three files sit behind [`../2026-08-25-six-thousand-trials.md`](../2026-08-25-six-thousand-trials.md),
+seven batches of the `repro` binary rolled together rather than one file per batch, since the batches
+differ only in which client pair ran them.
+
+| file | what it is |
+|---|---|
+| `2026-08-25-long-run-trials.txt` | every trial line of all seven batches, batch headers in between |
+| `2026-08-25-long-run-traces.txt` | every orphan-buffer and orphan-cleanup trace, 1,416 of the first and one of the second |
+| `2026-08-25-long-run-summaries.txt` | the tool's own summary per batch, and the run log carrying the note that invalidates batch 3 past trial 237 |
+
+Batch 3 is kept whole in the trial file, including the 763 trials after the host suspended, because
+what a suspended host looks like from inside is worth being able to recognise. The report counts only
+the first 237.
+
+Colour codes are gone. The SDK's `info` and `warn` noise is dropped, which here is mostly duplicate
+fragment warnings from the layer below doing its job. No address or gateway identity appears in any
+of the three: the rig's clients are ephemeral and die with their containers.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):
