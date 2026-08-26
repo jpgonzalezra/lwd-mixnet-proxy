@@ -1,0 +1,25 @@
+=== one dial at an address whose gateway is not in the topology, both builds, 2026-08-26 ===
+
+--- max/lwd-stream-patch ---
+=== nym-spike-patch, dialling an address whose gateway is not in the topology ===
+=== started 2026-08-26T14:04:44Z ===
+dial-1  | 2026-08-26T14:04:52.516111Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial-1  | 2026-08-26T14:05:48.208978Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:05:48.362204Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:06:21.812874Z ERROR dial: opening the mixnet stream failed peer=172.24.0.1:55732 error=cannot route to HDfv77FgcWJTf4NFrxCvHRzZx4Zppc2pLiFUx6g2Lt3v.6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK@6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK: no node with identity 6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK is known
+=== ended 2026-08-26T14:06:57Z ===
+
+--- 1.21.5-rc.3 ---
+=== nym-spike-pinned, dialling an address whose gateway is not in the topology ===
+=== started 2026-08-26T14:06:59Z ===
+dial-1  | 2026-08-26T14:07:06.247177Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial-1  | 2026-08-26T14:08:00.310138Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:08:00.310138Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:08:00.311065Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:08:00.320817Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:08:01.959012Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:08:02.125174Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+dial-1  | 2026-08-26T14:08:36.428578Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a repliable message - Failed to prepare packets - no node with identity 6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK is known. 0 reply surbs will be returned
+dial-1  | 2026-08-26T14:08:36.438142Z  WARN nym_client_core::client::real_messages_control::acknowledgement_control::input_message_listener: failed to send a repliable message - Failed to prepare packets - no node with identity 6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK is known. 0 reply surbs will be returned
+=== ended 2026-08-26T14:09:11Z ===
+

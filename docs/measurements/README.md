@@ -14,6 +14,7 @@ report says how it was taken, so the numbers can be argued with. Raw output for 
 | [The gateway bounced and took the process with it](2026-08-20-gateway-restart.md) | what a gateway restart of about a minute costs a client that is registered with it | 2026-08-20 |
 | [The silent stream failures were reordering](2026-08-24-reordering-not-loss.md) | where the unexplained residue goes: the first payload overtakes the `Open` that registers its stream, and the pinned SDK discards it | 2026-08-24 |
 | [Six thousand trials on the fixed tree, and nothing lost](2026-08-25-six-thousand-trials.md) | whether anything is lost once the race is handled, at a resolution 400 trials could not reach | 2026-08-25 |
+| [A thousand trials on the branch that answers two of these reports](2026-08-26-branch-under-test.md) | what the rig sees once the SDK returns an error for an unroutable recipient and for reorder-buffer loss | 2026-08-26 |
 
 The first is a bench run against a purpose-built harness ([ADR 0005](../decisions/0005-what-the-measurement-has-to-show.md)
 sets what such a run has to show). The second reads the public testnet deployment in place, which is
@@ -24,7 +25,8 @@ could not take because it was idle. The fifth is the serving half on that same n
 to be what the fourth was measuring. The sixth is the same half two days later, losing the same kind
 of node for a minute instead of a day. The seventh goes back to the bench rig and finds that the
 failure mode all of this was built around is a race the SDK has since fixed upstream. The eighth
-runs that tree fifteen times longer and finds nothing left to catch.
+runs that tree fifteen times longer and finds nothing left to catch. The ninth tests the branch that
+turns two of these findings into errors a caller can see.
 
 A rate measured here is one machine and one pair of gateways in one window. The transport's failure
 rate moves by an order of magnitude between one hour and the next, so absolute numbers do not

@@ -1,0 +1,1228 @@
+=== 1,000 trials on nym-sdk at max/lwd-stream-patch, 2026-08-26 12:56 to 13:56 UTC ===
+   1  b1    ok           3641 ms
+   2  b20   ok           1431 ms
+   3  b100  ok           2445 ms
+   4  b400  ok           6221 ms
+2026-08-26T12:56:44.809826Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xbb60c39d3758a286): buffering seq 0 until registration
+   5  b1    ok           1240 ms
+   6  b20   ok           2212 ms
+   7  b100  ok           2065 ms
+   8  b400  ok           5797 ms
+   9  b1    ok           1219 ms
+  10  b20   ok           1663 ms
+  11  b100  ok           2219 ms
+  12  b400  ok           6231 ms
+  13  b1    ok            877 ms
+  14  b20   ok           2080 ms
+  15  b100  ok           2385 ms
+  16  b400  ok           6394 ms
+  17  b1    ok           1096 ms
+  18  b20   ok           1582 ms
+  19  b100  ok           2226 ms
+  20  b400  ok           6894 ms
+  21  b1    ok           2115 ms
+  22  b20   ok           1556 ms
+  23  b100  ok           2639 ms
+  24  b400  ok           6569 ms
+2026-08-26T12:57:43.838482Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd94ef0395800cd8f): buffering seq 0 until registration
+  25  b1    ok           1098 ms
+  26  b20   ok           2931 ms
+  27  b100  ok           2403 ms
+  28  b400  ok           6045 ms
+  29  b1    ok            929 ms
+  30  b20   ok           1166 ms
+  31  b100  ok           2590 ms
+  32  b400  ok           5798 ms
+2026-08-26T12:58:06.937109Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x28d36aa402394b1d): buffering seq 0 until registration
+  33  b1    ok           1291 ms
+  34  b20   ok           1673 ms
+  35  b100  ok           2165 ms
+  36  b400  ok           6000 ms
+2026-08-26T12:58:17.750783Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc164633f80efab98): buffering seq 0 until registration
+  37  b1    ok           1084 ms
+  38  b20   ok           1352 ms
+  39  b100  ok           2423 ms
+  40  b400  ok           5749 ms
+  41  b1    ok            833 ms
+  42  b20   ok           1501 ms
+  43  b100  ok           2309 ms
+  44  b400  ok           5929 ms
+  45  b1    ok           1408 ms
+  46  b20   ok           1464 ms
+  47  b100  ok           2354 ms
+  48  b400  ok           6320 ms
+  49  b1    ok           1051 ms
+  50  b20   ok           1938 ms
+  51  b100  ok           2481 ms
+  52  b400  ok           6086 ms
+2026-08-26T12:59:02.093912Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf437b7a2345e3152): buffering seq 0 until registration
+  53  b1    ok           1409 ms
+  54  b20   ok           1758 ms
+  55  b100  ok           2394 ms
+  56  b400  ok           6598 ms
+  57  b1    ok           1371 ms
+  58  b20   ok           1547 ms
+  59  b100  ok           3178 ms
+  60  b400  ok           6943 ms
+  61  b1    ok           1211 ms
+  62  b20   ok           1483 ms
+  63  b100  ok           2051 ms
+  64  b400  ok           5901 ms
+2026-08-26T12:59:37.895329Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x013fe5814f0c0b6b): buffering seq 0 until registration
+  65  b1    ok           1308 ms
+  66  b20   ok           1404 ms
+  67  b100  ok           2398 ms
+  68  b400  ok           6117 ms
+2026-08-26T12:59:49.152105Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xa9786ada91df9467): buffering seq 0 until registration
+  69  b1    ok           1004 ms
+2026-08-26T12:59:50.424866Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd95fe8a3154ec79c): buffering seq 0 until registration
+  70  b20   ok           1362 ms
+  71  b100  ok           2678 ms
+  72  b400  ok           5703 ms
+  73  b1    ok           1231 ms
+  74  b20   ok           3314 ms
+2026-08-26T13:00:06.821527Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9a6d2058333cf262): buffering seq 0 until registration
+  75  b100  ok           3721 ms
+  76  b400  ok           8379 ms
+2026-08-26T13:00:17.030587Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xfd2994c2e9afa6fe): buffering seq 0 until registration
+  77  b1    ok           2758 ms
+  78  b20   ok           1356 ms
+  79  b100  ok           2810 ms
+  80  b400  ok           5962 ms
+  81  b1    ok           1230 ms
+  82  b20   ok           1449 ms
+  83  b100  ok           2965 ms
+  84  b400  ok           6330 ms
+  85  b1    ok           1315 ms
+  86  b20   ok           1398 ms
+  87  b100  ok           2516 ms
+  88  b400  ok           6641 ms
+  89  b1    ok           1092 ms
+  90  b20   ok           1424 ms
+  91  b100  ok           2247 ms
+  92  b400  ok           6426 ms
+2026-08-26T13:01:04.537155Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe63b2770374dc9db): buffering seq 0 until registration
+  93  b1    ok           1481 ms
+  94  b20   ok           1415 ms
+  95  b100  ok           2436 ms
+  96  b400  ok           6240 ms
+2026-08-26T13:01:16.121826Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x48488be357201515): buffering seq 0 until registration
+  97  b1    ok           1169 ms
+  98  b20   ok           1510 ms
+  99  b100  ok           2579 ms
+ 100  b400  ok           6051 ms
+ 101  b1    ok            892 ms
+2026-08-26T13:01:28.724051Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x088a539b7f930701): buffering seq 0 until registration
+ 102  b20   ok           1664 ms
+ 103  b100  ok           2389 ms
+ 104  b400  ok           5898 ms
+2026-08-26T13:01:38.173282Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x27b92ddb47996cf4): buffering seq 0 until registration
+ 105  b1    ok           1024 ms
+2026-08-26T13:01:39.957995Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x0da88a471e01e38e): buffering seq 0 until registration
+ 106  b20   ok           1775 ms
+ 107  b100  ok           2549 ms
+ 108  b400  ok           6510 ms
+2026-08-26T13:01:50.157969Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xabc1d2bbc94bd0fa): buffering seq 0 until registration
+ 109  b1    ok           1087 ms
+ 110  b20   ok           1393 ms
+ 111  b100  ok           2684 ms
+ 112  b400  ok           5985 ms
+ 113  b1    ok           1335 ms
+ 114  b20   ok           1453 ms
+ 115  b100  ok           2168 ms
+ 116  b400  ok           6168 ms
+ 117  b1    ok            940 ms
+ 118  b20   ok           1198 ms
+ 119  b100  ok           2566 ms
+ 120  b400  ok           6352 ms
+2026-08-26T13:02:23.404716Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x74e449547ab2be43): buffering seq 0 until registration
+ 121  b1    ok            901 ms
+2026-08-26T13:02:24.553703Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x123861d63ad43179): buffering seq 0 until registration
+ 122  b20   ok           1534 ms
+ 123  b100  ok           2214 ms
+ 124  b400  ok           6125 ms
+ 125  b1    ok           1018 ms
+ 126  b20   ok           1614 ms
+ 127  b100  ok           2749 ms
+ 128  b400  ok           5525 ms
+ 129  b1    ok           1279 ms
+ 130  b20   ok           1426 ms
+ 131  b100  ok           2160 ms
+ 132  b400  ok           6370 ms
+ 133  b1    ok           1398 ms
+ 134  b20   ok           1174 ms
+ 135  b100  ok           2442 ms
+ 136  b400  ok           7526 ms
+ 137  b1    ok           1119 ms
+2026-08-26T13:03:10.406961Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xa6529df81e6f7599): buffering seq 0 until registration
+ 138  b20   ok           2367 ms
+ 139  b100  ok           2348 ms
+ 140  b400  ok           6042 ms
+2026-08-26T13:03:21.297873Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x112d4df07bf3e211): buffering seq 0 until registration
+ 141  b1    ok           1549 ms
+ 142  b20   ok           1354 ms
+ 143  b100  ok           2126 ms
+ 144  b400  ok           5860 ms
+ 145  b1    ok           1164 ms
+ 146  b20   ok           1472 ms
+ 147  b100  ok           2374 ms
+ 148  b400  ok           6632 ms
+ 149  b1    ok           1180 ms
+ 150  b20   ok           2233 ms
+ 151  b100  ok           2378 ms
+ 152  b400  ok           6638 ms
+ 153  b1    ok           1307 ms
+ 154  b20   ok           1421 ms
+ 155  b100  ok           2669 ms
+ 156  b400  ok           7661 ms
+ 157  b1    ok           1071 ms
+2026-08-26T13:04:11.140536Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x10a155243f4dd068): buffering seq 0 until registration
+ 158  b20   ok           2253 ms
+ 159  b100  ok           2318 ms
+ 160  b400  ok           5816 ms
+ 161  b1    ok            878 ms
+ 162  b20   ok           1396 ms
+ 163  b100  ok           2342 ms
+ 164  b400  ok           6708 ms
+ 165  b1    ok           1059 ms
+2026-08-26T13:04:32.895164Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xee05211268ece6c5): buffering seq 0 until registration
+ 166  b20   ok           1357 ms
+ 167  b100  ok           2843 ms
+ 168  b400  ok           6363 ms
+2026-08-26T13:04:43.244995Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9da01598363c07e9): buffering seq 0 until registration
+ 169  b1    ok            983 ms
+ 170  b20   ok           1264 ms
+ 171  b100  ok           2743 ms
+ 172  b400  ok           6764 ms
+2026-08-26T13:04:54.897378Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd2aa180be5f54043): buffering seq 0 until registration
+ 173  b1    ok           1009 ms
+2026-08-26T13:04:56.401094Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf9ad5e7de615f211): buffering seq 0 until registration
+ 174  b20   ok           2850 ms
+ 175  b100  ok           4542 ms
+ 176  b400  ok           9817 ms
+2026-08-26T13:05:13.215439Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xdde8d3c67966b76f): buffering seq 0 until registration
+ 177  b1    ok           3274 ms
+ 178  b20   ok           1652 ms
+2026-08-26T13:05:19.674663Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x7ab0f20e7d67345d): buffering seq 0 until registration
+ 179  b100  ok           3353 ms
+ 180  b400  ok           7618 ms
+2026-08-26T13:05:29.250853Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x088e5248dd7bb4e0): buffering seq 0 until registration
+ 181  b1    ok           2982 ms
+ 182  b20   ok           3102 ms
+ 183  b100  ok           5421 ms
+ 184  b400  ok           8303 ms
+2026-08-26T13:05:48.964587Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf31a3529297d83fb): buffering seq 0 until registration
+ 185  b1    ok           1159 ms
+ 186  b20   ok           2849 ms
+2026-08-26T13:05:55.252278Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xeadd3a1662610b6c): buffering seq 0 until registration
+ 187  b100  ok           4847 ms
+ 188  b400  ok           7204 ms
+ 189  b1    ok           1337 ms
+2026-08-26T13:06:06.571606Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x859689e3d1a05cc1): buffering seq 0 until registration
+ 190  b20   ok           2108 ms
+ 191  b100  ok           2955 ms
+ 192  b400  ok           8381 ms
+2026-08-26T13:06:19.686975Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x956eafd75c458f86): buffering seq 0 until registration
+ 193  b1    ok           1696 ms
+2026-08-26T13:06:21.791757Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x3c49365b16a17e56): buffering seq 0 until registration
+ 194  b20   ok           1864 ms
+ 195  b100  ok           2539 ms
+ 196  b400  ok           5737 ms
+ 197  b1    ok           1243 ms
+2026-08-26T13:06:33.157840Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4773a563d61d8419): buffering seq 0 until registration
+ 198  b20   ok           1433 ms
+ 199  b100  ok           2657 ms
+ 200  b400  ok           6167 ms
+2026-08-26T13:06:43.285638Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xba446c20ad090619): buffering seq 0 until registration
+ 201  b1    ok           1200 ms
+ 202  b20   ok           1425 ms
+ 203  b100  ok           2406 ms
+ 204  b400  ok           6044 ms
+ 205  b1    ok           1191 ms
+ 206  b20   ok           1383 ms
+ 207  b100  ok           2348 ms
+ 208  b400  ok           6057 ms
+ 209  b1    ok           1484 ms
+2026-08-26T13:07:07.101494Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb38a4e14e2a34887): buffering seq 0 until registration
+ 210  b20   ok           1523 ms
+ 211  b100  ok           2335 ms
+ 212  b400  ok           6706 ms
+ 213  b1    ok           1005 ms
+ 214  b20   ok           1338 ms
+ 215  b100  ok           2038 ms
+ 216  b400  ok           6605 ms
+2026-08-26T13:07:28.092488Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8afd7298ce7ea2b7): buffering seq 0 until registration
+ 217  b1    ok           1154 ms
+ 218  b20   ok           1556 ms
+ 219  b100  ok           2203 ms
+ 220  b400  ok           8205 ms
+ 221  b1    ok           1083 ms
+ 222  b20   ok           1594 ms
+ 223  b100  ok           4152 ms
+ 224  b400  ok           6554 ms
+ 225  b1    ok           1133 ms
+ 226  b20   ok           1444 ms
+ 227  b100  ok           2225 ms
+ 228  b400  ok           6758 ms
+ 229  b1    ok            849 ms
+ 230  b20   ok           1173 ms
+ 231  b100  ok           3836 ms
+ 232  b400  ok           6315 ms
+2026-08-26T13:08:18.817094Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x32b5ebed875343c4): buffering seq 0 until registration
+ 233  b1    ok           1658 ms
+2026-08-26T13:08:20.395763Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x94641a2f1bbbc66c): buffering seq 0 until registration
+ 234  b20   ok           1196 ms
+ 235  b100  ok           2510 ms
+ 236  b400  ok           6441 ms
+2026-08-26T13:08:30.511243Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x7ecc6a71c62e2b8d): buffering seq 0 until registration
+ 237  b1    ok           1486 ms
+ 238  b20   ok           1262 ms
+ 239  b100  ok           2435 ms
+ 240  b400  ok           7119 ms
+2026-08-26T13:08:42.512772Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x369fa2f208358504): buffering seq 0 until registration
+ 241  b1    ok           1643 ms
+ 242  b20   ok           1702 ms
+ 243  b100  ok           2448 ms
+ 244  b400  ok           7495 ms
+ 245  b1    ok            938 ms
+ 246  b20   ok           1351 ms
+ 247  b100  ok           2681 ms
+ 248  b400  ok           7619 ms
+ 249  b1    ok           2327 ms
+ 250  b20   ok           2011 ms
+ 251  b100  ok           3173 ms
+ 252  b400  ok           7210 ms
+2026-08-26T13:09:23.129611Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd3261906b3951555): buffering seq 0 until registration
+ 253  b1    ok           2597 ms
+2026-08-26T13:09:26.079023Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x47bf0e1387886083): buffering seq 0 until registration
+ 254  b20   ok           1173 ms
+ 255  b100  ok           4368 ms
+ 256  b400  ok          10016 ms
+ 257  b1    ok           1322 ms
+2026-08-26T13:09:42.981489Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xfb455cc11723c269): buffering seq 0 until registration
+ 258  b20   ok           1391 ms
+ 259  b100  ok           2287 ms
+ 260  b400  ok           5671 ms
+ 261  b1    ok           1089 ms
+2026-08-26T13:09:53.477475Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x89d315eb856cfb3a): buffering seq 0 until registration
+ 262  b20   ok           1642 ms
+ 263  b100  ok           2389 ms
+ 264  b400  ok           7451 ms
+2026-08-26T13:10:04.471806Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x6e41758b925369bd): buffering seq 0 until registration
+ 265  b1    ok           1061 ms
+ 266  b20   ok           2099 ms
+ 267  b100  ok           3429 ms
+ 268  b400  ok           6775 ms
+ 269  b1    ok           1524 ms
+2026-08-26T13:10:20.250983Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x69d6dc061d94c00d): buffering seq 0 until registration
+ 270  b20   ok           1669 ms
+ 271  b100  ok           2785 ms
+ 272  b400  ok           6050 ms
+ 273  b1    ok           1216 ms
+ 274  b20   ok           2164 ms
+ 275  b100  ok           2682 ms
+ 276  b400  ok           5834 ms
+2026-08-26T13:10:41.838659Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc22d0666e2323041): buffering seq 0 until registration
+ 277  b1    ok            967 ms
+ 278  b20   ok           1331 ms
+ 279  b100  ok           2435 ms
+ 280  b400  ok           6775 ms
+2026-08-26T13:10:53.337939Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x231d72a1ac892d8a): buffering seq 0 until registration
+ 281  b1    ok           1497 ms
+ 282  b20   ok           1289 ms
+ 283  b100  ok           2842 ms
+ 284  b400  ok           6077 ms
+2026-08-26T13:11:05.073893Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x0c808fdc954bf497): buffering seq 0 until registration
+ 285  b1    ok           1247 ms
+ 286  b20   ok           2813 ms
+ 287  b100  ok           2308 ms
+ 288  b400  ok           5779 ms
+ 289  b1    ok           1578 ms
+ 290  b20   ok           1484 ms
+ 291  b100  ok           2381 ms
+ 292  b400  ok           6253 ms
+ 293  b1    ok            878 ms
+2026-08-26T13:11:30.099389Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2ef2dff34eecadda): buffering seq 0 until registration
+ 294  b20   ok           1276 ms
+ 295  b100  ok           2387 ms
+ 296  b400  ok           6207 ms
+ 297  b1    ok           1086 ms
+ 298  b20   ok           1710 ms
+ 299  b100  ok           2266 ms
+ 300  b400  ok           6742 ms
+ 301  b1    ok           1577 ms
+2026-08-26T13:11:53.408302Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xbc530b430806ec28): buffering seq 0 until registration
+ 302  b20   ok           1679 ms
+ 303  b100  ok           2364 ms
+ 304  b400  ok           6579 ms
+ 305  b1    ok           1223 ms
+ 306  b20   ok           1820 ms
+ 307  b100  ok           3125 ms
+ 308  b400  ok           6420 ms
+2026-08-26T13:12:16.164725Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd72710f6501b666f): buffering seq 0 until registration
+ 309  b1    ok            943 ms
+2026-08-26T13:12:17.387670Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2e1d6457f5591acd): buffering seq 0 until registration
+ 310  b20   ok           1233 ms
+ 311  b100  ok           2612 ms
+ 312  b400  ok           6744 ms
+ 313  b1    ok           1192 ms
+ 314  b20   ok           1437 ms
+ 315  b100  ok           2701 ms
+ 316  b400  ok           5910 ms
+2026-08-26T13:12:38.986707Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xa0056b35ae81d97c): buffering seq 0 until registration
+ 317  b1    ok           1296 ms
+2026-08-26T13:12:40.635816Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xab1bab83595ce14d): buffering seq 0 until registration
+ 318  b20   ok           1297 ms
+ 319  b100  ok           2911 ms
+ 320  b400  ok           6572 ms
+2026-08-26T13:12:50.988433Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x6b93883b760c09d9): buffering seq 0 until registration
+ 321  b1    ok            885 ms
+ 322  b20   ok           1360 ms
+ 323  b100  ok           2841 ms
+ 324  b400  ok           6344 ms
+2026-08-26T13:13:02.697620Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe75be230c6ef4047): buffering seq 0 until registration
+ 325  b1    ok           1838 ms
+ 326  b20   ok           1435 ms
+ 327  b100  ok           2483 ms
+ 328  b400  ok           6005 ms
+2026-08-26T13:13:14.404582Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x52916eda33064c6f): buffering seq 0 until registration
+ 329  b1    ok           1127 ms
+ 330  b20   ok           1671 ms
+ 331  b100  ok           2643 ms
+ 332  b400  ok           6986 ms
+ 333  b1    ok           1128 ms
+ 334  b20   ok           1435 ms
+ 335  b100  ok           2237 ms
+ 336  b400  ok           5849 ms
+ 337  b1    ok           1062 ms
+ 338  b20   ok           1109 ms
+ 339  b100  ok           3043 ms
+ 340  b400  ok           5480 ms
+ 341  b1    ok           1032 ms
+ 342  b20   ok           1241 ms
+ 343  b100  ok           2408 ms
+ 344  b400  ok           6020 ms
+2026-08-26T13:13:58.952597Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4e2ff74ce846902b): buffering seq 0 until registration
+ 345  b1    ok           1459 ms
+ 346  b20   ok           1369 ms
+ 347  b100  ok           2501 ms
+ 348  b400  ok           7764 ms
+ 349  b1    ok           1335 ms
+ 350  b20   ok           1311 ms
+ 351  b100  ok           2895 ms
+ 352  b400  ok           7173 ms
+2026-08-26T13:14:24.633572Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x42e7f2cefb7c75f9): buffering seq 0 until registration
+ 353  b1    ok           1180 ms
+ 354  b20   ok           1648 ms
+ 355  b100  ok           2208 ms
+ 356  b400  ok           5542 ms
+ 357  b1    ok           1280 ms
+ 358  b20   ok           2111 ms
+ 359  b100  ok           2223 ms
+ 360  b400  ok           7093 ms
+2026-08-26T13:14:47.894432Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xbe312df08731c0de): buffering seq 0 until registration
+ 361  b1    ok           1000 ms
+ 362  b20   ok           1533 ms
+ 363  b100  ok           2573 ms
+ 364  b400  ok           6377 ms
+2026-08-26T13:14:59.361844Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4c6f00e58ff76ab6): buffering seq 0 until registration
+ 365  b1    ok            968 ms
+2026-08-26T13:15:00.670426Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xfa43a57d278b3df4): buffering seq 0 until registration
+ 366  b20   ok           1243 ms
+2026-08-26T13:15:03.294815Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9c0d0df1c924b1ec): buffering seq 0 until registration
+ 367  b100  ok           3039 ms
+ 368  b400  ok           6124 ms
+ 369  b1    ok            890 ms
+ 370  b20   ok           1414 ms
+ 371  b100  ok           3943 ms
+ 372  b400  ok           7706 ms
+2026-08-26T13:15:24.565406Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x56387c82a846fb7b): buffering seq 0 until registration
+ 373  b1    ok            786 ms
+ 374  b20   ok           1123 ms
+ 375  b100  ok           2718 ms
+ 376  b400  ok           5862 ms
+2026-08-26T13:15:35.140746Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc6d7a6855b4e8560): buffering seq 0 until registration
+ 377  b1    ok            934 ms
+ 378  b20   ok           1902 ms
+ 379  b100  ok           2153 ms
+ 380  b400  ok           7041 ms
+2026-08-26T13:15:47.355221Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc5ea134dd105e4a9): buffering seq 0 until registration
+ 381  b1    ok           1142 ms
+ 382  b20   ok           1804 ms
+ 383  b100  ok           2711 ms
+ 384  b400  ok           6240 ms
+ 385  b1    ok            962 ms
+ 386  b20   ok           1324 ms
+ 387  b100  ok           3333 ms
+ 388  b400  ok           6656 ms
+ 389  b1    ok           1165 ms
+2026-08-26T13:16:12.815579Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2cca47de22120133): buffering seq 0 until registration
+ 390  b20   ok           1544 ms
+ 391  b100  ok           2739 ms
+ 392  b400  ok           6645 ms
+2026-08-26T13:16:23.442850Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x22d9678f8eb6c036): buffering seq 0 until registration
+ 393  b1    ok            896 ms
+ 394  b20   ok           1271 ms
+ 395  b100  ok           2320 ms
+ 396  b400  ok           5861 ms
+ 397  b1    ok           1268 ms
+2026-08-26T13:16:35.528443Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1f14dd4bd0e0af9a): buffering seq 0 until registration
+ 398  b20   ok           1839 ms
+ 399  b100  ok           2545 ms
+ 400  b400  ok           6801 ms
+ 401  b1    ok           1032 ms
+ 402  b20   ok           1467 ms
+ 403  b100  ok           2348 ms
+ 404  b400  ok           6356 ms
+2026-08-26T13:16:57.541440Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x048a397dccca70e8): buffering seq 0 until registration
+ 405  b1    ok           1239 ms
+ 406  b20   ok           1642 ms
+ 407  b100  ok           2688 ms
+ 408  b400  ok           7926 ms
+2026-08-26T13:17:11.122371Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x37445703d0c30c48): buffering seq 0 until registration
+ 409  b1    ok           1208 ms
+ 410  b20   ok           1351 ms
+ 411  b100  ok           2508 ms
+ 412  b400  ok           6162 ms
+ 413  b1    ok           1231 ms
+ 414  b20   ok           1416 ms
+ 415  b100  ok           2757 ms
+ 416  b400  ok           5553 ms
+ 417  b1    ok           1211 ms
+2026-08-26T13:17:34.701439Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc30255b954bac6fe): buffering seq 0 until registration
+ 418  b20   ok           1439 ms
+ 419  b100  ok           2563 ms
+ 420  b400  ok           5558 ms
+ 421  b1    ok           2200 ms
+2026-08-26T13:17:46.535606Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xed79ad66e9ceaea1): buffering seq 0 until registration
+ 422  b20   ok           2084 ms
+ 423  b100  ok           2548 ms
+ 424  b400  ok           5777 ms
+ 425  b1    ok           1276 ms
+ 426  b20   ok           1248 ms
+ 427  b100  ok           2855 ms
+ 428  b400  ok           6353 ms
+ 429  b1    ok           2677 ms
+ 430  b20   ok           1536 ms
+ 431  b100  ok           3924 ms
+ 432  b400  ok           6500 ms
+ 433  b1    ok           1021 ms
+ 434  b20   ok           2237 ms
+ 435  b100  ok           2853 ms
+ 436  b400  ok           7086 ms
+ 437  b1    ok           1108 ms
+2026-08-26T13:18:37.599121Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1880cb99a7040ae2): buffering seq 0 until registration
+ 438  b20   ok           1826 ms
+ 439  b100  ok           2339 ms
+ 440  b400  ok           5640 ms
+ 441  b1    ok           1278 ms
+ 442  b20   ok           1399 ms
+ 443  b100  ok           2433 ms
+ 444  b400  ok           6084 ms
+2026-08-26T13:18:58.228444Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x22c51812f22fc574): buffering seq 0 until registration
+ 445  b1    ok           1165 ms
+ 446  b20   ok           1893 ms
+ 447  b100  ok           2747 ms
+ 448  b400  ok           6346 ms
+2026-08-26T13:19:10.392520Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x18dc3fcf5317fee2): buffering seq 0 until registration
+ 449  b1    ok           1033 ms
+ 450  b20   ok           1458 ms
+2026-08-26T13:19:14.332518Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb3cbec9b86b0e09a): buffering seq 0 until registration
+ 451  b100  ok           2744 ms
+ 452  b400  ok           7645 ms
+ 453  b1    ok           1063 ms
+ 454  b20   ok           1625 ms
+ 455  b100  ok           2104 ms
+ 456  b400  ok           6860 ms
+2026-08-26T13:19:34.866219Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd71892606cb83454): buffering seq 0 until registration
+ 457  b1    ok           1372 ms
+ 458  b20   ok           1388 ms
+ 459  b100  ok           2738 ms
+ 460  b400  ok           6484 ms
+ 461  b1    ok           1364 ms
+ 462  b20   ok           1698 ms
+ 463  b100  ok           2463 ms
+ 464  b400  ok           5947 ms
+ 465  b1    ok           1015 ms
+ 466  b20   ok           1520 ms
+ 467  b100  ok           3590 ms
+ 468  b400  ok           7505 ms
+ 469  b1    ok           5373 ms
+ 470  b20   ok           2011 ms
+2026-08-26T13:20:21.039376Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf4382f68fa79ae01): buffering seq 0 until registration
+ 471  b100  ok           3065 ms
+ 472  b400  ok           6229 ms
+ 473  b1    ok           1129 ms
+ 474  b20   ok           1164 ms
+ 475  b100  ok           2402 ms
+ 476  b400  ok           5450 ms
+ 477  b1    ok           1086 ms
+2026-08-26T13:20:40.378081Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xa5b8a53828436b55): buffering seq 0 until registration
+ 478  b20   ok           1689 ms
+ 479  b100  ok           2442 ms
+ 480  b400  ok           5844 ms
+ 481  b1    ok            924 ms
+ 482  b20   ok           1795 ms
+ 483  b100  ok           2343 ms
+ 484  b400  ok           6056 ms
+2026-08-26T13:21:01.105255Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb414f85cc408b129): buffering seq 0 until registration
+ 485  b1    ok            914 ms
+ 486  b20   ok           1383 ms
+ 487  b100  ok           2378 ms
+ 488  b400  ok           7760 ms
+2026-08-26T13:21:13.644109Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2fee9b4815946603): buffering seq 0 until registration
+ 489  b1    ok           1009 ms
+2026-08-26T13:21:14.740124Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc0c73c6d69b9d9b9): buffering seq 0 until registration
+ 490  b20   ok           3474 ms
+2026-08-26T13:21:19.351624Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x76cfeca2427ba696): buffering seq 0 until registration
+ 491  b100  ok           3442 ms
+ 492  b400  ok           9233 ms
+2026-08-26T13:21:30.549893Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4a7707c2730faf85): buffering seq 0 until registration
+ 493  b1    ok           1767 ms
+ 494  b20   ok           1237 ms
+ 495  b100  ok           2601 ms
+ 496  b400  ok           7215 ms
+2026-08-26T13:21:43.509235Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x65fae10a8af06536): buffering seq 0 until registration
+ 497  b1    ok           1089 ms
+ 498  b20   ok           1753 ms
+ 499  b100  ok           2833 ms
+ 500  b400  ok           5268 ms
+ 501  b1    ok           1165 ms
+ 502  b20   ok           1371 ms
+ 503  b100  ok           2337 ms
+ 504  b400  ok           6960 ms
+ 505  b1    ok           1047 ms
+ 506  b20   ok           1425 ms
+ 507  b100  ok           2144 ms
+ 508  b400  ok           7166 ms
+2026-08-26T13:22:17.894950Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb237cf2a823424f9): buffering seq 0 until registration
+ 509  b1    ok           1131 ms
+ 510  b20   ok           1216 ms
+ 511  b100  ok           2591 ms
+ 512  b400  ok           5925 ms
+2026-08-26T13:22:28.821699Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9b9c9a921367c4d9): buffering seq 0 until registration
+ 513  b1    ok            921 ms
+ 514  b20   ok           1464 ms
+ 515  b100  ok           2398 ms
+ 516  b400  ok           6338 ms
+ 517  b1    ok           1036 ms
+ 518  b20   ok           1304 ms
+ 519  b100  ok           2372 ms
+ 520  b400  ok           6368 ms
+2026-08-26T13:22:50.996541Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8edfb75058aa02ed): buffering seq 0 until registration
+ 521  b1    ok            869 ms
+ 522  b20   ok           1595 ms
+ 523  b100  ok           2521 ms
+ 524  b400  ok           5946 ms
+2026-08-26T13:23:02.098844Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1123c4a0173724bd): buffering seq 0 until registration
+ 525  b1    ok           1559 ms
+ 526  b20   ok           1609 ms
+ 527  b100  ok           2676 ms
+ 528  b400  ok           6064 ms
+ 529  b1    ok           1046 ms
+2026-08-26T13:23:15.357887Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x37a2889abc75c0ed): buffering seq 0 until registration
+ 530  b20   ok           1696 ms
+ 531  b100  ok           3692 ms
+ 532  b400  ok           6985 ms
+ 533  b1    ok            944 ms
+ 534  b20   ok           1231 ms
+ 535  b100  ok           1952 ms
+ 536  b400  ok           6735 ms
+ 537  b1    ok           1220 ms
+2026-08-26T13:23:39.829117Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x849410c99a79131f): buffering seq 0 until registration
+ 538  b20   ok           1452 ms
+ 539  b100  ok           3535 ms
+ 540  b400  ok           7261 ms
+2026-08-26T13:23:51.748799Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x221902acc04b14dc): buffering seq 0 until registration
+ 541  b1    ok           1331 ms
+ 542  b20   ok           1321 ms
+2026-08-26T13:23:55.947552Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf536ebef51473bbb): buffering seq 0 until registration
+ 543  b100  ok           3079 ms
+ 544  b400  ok           6716 ms
+2026-08-26T13:24:04.270349Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x96c656c7c16676ee): buffering seq 0 until registration
+ 545  b1    ok           1351 ms
+2026-08-26T13:24:06.234180Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4d9b7ffb9ed2bb04): buffering seq 0 until registration
+ 546  b20   ok           2009 ms
+2026-08-26T13:24:08.762381Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf69153331b6925c8): buffering seq 0 until registration
+ 547  b100  ok           4019 ms
+ 548  b400  ok           7832 ms
+2026-08-26T13:24:19.451799Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x32f6f5ce653f1176): buffering seq 0 until registration
+ 549  b1    ok           1298 ms
+ 550  b20   ok           1414 ms
+2026-08-26T13:24:23.360662Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x455e649132369645): buffering seq 0 until registration
+ 551  b100  ok           2975 ms
+ 552  b400  ok           8522 ms
+2026-08-26T13:24:33.542108Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x5eb1688fa2152834): buffering seq 0 until registration
+ 553  b1    ok            941 ms
+ 554  b20   ok           2669 ms
+ 555  b100  ok           3513 ms
+ 556  b400  ok           8136 ms
+2026-08-26T13:24:49.115505Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xbee79e7ad28c62d0): buffering seq 0 until registration
+ 557  b1    ok           1164 ms
+ 558  b20   ok           1397 ms
+ 559  b100  ok           3984 ms
+ 560  b400  ok           9429 ms
+ 561  b1    ok           2344 ms
+2026-08-26T13:25:07.532030Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x33f897bfa30ca617): buffering seq 0 until registration
+ 562  b20   ok           2676 ms
+ 563  b100  ok           3585 ms
+ 564  b400  ok           9696 ms
+ 565  b1    ok           1154 ms
+ 566  b20   ok           2710 ms
+2026-08-26T13:25:28.542815Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x6366a78c40f87c6a): buffering seq 0 until registration
+ 567  b100  ok           4737 ms
+ 568  b400  ok           7857 ms
+ 569  b1    ok           1339 ms
+ 570  b20   ok           1848 ms
+ 571  b100  ok           3562 ms
+ 572  b400  ok           7718 ms
+2026-08-26T13:25:54.010051Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xae963166e05ee15f): buffering seq 0 until registration
+ 573  b1    ok           1011 ms
+2026-08-26T13:25:55.332136Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x345b59663d012ced): buffering seq 0 until registration
+ 574  b20   ok           2779 ms
+ 575  b100  ok           6300 ms
+ 576  b400  ok           9973 ms
+ 577  b1    ok           1039 ms
+ 578  b20   ok           3069 ms
+ 579  b100  ok           3079 ms
+ 580  b400  ok           6290 ms
+ 581  b1    ok           1173 ms
+2026-08-26T13:26:29.081321Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb7cb8474866c1ff7): buffering seq 0 until registration
+ 582  b20   ok           1369 ms
+ 583  b100  ok           2125 ms
+ 584  b400  ok           6260 ms
+ 585  b1    ok           1074 ms
+2026-08-26T13:26:39.838312Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1aefeb27656c9f05): buffering seq 0 until registration
+ 586  b20   ok           1405 ms
+2026-08-26T13:26:42.654320Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8d312622bb1ec090): buffering seq 0 until registration
+ 587  b100  ok           3355 ms
+ 588  b400  ok           5714 ms
+ 589  b1    ok           1106 ms
+2026-08-26T13:26:51.665844Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x6983aeba4e764f8b): buffering seq 0 until registration
+ 590  b20   ok           2942 ms
+ 591  b100  ok           3959 ms
+ 592  b400  ok           9022 ms
+ 593  b1    ok           2625 ms
+2026-08-26T13:27:10.040762Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1e86d4faa7eccdbd): buffering seq 0 until registration
+ 594  b20   ok           1627 ms
+ 595  b100  ok           2778 ms
+ 596  b400  ok           6098 ms
+ 597  b1    ok           1469 ms
+ 598  b20   ok           1187 ms
+ 599  b100  ok           3422 ms
+ 600  b400  ok           7931 ms
+2026-08-26T13:27:34.328523Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8c105d620f89daf1): buffering seq 0 until registration
+ 601  b1    ok           1113 ms
+ 602  b20   ok           3172 ms
+2026-08-26T13:27:40.323089Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x37695993755951b3): buffering seq 0 until registration
+ 603  b100  ok           3193 ms
+ 604  b400  ok           6045 ms
+ 605  b1    ok            852 ms
+2026-08-26T13:27:48.866672Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xa6f47e6dc20e18cf): buffering seq 0 until registration
+ 606  b20   ok           1359 ms
+ 607  b100  ok           2385 ms
+ 608  b400  ok           6102 ms
+2026-08-26T13:27:58.605132Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xfe9350b1757c5d40): buffering seq 0 until registration
+ 609  b1    ok           1027 ms
+ 610  b20   ok           1398 ms
+ 611  b100  ok           2659 ms
+ 612  b400  ok           5823 ms
+ 613  b1    ok           1043 ms
+2026-08-26T13:28:10.851317Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x30a957832b7cbf8b): buffering seq 0 until registration
+ 614  b20   ok           1582 ms
+ 615  b100  ok           3109 ms
+ 616  b400  ok           5958 ms
+ 617  b1    ok           1012 ms
+ 618  b20   ok           1443 ms
+ 619  b100  ok           2328 ms
+ 620  b400  ok           6041 ms
+ 621  b1    ok           1115 ms
+ 622  b20   ok           1248 ms
+ 623  b100  ok           2590 ms
+ 624  b400  ok           6907 ms
+2026-08-26T13:28:43.725681Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb8167e5f43e625fc): buffering seq 0 until registration
+ 625  b1    ok           1767 ms
+ 626  b20   ok           1728 ms
+ 627  b100  ok           2718 ms
+ 628  b400  ok           6027 ms
+2026-08-26T13:28:55.937015Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x097ea1b9b4e75fd5): buffering seq 0 until registration
+ 629  b1    ok            979 ms
+ 630  b20   ok           1213 ms
+ 631  b100  ok           2160 ms
+ 632  b400  ok           6709 ms
+ 633  b1    ok           1169 ms
+ 634  b20   ok           1347 ms
+ 635  b100  ok           2282 ms
+ 636  b400  ok           6000 ms
+ 637  b1    ok           1296 ms
+ 638  b20   ok           1408 ms
+ 639  b100  ok           2387 ms
+ 640  b400  ok           5974 ms
+ 641  b1    ok           1397 ms
+ 642  b20   ok           1405 ms
+ 643  b100  ok           2587 ms
+ 644  b400  ok           8884 ms
+2026-08-26T13:29:43.105419Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x53212f011002e8cf): buffering seq 0 until registration
+ 645  b1    ok           1619 ms
+ 646  b20   ok           1530 ms
+ 647  b100  ok           3570 ms
+ 648  b400  ok           7752 ms
+2026-08-26T13:29:57.563987Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x5efc81a4ef7be68f): buffering seq 0 until registration
+ 649  b1    ok           1207 ms
+2026-08-26T13:29:59.154482Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe5fd2e906329d544): buffering seq 0 until registration
+ 650  b20   ok           2800 ms
+ 651  b100  ok           4015 ms
+ 652  b400  ok           8042 ms
+2026-08-26T13:30:13.773304Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x62b2a9259a5c7d1b): buffering seq 0 until registration
+ 653  b1    ok           1145 ms
+ 654  b20   ok           1667 ms
+2026-08-26T13:30:18.250265Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xdaefc440a963d6a6): buffering seq 0 until registration
+ 655  b100  ok           2738 ms
+ 656  b400  ok           7795 ms
+ 657  b1    ok           1178 ms
+ 658  b20   ok           1494 ms
+ 659  b100  ok           3709 ms
+ 660  b400  ok           7161 ms
+2026-08-26T13:30:40.681476Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xfefdcc2138b0fb19): buffering seq 0 until registration
+ 661  b1    ok           1259 ms
+ 662  b20   ok           1483 ms
+2026-08-26T13:30:44.587085Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4a44fa557aed0e59): buffering seq 0 until registration
+ 663  b100  ok           2880 ms
+ 664  b400  ok           6470 ms
+ 665  b1    ok           1143 ms
+2026-08-26T13:30:54.062092Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe2725a02d4adbdf6): buffering seq 0 until registration
+ 666  b20   ok           1591 ms
+ 667  b100  ok           3187 ms
+ 668  b400  ok           6670 ms
+2026-08-26T13:31:05.293420Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x3ac6a066a613c544): buffering seq 0 until registration
+ 669  b1    ok           2987 ms
+ 670  b20   ok          12129 ms
+ 671  b100  LOST-BACK   20005 ms
+ 672  b400  LOST-BACK   20002 ms
+2026-08-26T13:32:12.787237Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x42e1560648c2d6b7): buffering seq 0 until registration
+2026-08-26T13:32:18.226069Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x448c703d2bd0abe7): buffering seq 0 until registration
+ 673  b1    LOST-BACK   20001 ms
+2026-08-26T13:32:20.126369Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x39a503f454d20f50): buffering seq 0 until registration
+2026-08-26T13:32:20.443159Z TRACE nym_sdk::mixnet::stream: Cleaning up orphan frames for never-registered stream StreamId(0x42e1560648c2d6b7)
+2026-08-26T13:32:30.442417Z TRACE nym_sdk::mixnet::stream: Cleaning up orphan frames for never-registered stream StreamId(0x448c703d2bd0abe7)
+2026-08-26T13:32:30.442612Z TRACE nym_sdk::mixnet::stream: Cleaning up orphan frames for never-registered stream StreamId(0x39a503f454d20f50)
+ 674  b20   ok          13541 ms
+ 675  b100  ok           5548 ms
+ 676  b400  ok           6764 ms
+2026-08-26T13:32:46.588866Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x5a25366e3d141e71): buffering seq 0 until registration
+ 677  b1    ok           1401 ms
+ 678  b20   ok           1353 ms
+ 679  b100  ok           2864 ms
+ 680  b400  ok           6419 ms
+ 681  b1    ok            964 ms
+ 682  b20   ok           1735 ms
+ 683  b100  ok           6312 ms
+ 684  b400  ok           7979 ms
+2026-08-26T13:33:15.304702Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8b8114a621bd9aa6): buffering seq 0 until registration
+ 685  b1    ok           1912 ms
+ 686  b20   ok           1599 ms
+ 687  b100  ok           2645 ms
+ 688  b400  ok           7220 ms
+ 689  b1    ok           1012 ms
+ 690  b20   ok           1299 ms
+ 691  b100  ok           2537 ms
+ 692  b400  ok           6105 ms
+ 693  b1    ok           1606 ms
+ 694  b20   ok           1430 ms
+ 695  b100  ok           2978 ms
+ 696  b400  ok           6040 ms
+ 697  b1    ok           1751 ms
+ 698  b20   ok           1337 ms
+ 699  b100  ok           2065 ms
+ 700  b400  ok           6426 ms
+2026-08-26T13:34:03.830949Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8daa04190fa20294): buffering seq 0 until registration
+ 701  b1    ok           1829 ms
+ 702  b20   ok           1648 ms
+ 703  b100  ok           2872 ms
+ 704  b400  ok           6797 ms
+2026-08-26T13:34:16.653876Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x7f6df6ceff8abff5): buffering seq 0 until registration
+ 705  b1    ok           1077 ms
+ 706  b20   ok           1366 ms
+ 707  b100  ok           2643 ms
+ 708  b400  ok           6286 ms
+2026-08-26T13:34:27.949702Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe15d9687b05e03dd): buffering seq 0 until registration
+ 709  b1    ok           1127 ms
+ 710  b20   ok           1724 ms
+ 711  b100  ok           2550 ms
+ 712  b400  ok           7498 ms
+2026-08-26T13:34:40.705766Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x0a8fd2a8aa5ab5ea): buffering seq 0 until registration
+ 713  b1    ok           1155 ms
+ 714  b20   ok           1738 ms
+ 715  b100  ok           3529 ms
+ 716  b400  ok           7778 ms
+ 717  b1    ok           1350 ms
+ 718  b20   ok           1443 ms
+ 719  b100  ok           2728 ms
+ 720  b400  ok           6245 ms
+2026-08-26T13:35:06.995488Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xedae4f671307a3cf): buffering seq 0 until registration
+ 721  b1    ok           1385 ms
+ 722  b20   ok           2225 ms
+ 723  b100  ok           2494 ms
+ 724  b400  ok           6606 ms
+ 725  b1    ok           1396 ms
+ 726  b20   ok           1505 ms
+2026-08-26T13:35:23.752268Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xbce8d20e4d2519a1): buffering seq 0 until registration
+ 727  b100  ok           3133 ms
+ 728  b400  ok           6905 ms
+2026-08-26T13:35:32.607458Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x803c94ca68f773a1): buffering seq 0 until registration
+ 729  b1    ok           1193 ms
+ 730  b20   ok           1528 ms
+ 731  b100  ok           3573 ms
+ 732  b400  ok           6116 ms
+2026-08-26T13:35:44.677179Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe69bafde4a9af231): buffering seq 0 until registration
+ 733  b1    ok            993 ms
+2026-08-26T13:35:46.156393Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf51b52d1bf9ae090): buffering seq 0 until registration
+ 734  b20   ok           1443 ms
+ 735  b100  ok           2749 ms
+ 736  b400  ok           5961 ms
+ 737  b1    ok           1361 ms
+2026-08-26T13:35:57.463402Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1002c2e38f246871): buffering seq 0 until registration
+ 738  b20   ok           1322 ms
+ 739  b100  ok           2690 ms
+ 740  b400  ok           6139 ms
+2026-08-26T13:36:07.354721Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x78db4930c3949b01): buffering seq 0 until registration
+ 741  b1    ok            930 ms
+2026-08-26T13:36:08.597290Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb9226f4c3ad9092c): buffering seq 0 until registration
+ 742  b20   ok           1970 ms
+ 743  b100  ok           2460 ms
+ 744  b400  ok          11057 ms
+ 745  b1    ok           3364 ms
+2026-08-26T13:36:27.496224Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x3eb04892827cdbda): buffering seq 0 until registration
+ 746  b20   ok           1349 ms
+ 747  b100  ok           2994 ms
+ 748  b400  ok           7176 ms
+ 749  b1    ok           1211 ms
+ 750  b20   ok           1921 ms
+2026-08-26T13:36:43.404345Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc6da987233a9988f): buffering seq 0 until registration
+ 751  b100  ok           2815 ms
+ 752  b400  ok           7345 ms
+ 753  b1    ok           1061 ms
+2026-08-26T13:36:53.471657Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xc271367cee56af0e): buffering seq 0 until registration
+ 754  b20   ok           2407 ms
+ 755  b100  ok           2222 ms
+ 756  b400  ok           6684 ms
+ 757  b1    ok           1110 ms
+2026-08-26T13:37:06.283331Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xac980c9aa6b392e4): buffering seq 0 until registration
+ 758  b20   ok           6435 ms
+ 759  b100  ok           3633 ms
+ 760  b400  ok           7295 ms
+ 761  b1    ok           1239 ms
+ 762  b20   ok           1377 ms
+ 763  b100  ok           2372 ms
+ 764  b400  ok           7302 ms
+ 765  b1    ok            970 ms
+2026-08-26T13:37:36.463185Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9bdb1740ef1231b8): buffering seq 0 until registration
+ 766  b20   ok           2138 ms
+ 767  b100  ok           2738 ms
+ 768  b400  ok           7099 ms
+ 769  b1    ok            992 ms
+2026-08-26T13:37:49.330107Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2af4389eb4f82003): buffering seq 0 until registration
+ 770  b20   ok           1253 ms
+ 771  b100  ok           2497 ms
+ 772  b400  ok           6497 ms
+ 773  b1    ok           1160 ms
+ 774  b20   ok           7300 ms
+ 775  b100  ok           7501 ms
+ 776  b400  ok           7721 ms
+ 777  b1    ok            876 ms
+ 778  b20   ok           1428 ms
+ 779  b100  ok           3429 ms
+ 780  b400  ok           6588 ms
+2026-08-26T13:38:35.408314Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x7d6fc658050c0326): buffering seq 0 until registration
+ 781  b1    ok           1033 ms
+ 782  b20   ok           1383 ms
+ 783  b100  ok           2688 ms
+ 784  b400  ok           9069 ms
+ 785  b1    ok           1431 ms
+2026-08-26T13:38:51.497357Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf3d62cd0cfc8bbab): buffering seq 0 until registration
+ 786  b20   ok           2057 ms
+ 787  b100  ok           3443 ms
+ 788  b400  ok           8626 ms
+2026-08-26T13:39:05.107695Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8e0a8f92a02f71c8): buffering seq 0 until registration
+ 789  b1    ok           1080 ms
+ 790  b20   ok           2758 ms
+ 791  b100  ok           9681 ms
+ 792  b400  ok           9023 ms
+2026-08-26T13:39:28.049645Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x85c108680f652397): buffering seq 0 until registration
+ 793  b1    ok           1349 ms
+ 794  b20   ok           1299 ms
+ 795  b100  ok           3693 ms
+ 796  b400  ok           7075 ms
+2026-08-26T13:39:41.160842Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9ffc0a12c14fa41b): buffering seq 0 until registration
+ 797  b1    ok           1524 ms
+ 798  b20   ok           1311 ms
+ 799  b100  ok           2160 ms
+ 800  b400  ok           6487 ms
+ 801  b1    ok           5609 ms
+2026-08-26T13:39:59.489147Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2d6ab5d7de132bd8): buffering seq 0 until registration
+ 802  b20   ok           4459 ms
+ 803  b100  ok           4634 ms
+ 804  b400  ok           8500 ms
+2026-08-26T13:40:16.044670Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x0c35eea9b9a93d9d): buffering seq 0 until registration
+ 805  b1    ok          10019 ms
+ 806  b20   ok          10127 ms
+ 807  b100  ok          10238 ms
+ 808  b400  ok           7199 ms
+2026-08-26T13:40:53.364591Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x5490372664d3e1ce): buffering seq 0 until registration
+ 809  b1    ok           5833 ms
+ 810  b20   ok           3394 ms
+2026-08-26T13:41:04.320986Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x82e8d66d56545dc9): buffering seq 0 until registration
+ 811  b100  ok           3483 ms
+ 812  b400  ok           8363 ms
+2026-08-26T13:41:14.489070Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x296de0006caa49ea): buffering seq 0 until registration
+ 813  b1    ok           1237 ms
+2026-08-26T13:41:16.552198Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xe6740e11ae06ae3f): buffering seq 0 until registration
+ 814  b20   ok           2690 ms
+ 815  b100  ok           2603 ms
+ 816  b400  ok           6448 ms
+ 817  b1    ok           2208 ms
+ 818  b20   ok           1536 ms
+ 819  b100  ok           2189 ms
+ 820  b400  ok           6311 ms
+ 821  b1    ok            950 ms
+2026-08-26T13:41:41.153970Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x3f8ccf867da78bd6): buffering seq 0 until registration
+ 822  b20   ok           6503 ms
+ 823  b100  ok           3767 ms
+ 824  b400  ok           6520 ms
+2026-08-26T13:41:57.585787Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf260698172fba8e2): buffering seq 0 until registration
+ 825  b1    ok           2154 ms
+ 826  b20   ok           7929 ms
+2026-08-26T13:42:08.927824Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x27c323472d079fcf): buffering seq 0 until registration
+ 827  b100  ok           8215 ms
+ 828  b400  ok           6909 ms
+2026-08-26T13:42:22.585353Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x1f840de83ba05255): buffering seq 0 until registration
+ 829  b1    ok           1107 ms
+ 830  b20   ok           1461 ms
+ 831  b100  ok           3044 ms
+ 832  b400  ok           6280 ms
+ 833  b1    ok           1559 ms
+2026-08-26T13:42:36.682491Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd0e43dec0dbb3759): buffering seq 0 until registration
+ 834  b20   ok           5794 ms
+ 835  b100  ok           3300 ms
+ 836  b400  ok           9191 ms
+2026-08-26T13:42:54.387989Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x63df1c3f8e8f8f20): buffering seq 0 until registration
+ 837  b1    ok           1066 ms
+ 838  b20   ok           1350 ms
+ 839  b100  ok           2471 ms
+ 840  b400  ok          11792 ms
+ 841  b1    ok           2588 ms
+ 842  b20   ok           5909 ms
+ 843  b100  ok           5462 ms
+ 844  b400  ok           6359 ms
+2026-08-26T13:43:31.238860Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x9e16482d10743a80): buffering seq 0 until registration
+ 845  b1    ok            915 ms
+ 846  b20   ok           1300 ms
+ 847  b100  ok           2902 ms
+ 848  b400  ok           6721 ms
+ 849  b1    ok           1273 ms
+ 850  b20   ok           1277 ms
+ 851  b100  ok           3012 ms
+ 852  b400  ok           6330 ms
+ 853  b1    ok           1107 ms
+ 854  b20   ok           1344 ms
+ 855  b100  ok           2965 ms
+ 856  b400  ok           9587 ms
+2026-08-26T13:44:09.993605Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x80d1071acf74fcfe): buffering seq 0 until registration
+ 857  b1    ok            932 ms
+ 858  b20   ok           1244 ms
+2026-08-26T13:44:14.588928Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb0a76cf15a2ab8be): buffering seq 0 until registration
+ 859  b100  ok           3571 ms
+ 860  b400  ok           6377 ms
+ 861  b1    ok           1163 ms
+ 862  b20   ok           5317 ms
+ 863  b100  ok           8586 ms
+ 864  b400  ok          19766 ms
+2026-08-26T13:44:56.975667Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x5f0e8d4e7edce182): buffering seq 0 until registration
+ 865  b1    ok          10004 ms
+2026-08-26T13:45:07.568197Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x21b3da62e8acd667): buffering seq 0 until registration
+ 866  b20   ok           5001 ms
+ 867  b100  ok           3513 ms
+ 868  b400  ok           7906 ms
+2026-08-26T13:45:23.708493Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xeb03ad847ba03be6): buffering seq 0 until registration
+ 869  b1    ok           1200 ms
+ 870  b20   ok           8025 ms
+ 871  b100  ok          12798 ms
+ 872  b400  ok           8580 ms
+ 873  b1    ok           1487 ms
+ 874  b20   ok           1267 ms
+ 875  b100  ok           3715 ms
+ 876  b400  ok           9868 ms
+2026-08-26T13:46:10.364154Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb52dafce52422b89): buffering seq 0 until registration
+ 877  b1    ok           1080 ms
+2026-08-26T13:46:13.276248Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x639a6dd2560b8799): buffering seq 0 until registration
+ 878  b20   ok           3086 ms
+ 879  b100  ok           3974 ms
+ 880  b400  ok           6978 ms
+ 881  b1    ok           1087 ms
+ 882  b20   ok           2469 ms
+ 883  b100  ok           2420 ms
+ 884  b400  ok          12523 ms
+ 885  b1    ok           3062 ms
+ 886  b20   ok           2285 ms
+ 887  b100  ok           5865 ms
+ 888  b400  ok           7342 ms
+2026-08-26T13:47:02.637504Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb451d24a102a2307): buffering seq 0 until registration
+ 889  b1    ok           5863 ms
+2026-08-26T13:47:09.002245Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x700bd818b406d0a5): buffering seq 0 until registration
+ 890  b20   ok           5821 ms
+ 891  b100  ok           6475 ms
+ 892  b400  ok          10298 ms
+ 893  b1    ok           1764 ms
+ 894  b20   ok           1452 ms
+ 895  b100  ok           3213 ms
+ 896  b400  ok           7690 ms
+2026-08-26T13:47:45.091392Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xd6a956c3a3adfd22): buffering seq 0 until registration
+ 897  b1    ok           1238 ms
+ 898  b20   ok           2091 ms
+ 899  b100  ok           3628 ms
+ 900  b400  ok           8449 ms
+ 901  b1    ok           1556 ms
+2026-08-26T13:48:02.528312Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x81da55bbcc8858fd): buffering seq 0 until registration
+ 902  b20   ok           9098 ms
+2026-08-26T13:48:12.582623Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x59bb36930a88e29a): buffering seq 0 until registration
+ 903  b100  ok          10087 ms
+ 904  b400  ok          15188 ms
+ 905  b1    ok          14093 ms
+ 906  b20   ok          13377 ms
+ 907  b100  ok           4031 ms
+ 908  b400  ok           7495 ms
+ 909  b1    ok           2553 ms
+2026-08-26T13:49:18.869454Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x4e09bc916f06253f): buffering seq 0 until registration
+ 910  b20   ok           7048 ms
+ 911  b100  ok           4622 ms
+ 912  b400  ok           7034 ms
+ 913  b1    ok           2928 ms
+ 914  b20   ok           2818 ms
+ 915  b100  ok           5600 ms
+ 916  b400  ok          11074 ms
+2026-08-26T13:49:59.144535Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xee5297bf71d1f63c): buffering seq 0 until registration
+ 917  b1    ok           1088 ms
+ 918  b20   ok           3832 ms
+ 919  b100  ok           5423 ms
+ 920  b400  ok           8587 ms
+ 921  b1    ok           1080 ms
+2026-08-26T13:50:19.649355Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x21e3af57da48cec8): buffering seq 0 until registration
+ 922  b20   ok           4408 ms
+ 923  b100  ok           8725 ms
+ 924  b400  ok           7165 ms
+2026-08-26T13:50:39.560805Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x841b2dce142c2ce6): buffering seq 0 until registration
+ 925  b1    ok           1261 ms
+ 926  b20   ok           1867 ms
+ 927  b100  ok           3699 ms
+ 928  b400  ok          15320 ms
+2026-08-26T13:51:01.763515Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xca2b76557cdafaf9): buffering seq 0 until registration
+ 929  b1    ok          18226 ms
+ 930  b20   ok           3374 ms
+ 931  b100  ok           3991 ms
+ 932  b400  ok           7041 ms
+2026-08-26T13:51:34.359018Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xcaee599b66cb4d01): buffering seq 0 until registration
+ 933  b1    ok           1092 ms
+ 934  b20   ok           2713 ms
+ 935  b100  ok           4062 ms
+ 936  b400  ok           7588 ms
+ 937  b1    ok           1006 ms
+ 938  b20   ok           1554 ms
+ 939  b100  ok           9846 ms
+ 940  b400  ok           9739 ms
+2026-08-26T13:52:11.813550Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x7b3d2bc9d70b6bb6): buffering seq 0 until registration
+ 941  b1    ok            931 ms
+2026-08-26T13:52:13.420552Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x34d124dd23e7e0c4): buffering seq 0 until registration
+ 942  b20   ok           4741 ms
+ 943  b100  ok           3743 ms
+ 944  b400  ok           7806 ms
+ 945  b1    ok           1305 ms
+2026-08-26T13:52:30.709385Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xce26f2e4bcf410e8): buffering seq 0 until registration
+ 946  b20   ok           1311 ms
+ 947  b100  ok           3801 ms
+ 948  b400  ok           7685 ms
+ 949  b1    ok            785 ms
+ 950  b20   ok           2571 ms
+2026-08-26T13:52:49.707164Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x6d55fbb97542dbda): buffering seq 0 until registration
+ 951  b100  ok           9933 ms
+ 952  b400  ok           8238 ms
+2026-08-26T13:53:05.048564Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xa70a8da7fb0c8b0f): buffering seq 0 until registration
+ 953  b1    ok           1360 ms
+2026-08-26T13:53:06.641945Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x344e11f169126b54): buffering seq 0 until registration
+ 954  b20   ok           2996 ms
+2026-08-26T13:53:10.162014Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x32ebace8f3b39ade): buffering seq 0 until registration
+ 955  b100  ok           3079 ms
+ 956  b400  ok           6929 ms
+2026-08-26T13:53:19.057401Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xadde608e44c2521b): buffering seq 0 until registration
+ 957  b1    ok           1159 ms
+ 958  b20   ok           1471 ms
+ 959  b100  ok           2542 ms
+ 960  b400  ok           8204 ms
+2026-08-26T13:53:32.439072Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x5efc31c0e8da5921): buffering seq 0 until registration
+ 961  b1    ok            944 ms
+2026-08-26T13:53:33.900648Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xf7fd97cbee777a48): buffering seq 0 until registration
+ 962  b20   ok           5703 ms
+ 963  b100  ok          11575 ms
+ 964  b400  ok          12452 ms
+ 965  b1    ok           3365 ms
+ 966  b20   ok           3080 ms
+2026-08-26T13:54:12.352061Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x129dae2e36ed90cf): buffering seq 0 until registration
+ 967  b100  ok           4435 ms
+ 968  b400  ok          10580 ms
+2026-08-26T13:54:24.603514Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xeacb4e54540d1943): buffering seq 0 until registration
+ 969  b1    ok           2241 ms
+ 970  b20   ok           7110 ms
+2026-08-26T13:54:36.789707Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb17e5290287b2de0): buffering seq 0 until registration
+ 971  b100  ok           4822 ms
+ 972  b400  ok          10411 ms
+2026-08-26T13:54:49.205124Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x6b0c20141943357a): buffering seq 0 until registration
+ 973  b1    ok           1037 ms
+ 974  b20   ok           2867 ms
+ 975  b100  ok           4455 ms
+ 976  b400  ok           9604 ms
+ 977  b1    ok           2648 ms
+ 978  b20   ok           1522 ms
+ 979  b100  ok           4796 ms
+ 980  b400  ok           7322 ms
+2026-08-26T13:55:23.738739Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x301ff94c61be9ddc): buffering seq 0 until registration
+ 981  b1    ok           1309 ms
+2026-08-26T13:55:25.187088Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x8caad2fbf3944011): buffering seq 0 until registration
+ 982  b20   ok           2683 ms
+ 983  b100  ok           3914 ms
+ 984  b400  ok           7890 ms
+ 985  b1    ok           1093 ms
+2026-08-26T13:55:42.160470Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x19d1eb2f1c9c84cf): buffering seq 0 until registration
+ 986  b20   ok           3022 ms
+ 987  b100  ok           3814 ms
+ 988  b400  ok           8878 ms
+2026-08-26T13:55:56.097031Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x2e30cf781d6ed0a9): buffering seq 0 until registration
+ 989  b1    ok           1155 ms
+ 990  b20   ok           1376 ms
+ 991  b100  ok           5852 ms
+ 992  b400  ok          13244 ms
+ 993  b1    ok           7404 ms
+ 994  b20   ok           4588 ms
+2026-08-26T13:56:32.811011Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0x996e1d35acda7c0e): buffering seq 0 until registration
+ 995  b100  ok           4951 ms
+ 996  b400  ok           7611 ms
+ 997  b1    ok           1282 ms
+ 998  b20   ok           2675 ms
+2026-08-26T13:56:49.104373Z TRACE nym_sdk::mixnet::stream: Stream StreamId(0xb58eeecb341ab8fa): buffering seq 0 until registration
+ 999  b100  ok           4698 ms
+1000  b400  ok           8743 ms
+--- summary ---
+trials                       1000
+ok                           997
+lost outbound                0
+echo failed to write         0
+lost on the way back         3
+dialler errors               0
+failure rate                 0.3%  (3/1000)
+ok latency   p50 2471 ms | p90 7302 ms | p99 12452 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1       250  249       1    0.4%    1178 ms
+    20       250  250       0    0.0%    1544 ms
+   100       250  249       1    0.4%    2738 ms
+   400       250  249       1    0.4%    6684 ms
+echo stages: accepted 1000 | read 1000 | written 1000

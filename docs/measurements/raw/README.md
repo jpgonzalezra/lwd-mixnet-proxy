@@ -157,6 +157,19 @@ Colour codes are gone. The SDK's `info` and `warn` noise is dropped, which here 
 fragment warnings from the layer below doing its job. No address or gateway identity appears in any
 of the three: the rig's clients are ephemeral and die with their containers.
 
+## The branch under test
+
+Two files sit behind [`../2026-08-26-branch-under-test.md`](../2026-08-26-branch-under-test.md).
+
+| file | what it is |
+|---|---|
+| `2026-08-26-branch-run.txt` | 1,000 trial lines, the tool's summary, and every orphan-buffer and orphan-cleanup trace of the batch |
+| `2026-08-26-unroutable-both-builds.txt` | both dial windows, one per build, from container start to the line that ends each |
+
+The dial windows are whole rather than filtered, which is why DNS retry warnings from an unrelated
+resolver sit in them. They are two dozen lines and cutting them would leave less to check than to
+read past.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):
