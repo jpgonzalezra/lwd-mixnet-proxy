@@ -1,5 +1,14 @@
 # 0003. Probe every stream before the wallet is allowed near it
 
+> **Amended 2026-08-26.** The rate this decision is calibrated against is real and is what every
+> `nym-sdk` release still produces, so the decision stands as written. What changed is why: the
+> failures are not the transport losing payloads, they are a first `Data` frame overtaking the `Open`
+> that registers its stream, which the pinned SDK discards without a log. Nym fixed that on `develop`
+> in August 2026. On that tree the rate collapses, and 6,237 trials found nothing lost at all. Revisit
+> this budget when a **release** carries the fix, not before. Evidence:
+> [reordering, not loss](../measurements/2026-08-24-reordering-not-loss.md) and
+> [six thousand trials](../measurements/2026-08-25-six-thousand-trials.md).
+
 ## Context
 
 The transport loses a stream's first payload, often and silently. A stream opens, the far side's

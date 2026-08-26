@@ -34,15 +34,23 @@ the calls that leak the most and cost the fewest bytes.
 
 ## What this is really for
 
-The transport has a defect that decides the whole design: **a stream can open, be accepted by the far
-side, and silently lose its first payload.** Neither end errors and neither times out; both hang. The
-rate measured between 2% and 51% over three days and is not stationary.
+One defect decides the whole design: **a stream can open, be accepted by the far side, and never
+deliver its first payload.** Neither end errors and neither times out; both hang. The rate measured
+between 2% and 51% over three days and is not stationary.
+
+Nothing is lost when that happens. The first `Data` frame overtakes the `Open` that registers its
+stream, and the `nym-sdk` releases this project pins discard whatever arrives for a stream they do
+not yet know about. Nym fixed it on `develop` in August 2026, and it is in no release yet, so every
+release still behaves this way.
+[The measurement](docs/measurements/2026-08-24-reordering-not-loss.md) has the evidence, and
+[the one after it](docs/measurements/2026-08-25-six-thousand-trials.md) found nothing lost in 6,237
+trials on the fixed tree.
 
 gRPC libraries recover from errors. They do not recover from silence. So this proxy exists to convert
 that hang into an invisible retry, and in the worst case into a fast error:
 
 - Before the wallet sends a byte, the dialling half **probes** each stream and discards any that does
-  not answer within a deadline. The probe is the same round trip the transport loses, so a stream
+  not answer within a deadline. The probe is the same round trip that gets dropped, so a stream
   that would have swallowed the wallet's first request swallows the probe instead.
 - Streams are opened **three at a time**, keeping the first to answer. Since a silent failure is only
   discovered when the deadline expires, retrying one at a time pays that deadline per failure and
@@ -205,8 +213,9 @@ curl -s localhost:9069/metrics
 curl -s localhost:9069/health     # {"state":"serving"}, 200 only once it is
 ```
 
-**Read two numbers, never one.** The transport's own failure rate swung by more than an order of
-magnitude across three days, so any single rate mostly records which afternoon it was measured on.
+**Read two numbers, never one.** The rate at which streams fail to establish swung by more than an
+order of magnitude across three days, so any single rate mostly records which afternoon it was
+measured on.
 What separates a bad afternoon from a broken deployment is the pair, both taken from the same dial:
 
 ```

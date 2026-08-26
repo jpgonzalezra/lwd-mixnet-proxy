@@ -46,7 +46,9 @@ pub struct ProbeSettings {
 #[derive(Debug, Clone, Copy)]
 pub struct DialSettings {
     /// Reply blocks attached to each outbound message; `None` leaves the SDK default of 10. Raising
-    /// it lowers the failure rate and costs latency. It will not get you to zero.
+    /// it lowers the failure rate and costs latency, and not for the reason it looks like: every
+    /// message carries the budget, so a larger one puts a larger `Open` in front of a larger first
+    /// `Data` and the two stop racing. It will not get you to zero.
     pub reply_surbs: Option<u32>,
     /// `None` sends the header without waiting for it, which is the shape this takes if the
     /// transport ever stops losing first payloads.

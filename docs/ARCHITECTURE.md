@@ -22,9 +22,15 @@ What the halves add is a **deadline**.
 
 ## Why there is a deadline
 
-The transport loses a stream's first payload, often and silently: the stream opens, the far side
-accepts it, `write_all` and `flush` both return `Ok`, and nothing arrives. Neither end errors and
+A stream's first payload often fails to arrive, and does so silently: the stream opens, the far side
+accepts it, `write_all` and `flush` both return `Ok`, and nothing comes. Neither end errors and
 neither times out. Measured over three days, the rate moved between 2% and 51%, and it does not settle.
+
+The cause is not the transport losing anything. The first `Data` frame can reach the far side before
+the `Open` that registers its stream, and the pinned SDK drops frames for streams it does not know
+about, in a branch that logs nothing. That is fixed on `develop` and in no release, so this remains
+the behaviour of everything shipped. See
+[reordering, not loss](measurements/2026-08-24-reordering-not-loss.md).
 
 An error is something a gRPC library can act on. Silence is not, so the job here is turning a hang
 into either an invisible retry or a fast error. Most of what follows is downstream of that.

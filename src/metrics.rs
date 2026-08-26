@@ -109,8 +109,9 @@ impl ClientMetrics {
                 &registry,
                 "lwd_mixnet_client_first_round_failures_total",
                 "Connections whose first round of streams all went unanswered. Against \
-                 lwd_mixnet_client_connections_total this is the transport's own failure rate, \
-                 before any retry.",
+                 lwd_mixnet_client_connections_total this is the rate at which a stream fails to \
+                 establish, before any retry. The mixnet is not what drops them: see \
+                 docs/measurements/2026-08-24-reordering-not-loss.md.",
             )?,
             streams_opened: counter(
                 &registry,

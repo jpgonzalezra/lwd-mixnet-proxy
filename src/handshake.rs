@@ -1,10 +1,14 @@
 //! The header both halves exchange before a single wallet byte moves.
 //!
-//! It exists to reproduce, on purpose and cheaply, the failure the transport produces on its own: a
+//! It exists to reproduce, on purpose and cheaply, the failure this transport has without it: a
 //! stream opens, the far side accepts it, and the first payload never arrives, with neither end
 //! erroring or timing out. Sending a header and waiting for it back puts that failure under a
 //! deadline the dialler controls, so a dead stream can be discarded before it is handed anything
 //! that matters.
+//!
+//! The payload is not lost. It reaches the far side before the `Open` that registers its stream,
+//! and the pinned SDK discards frames for streams it has not seen. Fixed on the SDK's `develop`
+//! and in no release, so the header stays until a release carries it.
 //!
 //! ```text
 //! byte  0..4   magic, "LWMP"

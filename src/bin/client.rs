@@ -61,8 +61,8 @@ struct Arguments {
     probe_concurrency: NonZeroU32,
 
     /// Hand the wallet the first stream that opens, without checking that it works. The probe
-    /// exists because the transport loses first payloads silently; this is the switch for the day
-    /// it stops.
+    /// exists because first payloads go missing silently; this is the switch for the day it
+    /// stops.
     ///
     /// It also takes the only evidence the degraded signal runs on. Without a probe nothing comes
     /// back before the wallet's own bytes, so a dial can only report that a stream opened, and
