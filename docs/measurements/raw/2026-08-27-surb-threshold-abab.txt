@@ -1,0 +1,268 @@
+=== block 1, threshold 0, 50 trials at budget 1, fresh dialling client per trial ===
+   1  b1    ok           5525 ms
+   2  b1    ok           5297 ms
+   3  b1    ok           3842 ms
+   4  b1    ok           3926 ms
+   5  b1    ok           3523 ms
+   6  b1    ok           3542 ms
+   7  b1    ok           3992 ms
+   8  b1    ok           3411 ms
+   9  b1    ok           2935 ms
+  10  b1    ok           3238 ms
+  11  b1    ok           4402 ms
+  12  b1    ok           5024 ms
+  13  b1    ok           3768 ms
+  14  b1    ok           3681 ms
+  15  b1    ok           4429 ms
+  16  b1    ok           5738 ms
+  17  b1    LOST-BACK   20000 ms
+  18  b1    ok          18547 ms
+  19  b1    ok           3617 ms
+  20  b1    LOST-BACK   20001 ms
+  21  b1    ok           9556 ms
+  22  b1    ok           7134 ms
+  23  b1    ok           6429 ms
+  24  b1    ok           3389 ms
+  25  b1    ok           6985 ms
+  26  b1    ok           7688 ms
+  27  b1    ok           5012 ms
+  28  b1    ok           5752 ms
+  29  b1    ok           4805 ms
+  30  b1    ok           3960 ms
+  31  b1    ok           5568 ms
+  32  b1    ok           5558 ms
+  33  b1    ok           5559 ms
+  34  b1    ok           5191 ms
+  35  b1    LOST-BACK   20001 ms
+  36  b1    LOST-BACK   20000 ms
+  37  b1    LOST-BACK   20000 ms
+  38  b1    LOST-BACK   20000 ms
+  39  b1    LOST-BACK   20001 ms
+  40  b1    LOST-BACK   20002 ms
+  41  b1    LOST-BACK   20000 ms
+  42  b1    LOST-BACK   20003 ms
+  43  b1    LOST-BACK   20000 ms
+  44  b1    LOST-BACK   20000 ms
+  45  b1    LOST-BACK   20000 ms
+  46  b1    LOST-BACK   20000 ms
+  47  b1    LOST-BACK   20000 ms
+  48  b1    LOST-BACK   20001 ms
+  49  b1    LOST-BACK   20000 ms
+  50  b1    LOST-BACK   20001 ms
+--- summary ---
+trials                       50
+registration retries         0
+ok                           32
+lost outbound                0
+echo failed to write         0
+lost on the way back         18
+dialler errors               0
+failure rate                 36.0%  (18/50)
+ok latency   p50 5012 ms | p90 7134 ms | p99 18547 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1        50   32      18   36.0%    5012 ms
+echo stages: accepted 50 | read 50 | written 50
+
+=== block 2, default 10, 50 trials at budget 1, fresh dialling client per trial ===
+   1  b1    ok           5501 ms
+   2  b1    ok           5297 ms
+   3  b1    ok           3917 ms
+   4  b1    ok           8750 ms
+   5  b1    ok           4440 ms
+   6  b1    ok           4839 ms
+   7  b1    ok           4235 ms
+   8  b1    ok           3638 ms
+   9  b1    ok           5264 ms
+  10  b1    ok           4434 ms
+  11  b1    ok          13512 ms
+  12  b1    ok           5273 ms
+  13  b1    ok           6913 ms
+  14  b1    ok           5503 ms
+  15  b1    ok           3810 ms
+  16  b1    LOST-BACK   20000 ms
+  17  b1    ok           6503 ms
+  18  b1    ok          14819 ms
+  19  b1    ok           3690 ms
+  20  b1    ok          11785 ms
+  21  b1    ok           5782 ms
+  22  b1    ok           6895 ms
+  23  b1    ok           6290 ms
+  24  b1    ok           4856 ms
+  25  b1    ok           8456 ms
+  26  b1    ok           5572 ms
+  27  b1    ok           5182 ms
+  28  b1    ok           5272 ms
+  29  b1    ok           7990 ms
+  30  b1    LOST-BACK   20000 ms
+  31  b1    NO-ACCEPT   20000 ms
+  32  b1    LOST-BACK   20002 ms
+  33  b1    LOST-BACK   20001 ms
+  34  b1    LOST-BACK   20000 ms
+  35  b1    LOST-BACK   20001 ms
+  36  b1    LOST-BACK   20001 ms
+  37  b1    LOST-BACK   20001 ms
+  38  b1    LOST-BACK   20000 ms
+  39  b1    LOST-BACK   20001 ms
+  40  b1    LOST-BACK   20000 ms
+  41  b1    LOST-BACK   20001 ms
+  42  b1    LOST-BACK   20000 ms
+  43  b1    LOST-BACK   20001 ms
+  44  b1    LOST-BACK   20001 ms
+  45  b1    LOST-BACK   20001 ms
+  46  b1    LOST-BACK   20001 ms
+  47  b1    LOST-BACK   20001 ms
+  48  b1    LOST-BACK   20002 ms
+  49  b1    LOST-BACK   20001 ms
+  50  b1    LOST-BACK   20000 ms
+--- summary ---
+trials                       50
+registration retries         0
+ok                           28
+lost outbound                1
+echo failed to write         0
+lost on the way back         21
+dialler errors               0
+failure rate                 44.0%  (22/50)
+ok latency   p50 5501 ms | p90 8750 ms | p99 14819 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1        50   28      22   44.0%    5501 ms
+echo stages: accepted 50 | read 50 | written 50
+
+=== block 3, threshold 0, 50 trials at budget 1, fresh dialling client per trial ===
+   1  b1    ok           3959 ms
+   2  b1    ok           4130 ms
+   3  b1    ok           4500 ms
+   4  b1    ok           4311 ms
+   5  b1    ok           3987 ms
+   6  b1    ok           5038 ms
+   7  b1    ok           4726 ms
+   8  b1    ok           3330 ms
+   9  b1    ok           5211 ms
+  10  b1    ok           3819 ms
+  11  b1    ok           3857 ms
+  12  b1    ok           3220 ms
+  13  b1    ok           8305 ms
+  14  b1    ok           3754 ms
+  15  b1    ok           3785 ms
+  16  b1    ok           4185 ms
+  17  b1    ok           3933 ms
+  18  b1    ok           3703 ms
+  19  b1    ok           4934 ms
+  20  b1    ok           3979 ms
+  21  b1    ok           3896 ms
+  22  b1    ok           3542 ms
+  23  b1    ok           6568 ms
+  24  b1    ok           3735 ms
+  25  b1    ok           3496 ms
+  26  b1    ok           3719 ms
+  27  b1    ok           3407 ms
+  28  b1    ok           4982 ms
+  29  b1    ok           4260 ms
+  30  b1    ok           3718 ms
+  31  b1    ok           4166 ms
+  32  b1    ok          15027 ms
+  33  b1    ok          10843 ms
+  34  b1    ok           6565 ms
+  35  b1    LOST-BACK   20000 ms
+  36  b1    ok           4192 ms
+  37  b1    ok           3891 ms
+  38  b1    LOST-BACK   20000 ms
+  39  b1    ok          17475 ms
+  40  b1    ok          11124 ms
+  41  b1    LOST-BACK   20001 ms
+  42  b1    LOST-BACK   20001 ms
+  43  b1    LOST-BACK   20000 ms
+  44  b1    LOST-BACK   20000 ms
+  45  b1    LOST-BACK   20001 ms
+  46  b1    LOST-BACK   20002 ms
+  47  b1    LOST-BACK   20002 ms
+  48  b1    LOST-BACK   20000 ms
+  49  b1    LOST-BACK   20000 ms
+  50  b1    LOST-BACK   20001 ms
+--- summary ---
+trials                       50
+registration retries         1
+ok                           38
+lost outbound                0
+echo failed to write         0
+lost on the way back         12
+dialler errors               0
+failure rate                 24.0%  (12/50)
+ok latency   p50 4130 ms | p90 8305 ms | p99 17475 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1        50   38      12   24.0%    4130 ms
+echo stages: accepted 50 | read 50 | written 50
+
+=== block 4, default 10, 50 trials at budget 1, fresh dialling client per trial ===
+   1  b1    ok          10147 ms
+   2  b1    ok           3412 ms
+   3  b1    ok           4142 ms
+   4  b1    ok           3215 ms
+   5  b1    ok           3515 ms
+   6  b1    ok           6202 ms
+   7  b1    ok           3679 ms
+   8  b1    ok           4022 ms
+   9  b1    ok           7909 ms
+  10  b1    ok           6655 ms
+  11  b1    ok           7265 ms
+  12  b1    ok           3629 ms
+  13  b1    ok           3366 ms
+  14  b1    ok           3361 ms
+  15  b1    ok           3533 ms
+  16  b1    ok           3265 ms
+  17  b1    ok           4255 ms
+  18  b1    ok           3363 ms
+  19  b1    ok           3335 ms
+  20  b1    ok           3553 ms
+  21  b1    ok           3528 ms
+  22  b1    ok           3110 ms
+  23  b1    ok           4103 ms
+  24  b1    ok           3302 ms
+  25  b1    ok           3037 ms
+  26  b1    ok           3076 ms
+  27  b1    ok           4175 ms
+  28  b1    ok           3528 ms
+  29  b1    ok           5538 ms
+  30  b1    ok           3221 ms
+  31  b1    ok           5128 ms
+  32  b1    ok           4662 ms
+  33  b1    ok           4035 ms
+  34  b1    ok           7099 ms
+  35  b1    ok           9250 ms
+  36  b1    ok           8277 ms
+  37  b1    ok           3615 ms
+  38  b1    ok           9626 ms
+  39  b1    ok           5479 ms
+  40  b1    LOST-BACK   20001 ms
+  41  b1    LOST-BACK   20001 ms
+  42  b1    LOST-BACK   20000 ms
+  43  b1    LOST-BACK   20000 ms
+  44  b1    LOST-BACK   20000 ms
+  45  b1    LOST-BACK   20000 ms
+  46  b1    LOST-BACK   20001 ms
+  47  b1    LOST-BACK   20000 ms
+  48  b1    LOST-BACK   20000 ms
+  49  b1    LOST-BACK   20001 ms
+  50  b1    LOST-BACK   20001 ms
+--- summary ---
+trials                       50
+registration retries         0
+ok                           39
+lost outbound                0
+echo failed to write         0
+lost on the way back         11
+dialler errors               0
+failure rate                 22.0%  (11/50)
+ok latency   p50 3679 ms | p90 7909 ms | p99 10147 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+     1        50   39      11   22.0%    3679 ms
+echo stages: accepted 50 | read 50 | written 50
+

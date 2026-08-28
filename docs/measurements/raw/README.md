@@ -170,6 +170,20 @@ The dial windows are whole rather than filtered, which is why DNS retry warnings
 resolver sit in them. They are two dozen lines and cutting them would leave less to check than to
 read past.
 
+## The reply-block reserve
+
+One file sits behind
+[`../2026-08-27-surb-reserve-costs-nothing.md`](../2026-08-27-surb-reserve-costs-nothing.md).
+
+| file | what it is |
+|---|---|
+| `2026-08-27-surb-threshold-abab.txt` | all four blocks in the order they ran, 50 trial lines and a summary each, with the arm named in the block header |
+
+Colour codes and the SDK's own logging are gone; the trial lines and the tool's summaries are
+verbatim. The two abandoned attempts at this experiment are not here: one ended when the host ran out
+of disk and the other when Docker was pruned underneath it, and neither produced a number worth
+keeping.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):
