@@ -15,7 +15,8 @@ report says how it was taken, so the numbers can be argued with. Raw output for 
 | [The silent stream failures were reordering](2026-08-24-reordering-not-loss.md) | where the unexplained residue goes: the first payload overtakes the `Open` that registers its stream, and the pinned SDK discards it | 2026-08-24 |
 | [Six thousand trials on the fixed tree, and nothing lost](2026-08-25-six-thousand-trials.md) | whether anything is lost once the race is handled, at a resolution 400 trials could not reach | 2026-08-25 |
 | [A thousand trials on the branch that answers two of these reports](2026-08-26-branch-under-test.md) | what the rig sees once the SDK returns an error for an unroutable recipient and for reorder-buffer loss | 2026-08-26 |
-| [The reply-block reserve costs nothing this could measure](2026-08-27-surb-reserve-costs-nothing.md) | whether two SDK defaults landing on the same number costs a round trip before every first reply | 2026-08-27 |
+| [The reply-block reserve costs nothing this could measure](2026-08-27-surb-reserve-costs-nothing.md) | whether two SDK defaults landing on the same number costs a round trip before every first reply | 2026-08-27, amended 2026-09-02 |
+| [The establishment handshake, and what a fresh dialler does to a serving client](2026-09-01-establishment-handshake.md) | whether the SDK's new acknowledgement tells a caller its stream reached something alive, and what it costs | 2026-09-01 |
 
 The first is a bench run against a purpose-built harness ([ADR 0005](../decisions/0005-what-the-measurement-has-to-show.md)
 sets what such a run has to show). The second reads the public testnet deployment in place, which is
@@ -28,8 +29,14 @@ of node for a minute instead of a day. The seventh goes back to the bench rig an
 failure mode all of this was built around is a race the SDK has since fixed upstream. The eighth
 runs that tree fifteen times longer and finds nothing left to catch. The ninth tests the branch that
 turns two of these findings into errors a caller can see. The tenth answers a question asked upstream
-about two constants, and finds an unrelated one about first exchanges on the way.
+about two constants. The eleventh tests the acknowledgement that closes the last gap on that branch,
+and its control run retracts what the tenth thought it had found on the side.
 
-A rate measured here is one machine and one pair of gateways in one window. The transport's failure
-rate moves by an order of magnitude between one hour and the next, so absolute numbers do not
-reproduce and comparisons have to be interleaved inside the same window.
+A rate measured here is one machine and one pair of gateways in one window, and latencies move by
+more between hours than most of the effects being measured. Absolute numbers do not reproduce, and
+comparisons have to be interleaved inside the same window rather than run as separate blocks.
+
+Failure rates need one warning more. A rate quoted for a whole run is only a rate if the run was
+healthy throughout, and the eleventh report shows a configuration where it is not: the process
+degrades until nothing works, so the figure ends up recording where it gave out. Check that failures
+are spread through a run before reading its rate as one.

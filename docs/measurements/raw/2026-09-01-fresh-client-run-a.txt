@@ -1,0 +1,506 @@
+# nym-sdk rev f5e46b7d8287869221cd6632c63444d4b32da59c (max/lwd-stream-patch)
+# run 2a, started 2026-09-01T21:39Z. Capture truncated at trial 134; see the report.
+2026-09-01T21:39:35.893794Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:39:40.447983Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+echo   DAQwL7uzuiHSJsFr3oxeBsCATz1W6xmLBueveHN4xmnK.2ywwMuGiyjEPqwVV4V9KfMWbcDJ651BYb7oP3V5SXezf@8h489z12rHrbXDZ25H7fEcbeSFusdQ8xD4jkntWyGEqr
+dial   FhHzVqutd4tnZEengUFvZxYD7wmWv7oTfgVDKz8RYFrN.2Se9t82MLeLfKydKjrmk1JZb3D1Wr9knqfafNjj6o5KP@3ufwUQCnZnMPAnYgPnYYrT8Qq6StPUgqXEgEdKWyHnXi
+trials 150 | budgets ["1", "10", "default"] interleaved | timeout 40s
+establishment ack awaited before each write | ack timeout 15s
+2026-09-01T21:39:41.076362Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+   1  b1    ok           5569 ms  ack  4731 ms
+2026-09-01T21:39:48.307556Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+   2  b10   ok           3269 ms  ack  2227 ms
+2026-09-01T21:39:58.969101Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+   3  bdef  ok           4796 ms  ack  3589 ms
+2026-09-01T21:40:09.887031Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:40:11.056946Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+   4  b1    ok           7989 ms  ack  6689 ms
+2026-09-01T21:40:22.430622Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+   5  b10   ok           3468 ms  ack  2512 ms
+2026-09-01T21:40:30.794956Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+   6  bdef  ok           3253 ms  ack  2209 ms
+2026-09-01T21:40:39.039390Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:40:39.913462Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+   7  b1    ok           5891 ms  ack  4948 ms
+2026-09-01T21:40:48.636312Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+   8  b10   ok           3166 ms  ack  2193 ms
+2026-09-01T21:40:52.696543Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T21:40:52.696570Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://silentrelay12.testnet25.capetown:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://134.195.90.195:9000/
+2026-09-01T21:40:55.345278Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+   9  bdef  ok           3274 ms  ack  2469 ms
+2026-09-01T21:41:03.621732Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:41:04.654902Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  10  b1    ok           5665 ms  ack  4671 ms
+2026-09-01T21:41:14.059059Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  11  b10   ok           3287 ms  ack  2152 ms
+2026-09-01T21:41:20.800349Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  12  bdef  ok           3515 ms  ack  2594 ms
+2026-09-01T21:41:28.974189Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:41:29.572946Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  13  b1    ok           5118 ms  ack  4141 ms
+2026-09-01T21:41:39.433016Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  14  b10   ok           4003 ms  ack  2503 ms
+2026-09-01T21:41:47.714957Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  15  bdef  ok           2788 ms  ack  1989 ms
+2026-09-01T21:41:54.945297Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:41:55.681496Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  16  b1    ok           5452 ms  ack  4301 ms
+2026-09-01T21:42:05.640761Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  17  b10   ok           3797 ms  ack  2526 ms
+2026-09-01T21:42:10.691627Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-hu01.hermes-stakepool.de:9000/ : connection failed: ws://nym-exit-hu01.hermes-stakepool.de:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://37.221.208.97:9000/
+2026-09-01T21:42:14.216689Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  18  bdef  ok           4122 ms  ack  3031 ms
+2026-09-01T21:42:19.343640Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: received a stream error: stream closed because of a broken pipe
+2026-09-01T21:42:19.343693Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://uzo02.turquoiselab.io:9000/ : resolution failed: hickory-dns resolver error: received a stream error: stream closed because of a broken pipe, trying fallback : ws://85.155.186.123:9000/
+2026-09-01T21:42:22.140670Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:42:22.774769Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  19  b1    ok           5341 ms  ack  4418 ms
+2026-09-01T21:42:33.189238Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  20  b10   ok           4454 ms  ack  3031 ms
+2026-09-01T21:42:42.521916Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  21  bdef  ok           3540 ms  ack  2578 ms
+2026-09-01T21:42:50.483541Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:42:51.285427Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  22  b1    ok           5557 ms  ack  4590 ms
+2026-09-01T21:43:04.110495Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  23  b10   ok           3178 ms  ack  2131 ms
+2026-09-01T21:43:11.866561Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  24  bdef  ok           3782 ms  ack  2775 ms
+2026-09-01T21:43:20.290480Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:43:21.101224Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  25  b1    ok           5450 ms  ack  4617 ms
+2026-09-01T21:43:30.188290Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  26  b10   ok           3550 ms  ack  2559 ms
+2026-09-01T21:43:38.352452Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  27  bdef  ok           3159 ms  ack  2164 ms
+2026-09-01T21:43:46.458048Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:43:47.924355Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  28  b1    ok           6255 ms  ack  5459 ms
+2026-09-01T21:43:57.916261Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  29  b10   ok           3121 ms  ack  2270 ms
+2026-09-01T21:44:05.762155Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  30  bdef  ok           3808 ms  ack  2675 ms
+2026-09-01T21:44:13.135857Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:44:13.871934Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  31  b1    ok           5734 ms  ack  4644 ms
+2026-09-01T21:44:24.042280Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  32  b10   ok           3738 ms  ack  2646 ms
+2026-09-01T21:44:32.299254Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  33  bdef  ok           3468 ms  ack  2380 ms
+2026-09-01T21:44:42.268566Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:44:43.125900Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  34  b1    ok           5622 ms  ack  4499 ms
+2026-09-01T21:44:52.408360Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  35  b10   ok           3525 ms  ack  2613 ms
+2026-09-01T21:45:01.264314Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  36  bdef  ok           3472 ms  ack  2670 ms
+2026-09-01T21:45:09.676543Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:45:10.448476Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  37  b1    ok           5428 ms  ack  4452 ms
+2026-09-01T21:45:16.101419Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T21:45:16.101462Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-3.openstake.net:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://85.121.50.221:9000/
+2026-09-01T21:45:20.047135Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  38  b10   ok           5915 ms  ack  4525 ms
+2026-09-01T21:45:31.696103Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  39  bdef  ok           4011 ms  ack  2768 ms
+2026-09-01T21:45:41.077255Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:45:41.786567Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  40  b1    ok           5120 ms  ack  4210 ms
+2026-09-01T21:45:51.713861Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: DNS error: error response: Server Failure
+2026-09-01T21:45:51.713933Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.node17.vinlexnodes.xyz:9000/ : resolution failed: hickory-dns resolver error: DNS error: error response: Server Failure, trying fallback : ws://103.73.67.106:9000/
+2026-09-01T21:45:55.297132Z  WARN perform_initial_authentication{gateway=4i5nf3okg2dxVkSrewkVBpKcpuJoyTTrhiithXaUvu1Y gateway_address=ws://nym-exit.node17.vinlexnodes.xyz:9000/}: nym_http_api_client::dns: primary DNS failed w/ error: DNS error: error response: Server Failure
+2026-09-01T21:45:55.297175Z  WARN perform_initial_authentication{gateway=4i5nf3okg2dxVkSrewkVBpKcpuJoyTTrhiithXaUvu1Y gateway_address=ws://nym-exit.node17.vinlexnodes.xyz:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.node17.vinlexnodes.xyz:9000/ : resolution failed: hickory-dns resolver error: DNS error: error response: Server Failure, trying fallback : ws://103.73.67.106:9000/
+2026-09-01T21:45:57.010891Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  41  b10   ok           6179 ms  ack  3248 ms
+2026-09-01T21:46:07.738245Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  42  bdef  ok           5347 ms  ack  4201 ms
+2026-09-01T21:46:18.207830Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:46:18.850576Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  43  b1    ok           5445 ms  ack  4691 ms
+2026-09-01T21:46:28.828578Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  44  b10   ok           3823 ms  ack  2763 ms
+2026-09-01T21:46:37.564464Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  45  bdef  ok           3627 ms  ack  2519 ms
+2026-09-01T21:46:45.749953Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:46:46.515224Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  46  b1    ok           5200 ms  ack  4357 ms
+2026-09-01T21:46:55.835220Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  47  b10   ok           3903 ms  ack  2629 ms
+2026-09-01T21:47:04.497310Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  48  bdef  ok           4894 ms  ack  3921 ms
+2026-09-01T21:47:14.337535Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:47:14.997704Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  49  b1    ok           8447 ms  ack  7342 ms
+2026-09-01T21:47:26.352189Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  50  b10   ok           3529 ms  ack  2539 ms
+2026-09-01T21:47:34.115055Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  51  bdef  ok           3487 ms  ack  2541 ms
+2026-09-01T21:47:42.222701Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:47:42.925063Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  52  b1    ok           5845 ms  ack  4695 ms
+2026-09-01T21:47:52.350196Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  53  b10   ok           3259 ms  ack  2325 ms
+2026-09-01T21:48:00.275333Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  54  bdef  ok           4874 ms  ack  4025 ms
+2026-09-01T21:48:09.735268Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:48:10.406809Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  55  b1    ok           5181 ms  ack  4047 ms
+2026-09-01T21:48:19.548453Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  56  b10   ok           3976 ms  ack  2517 ms
+2026-09-01T21:48:28.106232Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  57  bdef  ok           3020 ms  ack  2208 ms
+2026-09-01T21:48:35.609729Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:48:36.226311Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  58  b1    ok           4920 ms  ack  4067 ms
+2026-09-01T21:48:44.871713Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  59  b10   ok           3421 ms  ack  2379 ms
+2026-09-01T21:48:53.175216Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  60  bdef  ok           3412 ms  ack  2553 ms
+2026-09-01T21:49:01.022921Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:49:01.806936Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  61  b1    ok           8653 ms  ack  7794 ms
+2026-09-01T21:49:14.605889Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  62  b10   ok           4081 ms  ack  3071 ms
+2026-09-01T21:49:23.531013Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  63  bdef  ok           4083 ms  ack  3156 ms
+2026-09-01T21:49:32.047542Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:49:32.685616Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  64  b1    ok           6058 ms  ack  4188 ms
+2026-09-01T21:49:43.321791Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  65  b10   ok           4090 ms  ack  3007 ms
+2026-09-01T21:49:48.430815Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T21:49:48.430858Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://gateway1.lunardao.net:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://195.35.2.60:9000/
+2026-09-01T21:49:52.335767Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  66  bdef  ok           3916 ms  ack  2966 ms
+2026-09-01T21:50:01.315108Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:50:02.333451Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  67  b1    ok           9122 ms  ack  7661 ms
+2026-09-01T21:50:14.311056Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  68  b10   ok           3145 ms  ack  2076 ms
+2026-09-01T21:50:23.697030Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  69  bdef  ok           5701 ms  ack  4476 ms
+2026-09-01T21:50:33.541826Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:50:34.100696Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  70  b1    ok           6844 ms  ack  6031 ms
+2026-09-01T21:50:46.256505Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  71  b10   ok           5786 ms  ack  4188 ms
+2026-09-01T21:50:56.665151Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  72  bdef  ok           5017 ms  ack  3786 ms
+2026-09-01T21:51:06.812082Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:51:07.612427Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  73  b1    ok           6062 ms  ack  5069 ms
+2026-09-01T21:51:14.984600Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.ua06.bhsysmx.st:9000/ : connection failed: ws://nym-exit.ua06.bhsysmx.st:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://185.254.197.116:9000/
+2026-09-01T21:51:18.658494Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  74  b10   ok           3723 ms  ack  2517 ms
+2026-09-01T21:51:27.562782Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  75  bdef  ok           5275 ms  ack  4205 ms
+2026-09-01T21:51:37.555606Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:51:38.225717Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  76  b1    ok           6968 ms  ack  6000 ms
+2026-09-01T21:51:49.259594Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  77  b10   ok           3491 ms  ack  2500 ms
+2026-09-01T21:51:57.535762Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  78  bdef  ok           4262 ms  ack  3337 ms
+2026-09-01T21:52:06.724055Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:52:07.530202Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  79  b1    ok           7437 ms  ack  6512 ms
+2026-09-01T21:52:18.736146Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  80  b10   ok           6587 ms  ack  5355 ms
+2026-09-01T21:52:31.578457Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  81  bdef  ok           4325 ms  ack  3106 ms
+2026-09-01T21:52:40.617692Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:52:41.543813Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  82  b1    ok           6359 ms  ack  5238 ms
+2026-09-01T21:52:51.750793Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  83  b10   ok           6775 ms  ack  5116 ms
+2026-09-01T21:52:59.527083Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T21:52:59.527138Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://marcijona.onchainaustria.at:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://195.238.126.176:9000/
+2026-09-01T21:53:03.539392Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  84  bdef  ok           3908 ms  ack  2650 ms
+2026-09-01T21:53:12.375650Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:53:13.030749Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  85  b1    ok           8726 ms  ack  6087 ms
+2026-09-01T21:53:25.628916Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  86  b10   ok           6769 ms  ack  5646 ms
+2026-09-01T21:53:37.679467Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  87  bdef  ok           2925 ms  ack  2153 ms
+2026-09-01T21:53:44.909468Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:53:45.516477Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  88  b1    ok           7733 ms  ack  4620 ms
+2026-09-01T21:53:58.797842Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  89  b10   ok           4453 ms  ack  2942 ms
+2026-09-01T21:54:07.938430Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  90  bdef  ok           6978 ms  ack  6034 ms
+2026-09-01T21:54:19.524317Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:54:20.279659Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  91  b1    ok           5878 ms  ack  4627 ms
+2026-09-01T21:54:30.160804Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  92  b10   ok           3431 ms  ack  2221 ms
+2026-09-01T21:54:39.594515Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  93  bdef  ok           4192 ms  ack  2949 ms
+2026-09-01T21:54:48.116714Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:54:48.771320Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  94  b1    ok           5334 ms  ack  4051 ms
+2026-09-01T21:54:58.044052Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  95  b10   ok           6573 ms  ack  3973 ms
+2026-09-01T21:55:09.396758Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  96  bdef  ok           3241 ms  ack  2236 ms
+2026-09-01T21:55:17.598816Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:55:18.262480Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+  97  b1    ok          22789 ms  NO-ACK
+2026-09-01T21:55:45.386163Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  98  b10   ok           3260 ms  ack  2308 ms
+2026-09-01T21:55:53.342755Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  99  bdef  ok           5196 ms  ack  4172 ms
+2026-09-01T21:56:03.480166Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:56:04.254324Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 100  b1    ok           5677 ms  ack  4421 ms
+2026-09-01T21:56:13.990832Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+ 101  b10   ok           6592 ms  ack  5266 ms
+2026-09-01T21:56:25.266945Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+ 102  bdef  ok           6136 ms  ack  4687 ms
+2026-09-01T21:56:35.541829Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:56:36.398336Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 103  b1    ok          10993 ms  ack  8371 ms
+2026-09-01T21:56:51.116525Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+ 104  b10   ok           5299 ms  ack  4242 ms
+2026-09-01T21:57:01.380662Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+ 105  bdef  ok           3665 ms  ack  2637 ms
+2026-09-01T21:57:10.478985Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:57:11.320845Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 106  b1    ok          20439 ms  ack 13829 ms
+2026-09-01T21:57:36.404036Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:57:45.755658Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 107  b10   LOST-BACK   40000 ms  NO-ACK
+2026-09-01T21:58:21.342607Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:58:30.151114Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T21:58:33.991920Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 500073645)
+2026-09-01T21:58:34.035802Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 500073645)
+2026-09-01T21:58:44.444446Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 108  bdef  LOST-BACK   40006 ms  NO-ACK
+2026-09-01T21:59:06.258198Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T21:59:07.200991Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T21:59:21.042249Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T21:59:30.593446Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1308847565)
+ 109  b1    LOST-BACK   40000 ms  NO-ACK
+2026-09-01T21:59:47.318439Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T21:59:47.318652Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-quwi.bwnym.xyz:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://176.97.192.38:9000/
+2026-09-01T21:59:51.792496Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:00:01.110376Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:00:10.308801Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1237595514)
+2026-09-01T22:00:14.060230Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:00:28.760286Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 5 (set id: 221413880)
+2026-09-01T22:00:28.852842Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 221413880)
+2026-09-01T22:00:28.900136Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 221413880)
+ 110  b10   LOST-BACK   40007 ms  NO-ACK
+2026-09-01T22:00:36.425003Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:00:39.327261Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:00:59.040357Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1199959251)
+2026-09-01T22:01:00.169464Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 111  bdef  LOST-BACK   40005 ms  NO-ACK
+2026-09-01T22:01:19.551171Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 737642544)
+2026-09-01T22:01:22.673182Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:01:23.780909Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:01:26.080601Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:01:42.598208Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 13 (attempted to request: 13): not enough reply SURBs to send the message, available: 0 required: 1.
+ 112  b1    LOST-BACK   40001 ms  NO-ACK
+2026-09-01T22:02:03.843510Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:02:03.843770Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://node-05.privacymeow.fyi:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://45.9.168.30:9000/
+2026-09-01T22:02:07.850989Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:02:17.440419Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:02:23.196464Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:02:38.794846Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1747841323)
+2026-09-01T22:02:42.812814Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 113  b10   LOST-BACK   40004 ms  NO-ACK
+2026-09-01T22:02:52.828142Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:02:53.812669Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:03:11.323541Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1211433868)
+2026-09-01T22:03:13.927083Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:03:28.370403Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 114  bdef  LOST-BACK   40001 ms  NO-ACK
+2026-09-01T22:03:35.518312Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 153068326)
+2026-09-01T22:03:35.818641Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 153068326)
+2026-09-01T22:03:38.631272Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 722365577)
+2026-09-01T22:03:38.749506Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:03:39.584059Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:03:41.121501Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:03:50.053431Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 294058929)
+2026-09-01T22:03:50.280157Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 294058929)
+2026-09-01T22:03:50.293007Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 63323200)
+2026-09-01T22:03:50.330765Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1893343359)
+2026-09-01T22:03:50.410508Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 4 (set id: 1893343359)
+2026-09-01T22:03:50.493863Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 5 (set id: 1893343359)
+2026-09-01T22:04:11.442133Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1727464360)
+2026-09-01T22:04:11.523565Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1727464360)
+ 115  b1    LOST-BACK   40002 ms  NO-ACK
+2026-09-01T22:04:25.376731Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:04:30.531399Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 11 (attempted to request: 11): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:04:33.945267Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:04:34.653658Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:04:36.219481Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:04:38.540966Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:04:49.920665Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1632959977)
+2026-09-01T22:04:50.056284Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1632959977)
+2026-09-01T22:04:50.474110Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1748151876)
+ 116  b10   LOST-BACK   40001 ms  NO-ACK
+2026-09-01T22:05:06.453935Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:05:06.454016Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.nl-20.silentriver.foo:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://185.246.188.220:9000/
+2026-09-01T22:05:10.789562Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:05:13.891662Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 290393618)
+2026-09-01T22:05:22.337771Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:05:32.017535Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 4 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 117  bdef  LOST-BACK   40000 ms  NO-ACK
+2026-09-01T22:05:51.844707Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:05:51.844776Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://exit-nl-08.aurorasky.org:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://85.17.151.89:9000/
+2026-09-01T22:05:55.523120Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:05:56.310470Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 935182626)
+2026-09-01T22:06:07.160465Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:06:07.234969Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 4 (set id: 1027794904)
+2026-09-01T22:06:07.261193Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1027794904)
+2026-09-01T22:06:07.272621Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1027794904)
+2026-09-01T22:06:07.305285Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 5 (set id: 1027794904)
+2026-09-01T22:06:08.113910Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 5 (set id: 1801748237)
+2026-09-01T22:06:08.132293Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1801748237)
+2026-09-01T22:06:08.147338Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1801748237)
+2026-09-01T22:06:08.996432Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:06:24.425609Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1259732542)
+2026-09-01T22:06:24.460076Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1259732542)
+ 118  b1    LOST-BACK   40008 ms  NO-ACK
+2026-09-01T22:06:36.020570Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 9 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:06:42.879158Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:06:55.756377Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:07:06.665535Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 119  b10   LOST-BACK   40000 ms  NO-ACK
+2026-09-01T22:07:24.791593Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:07:28.847742Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:07:32.057341Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 5 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:07:32.165619Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:07:39.173263Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:07:42.438856Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 841671602)
+2026-09-01T22:08:00.908155Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1396724072)
+2026-09-01T22:08:05.041629Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 120  bdef  LOST-BACK   40000 ms  NO-ACK
+2026-09-01T22:08:14.052405Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:08:14.930363Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:08:23.502188Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+ 121  b1    LOST-BACK   40000 ms  NO-ACK
+2026-09-01T22:08:55.154465Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:08:55.154515Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-es01.hermes-stakepool.de:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://141.227.129.110:9000/
+2026-09-01T22:08:59.221467Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:09:13.354401Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:09:21.201394Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:09:23.513876Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 887494719)
+2026-09-01T22:09:33.874403Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1612360293)
+2026-09-01T22:09:34.016865Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1612360293)
+2026-09-01T22:09:35.401328Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1612360293)
+2026-09-01T22:09:35.508496Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1612360293)
+ 122  b10   LOST-BACK   40000 ms  NO-ACK
+2026-09-01T22:09:40.309553Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:09:40.309610Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://pulse4.nymgateway.com:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://86.54.83.192:9000/
+2026-09-01T22:09:44.248789Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:09:49.640698Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+ 123  bdef  LOST-BACK   40001 ms  NO-ACK
+2026-09-01T22:10:25.344721Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:10:25.345188Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.ro-21.lunardao.net:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://185.100.84.202:9000/
+2026-09-01T22:10:29.763474Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:11:26.434475Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:11:28.536326Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:11:30.603894Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:11:45.682507Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+ 124  b1    LOST-BACK   40009 ms  NO-ACK
+2026-09-01T22:12:03.112579Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:12:07.641893Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:12:07.648032Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:12:07.649947Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:12:07.921522Z  WARN nym_http_api_client: Retrying request due to http error on attempt (2/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:12:07.922628Z  WARN nym_http_api_client: Retrying request due to http error on attempt (2/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:12:07.935284Z  WARN nym_http_api_client: Retrying request due to http error on attempt (2/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:12:08.192085Z  WARN nym_http_api_client: Retrying request due to http error on attempt (3/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:12:08.192143Z  WARN nym_http_api_client: Retrying request due to http error on attempt (3/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:12:08.201972Z  WARN nym_http_api_client: Retrying request due to http error on attempt (3/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:13:47.051468Z ERROR nym_client_core::client::topology_control::nym_api_provider: failed to get network nodes: failed to send request for https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0: error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0) unknown status code source: hyper_util::client::legacy::Error(SendRequest, hyper::Error(Io, Custom { kind: UnexpectedEof, error: "peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof" }))
+2026-09-01T22:13:47.052751Z ERROR nym_client_core::client::topology_control::nym_api_provider: failed to retrieve network topology: failed to send request for https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0: error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0) unknown status code source: hyper_util::client::legacy::Error(SendRequest, hyper::Error(Io, Custom { kind: UnexpectedEof, error: "peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof" }))
+2026-09-01T22:13:47.052762Z  WARN nym_client_core::client::topology_control: failed to obtain new network topology
+2026-09-01T22:13:47.053218Z  WARN nym_client_core::client::topology_control: we're going to keep on using the old topology for this iteration
+2026-09-01T22:13:47.350211Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 4 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:13:47.864999Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:13:47.865213Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:13:47.865274Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:13:47.948026Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:13:47.948229Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:14:04.199711Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:14:08.723813Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 643538255)
+2026-09-01T22:14:15.199283Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:14:20.970353Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 125  b10   LOST-OUT    40000 ms  NO-ACK
+2026-09-01T22:14:22.920773Z  WARN hickory_net::h2: h2 connection failed: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+2026-09-01T22:14:22.920845Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: received a stream error: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof
+2026-09-01T22:14:22.921079Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://gw-se-02.nym.aethergate.org:9000/ : resolution failed: hickory-dns resolver error: received a stream error: peer closed connection without sending TLS close_notify: https://docs.rs/rustls/latest/rustls/manual/_03_howto/index.html#unexpected-eof, trying fallback : ws://176.126.86.185:9000/
+2026-09-01T22:14:26.912160Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:14:43.313865Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 590717580)
+2026-09-01T22:14:44.131475Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:14:59.963867Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:15:00.024093Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 126  bdef  LOST-BACK   40008 ms  NO-ACK
+2026-09-01T22:15:15.116964Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:15:15.553170Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:15:16.693613Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:15:16.694657Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:16:15.684252Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:16:16.114068Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 6 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:16:16.114103Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 4 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:16:16.822968Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+2026-09-01T22:16:18.982022Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v1/nym-nodes/rewarded-set)
+2026-09-01T22:16:19.146701Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:16:20.076913Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-01T22:16:20.633357Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/mixnodes/active?page=0)
+ 127  b1    NO-ACCEPT   40003 ms  NO-ACK
+2026-09-01T22:17:04.791958Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:17:19.376918Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:17:19.496303Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:17:22.259350Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1888785131)
+ 128  b10   LOST-BACK   40002 ms  NO-ACK
+2026-09-01T22:17:46.031607Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:17:46.031662Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://silentrelay6.testnet25.capetown:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://31.220.15.225:9000/
+2026-09-01T22:17:48.810345Z  WARN perform_initial_authentication{gateway=9aBp75KwJQrjZbNeD8ZRtnPUPv6jtAs72XDmB66FSarc gateway_address=ws://silentrelay6.testnet25.capetown:9000/}: nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:17:48.810373Z  WARN perform_initial_authentication{gateway=9aBp75KwJQrjZbNeD8ZRtnPUPv6jtAs72XDmB66FSarc gateway_address=ws://silentrelay6.testnet25.capetown:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://silentrelay6.testnet25.capetown:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://31.220.15.225:9000/
+2026-09-01T22:17:49.548857Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:17:49.933529Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:17:56.181164Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:18:12.910702Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:18:13.380284Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+ 129  bdef  LOST-BACK   40007 ms  NO-ACK
+2026-09-01T22:18:33.217264Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:18:34.915979Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:18:36.549160Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:18:38.288650Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+ 130  b1    LOST-BACK   40002 ms  NO-ACK
+2026-09-01T22:19:15.555699Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:19:21.096528Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:19:31.398416Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 275412386)
+2026-09-01T22:19:39.724757Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 1 (set id: 1207060618)
+2026-09-01T22:19:39.930524Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1286492392)
+2026-09-01T22:19:40.140163Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 3 (set id: 1286492392)
+2026-09-01T22:19:54.923937Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 131  b10   LOST-BACK   40000 ms  NO-ACK
+2026-09-01T22:19:56.454640Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:19:56.454698Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-6.openstake.net:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://23.132.28.175:9000/
+2026-09-01T22:19:58.644669Z  WARN perform_initial_authentication{gateway=Aef3pQQrpQNqeA2s2S7VieeYjF3v5PKR5j7ZErJXnCVd gateway_address=ws://nym-exit-6.openstake.net:9000/}: nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-01T22:19:58.644717Z  WARN perform_initial_authentication{gateway=Aef3pQQrpQNqeA2s2S7VieeYjF3v5PKR5j7ZErJXnCVd gateway_address=ws://nym-exit-6.openstake.net:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-6.openstake.net:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://23.132.28.175:9000/
+2026-09-01T22:19:59.447297Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:20:09.757344Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 5 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:20:22.852796Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:20:27.180535Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 132  bdef  LOST-BACK   40003 ms  NO-ACK
+2026-09-01T22:20:45.226668Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:20:48.332851Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:20:48.391110Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 1 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:20:49.415842Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+2026-09-01T22:20:57.328694Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:21:10.600028Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 3 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 133  b1    LOST-BACK   40003 ms  NO-ACK
+2026-09-01T22:21:31.962563Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T22:21:37.066093Z  WARN nym_client_core::client::received_buffer: The reconstructed message receiver went offline without explicit notification (relevant error: - send failed because receiver is gone)
+2026-09-01T22:22:02.016264Z  WARN nym_client_core::client::replies::reply_controller::receiver_controller: failed to request more surbs to clear pending queue of size 2 (attempted to request: 10): not enough reply SURBs to send the message, available: 0 required: 1.
+ 134  b10   LOST-BACK   40001 ms  NO-ACK
+2026-09-01T22:22:17.023239Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while

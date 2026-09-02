@@ -184,6 +184,31 @@ verbatim. The two abandoned attempts at this experiment are not here: one ended 
 of disk and the other when Docker was pruned underneath it, and neither produced a number worth
 keeping.
 
+## The establishment handshake
+
+Three files sit behind
+[`../2026-09-01-establishment-handshake.md`](../2026-09-01-establishment-handshake.md), all of them
+stdout from the `repro` binary in `contrib/nym/` built against `nym-sdk` at commit `f5e46b7d`.
+
+| file | what it is |
+|---|---|
+| `2026-09-01-establishment-500-trials.txt` | run 1, one reused dialler: the ten dead-peer dials, 500 trial lines with their acknowledgement times, and the summary |
+| `2026-09-01-fresh-client-run-a.txt` | run 2a, a dialler per trial, **truncated at trial 134** and with no summary |
+| `2026-09-01-fresh-client-run-b.txt` | run 2b, the same again, through the collapse to the topology failure that ended it at trial 142 |
+
+Run 1 is kept whole, 618 lines, because at that size filtering hides more than it saves. The two
+fresh-client runs are filtered to trial lines, the tool's own output, and every `WARN` and `ERROR`,
+which drops about 2,000 lines of client startup per file: each of those runs registers a new client
+every trial and each registration announces itself in twenty-odd `INFO` lines.
+
+Run 2a is short two ways, and both are the same accident. The process reading the container's output
+was killed, and the container was set to delete itself on exit, so the last trials and the summary
+are gone with it. Everything missing is past trial 107, which the report discards anyway.
+
+The 150 repetitions of the `packet_router` panic at the foot of run 2b are the cancellation manager
+reporting the same event once per task. Nothing is redacted in any of the three: the rig's clients
+are ephemeral and die with their containers.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):

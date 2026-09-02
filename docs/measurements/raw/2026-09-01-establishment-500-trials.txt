@@ -1,0 +1,618 @@
+# started 2026-09-01T18:37:34Z
+# nym-sdk rev f5e46b7d8287869221cd6632c63444d4b32da59c (max/lwd-stream-patch)
+# args: --trials 500 --budgets default,10 --wait-established --dead-peer-trials 10 --timeout-secs 40
+2026-09-01T18:37:35.228655Z  INFO nym_http_api_client: Initializing shared HTTP client
+2026-09-01T18:37:35.241722Z  INFO nym_http_api_client::dns: building new configured resolver
+2026-09-01T18:37:36.921352Z  INFO nym_client_core::init::helpers: nym api reports 618 gateways
+2026-09-01T18:37:36.921895Z  INFO nym_client_core::init::helpers: Found 610 valid gateways after filtering
+2026-09-01T18:37:39.324536Z  INFO nym_client_core::client::base_client: Starting nym client
+2026-09-01T18:37:39.324806Z  INFO nym_client_core::client::base_client: Building nym-api client from provided URLs (with domain fronting support): 3 URLs
+2026-09-01T18:37:39.576284Z  INFO nym_client_core::client::base_client: Starting statistics control...
+2026-09-01T18:37:39.576924Z  INFO nym_client_core::client::base_client: Obtaining initial network topology
+2026-09-01T18:37:39.577354Z  INFO nym_bandwidth_controller::controller: BandwidthController started successfully
+2026-09-01T18:37:39.577793Z  INFO nym_bandwidth_controller::controller: Ticketbooks stored: 0
+2026-09-01T18:37:40.822067Z  INFO nym_client_core::client::base_client: Starting topology refresher...
+2026-09-01T18:37:42.386223Z  INFO perform_initial_authentication{gateway=7B5tMBbndS1cgb9NQh8wijEfqUk7512adoGJCLFMx4pf gateway_address=ws://139.99.88.215:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-09-01T18:37:42.386341Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-09-01T18:37:42.386374Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T18:37:42.386381Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-09-01T18:37:42.772027Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-09-01T18:37:42.772467Z  INFO nym_client_core::client::base_client: Starting received messages buffer controller...
+2026-09-01T18:37:42.772599Z  INFO nym_client_core::client::base_client: Starting mix traffic controller...
+2026-09-01T18:37:42.772617Z  INFO nym_client_core::client::base_client: Starting real traffic stream...
+2026-09-01T18:37:42.772734Z  INFO nym_client_core::client::base_client: Starting loop cover traffic stream...
+2026-09-01T18:37:43.514721Z  INFO nym_client_core::init::helpers: nym api reports 618 gateways
+2026-09-01T18:37:43.515293Z  INFO nym_client_core::init::helpers: Found 610 valid gateways after filtering
+2026-09-01T18:37:45.203959Z  INFO nym_client_core::client::base_client: Starting nym client
+2026-09-01T18:37:45.204125Z  INFO nym_client_core::client::base_client: Building nym-api client from provided URLs (with domain fronting support): 3 URLs
+2026-09-01T18:37:45.446914Z  INFO nym_client_core::client::base_client: Starting statistics control...
+2026-09-01T18:37:45.447205Z  INFO nym_client_core::client::base_client: Obtaining initial network topology
+2026-09-01T18:37:45.447224Z  INFO nym_bandwidth_controller::controller: BandwidthController started successfully
+2026-09-01T18:37:45.449533Z  INFO nym_bandwidth_controller::controller: Ticketbooks stored: 0
+2026-09-01T18:37:46.200793Z  INFO nym_client_core::client::base_client: Starting topology refresher...
+2026-09-01T18:37:47.213111Z  INFO perform_initial_authentication{gateway=Atcji22Wnfwi6nEkGC5BmgbqNPLYdhx5r4NxTqXAzFeq gateway_address=ws://nym-exit-patacon3.bwnym.xyz:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-09-01T18:37:47.213145Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-09-01T18:37:47.213155Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T18:37:47.213160Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-09-01T18:37:47.461609Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-09-01T18:37:47.461710Z  INFO nym_client_core::client::base_client: Starting received messages buffer controller...
+2026-09-01T18:37:47.461721Z  INFO nym_client_core::client::base_client: Starting mix traffic controller...
+2026-09-01T18:37:47.461729Z  INFO nym_client_core::client::base_client: Starting real traffic stream...
+2026-09-01T18:37:47.461766Z  INFO nym_client_core::client::base_client: Starting loop cover traffic stream...
+echo   8885hReZi7cAbGp9oqm356WBWCDoCun8GrWaZCCc8RXi.DB6MkmH9kJdmk2tYZVxWYQRFboDpbfgF86NKkTwieVPs@7B5tMBbndS1cgb9NQh8wijEfqUk7512adoGJCLFMx4pf
+dial   AP9yRa6YjZgfrtVPwPJuUYq7tFBpsdf18b51TgACMEBU.5o5KPu4APMsrqYRcH38CkBwxPsHnyNHaSoXWa2tgXQgy@Atcji22Wnfwi6nEkGC5BmgbqNPLYdhx5r4NxTqXAzFeq
+trials 500 | budgets ["default", "10"] interleaved | timeout 40s
+establishment ack awaited before each write | ack timeout 15s
+
+2026-09-01T18:37:48.206860Z  INFO nym_client_core::init::helpers: nym api reports 618 gateways
+2026-09-01T18:37:48.207146Z  INFO nym_client_core::init::helpers: Found 610 valid gateways after filtering
+2026-09-01T18:37:50.533766Z  INFO nym_client_core::client::base_client: Starting nym client
+2026-09-01T18:37:50.533819Z  INFO nym_client_core::client::base_client: Building nym-api client from provided URLs (with domain fronting support): 3 URLs
+2026-09-01T18:37:50.782608Z  INFO nym_client_core::client::base_client: Starting statistics control...
+2026-09-01T18:37:50.782717Z  INFO nym_client_core::client::base_client: Obtaining initial network topology
+2026-09-01T18:37:50.782754Z  INFO nym_bandwidth_controller::controller: BandwidthController started successfully
+2026-09-01T18:37:50.784345Z  INFO nym_bandwidth_controller::controller: Ticketbooks stored: 0
+2026-09-01T18:37:51.511311Z  INFO nym_client_core::client::base_client: Starting topology refresher...
+2026-09-01T18:37:52.771614Z  INFO perform_initial_authentication{gateway=2pZKwobCZZ2Cf4q2n4K5TTLCK8kPq1eLrJhwnS4Ru7jR gateway_address=ws://silentrelay17.testnet25.capetown:9000/}: nym_gateway_client::bandwidth: remaining bandwidth: 0.00 B. in 'upgrade mode': false
+2026-09-01T18:37:52.771647Z  INFO nym_gateway_client::client: Claiming more bandwidth with existing credentials. Stop the process now if you don't want that to happen.
+2026-09-01T18:37:52.771650Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-01T18:37:52.771652Z  INFO nym_gateway_client::client: The client is running in disabled credentials mode - attempting to claim bandwidth without a credential
+2026-09-01T18:37:53.097506Z  INFO nym_gateway_client::client: managed to claim testnet bandwidth
+2026-09-01T18:37:53.097610Z  INFO nym_client_core::client::base_client: Starting received messages buffer controller...
+2026-09-01T18:37:53.097625Z  INFO nym_client_core::client::base_client: Starting mix traffic controller...
+2026-09-01T18:37:53.097633Z  INFO nym_client_core::client::base_client: Starting real traffic stream...
+2026-09-01T18:37:53.097681Z  INFO nym_client_core::client::base_client: Starting loop cover traffic stream...
+2026-09-01T18:37:53.097958Z  INFO nym_client_core_surb_storage: PersistentReplyStorage is flushing all reply-related data to underlying storage
+2026-09-01T18:37:53.098045Z  INFO nym_client_core_surb_storage: Data flush is complete
+2026-09-01T18:37:53.098057Z  INFO nym_task::cancellation::manager: sending cancellation after receiving shutdown signal
+--- dead peer arm ---
+dead   4cZbsCJamMx5YQc6yjAQ7bsqCxWebYEBWW1imy6RAd2X.Dcx49725s6PQYxip58hNcJhAZAzHatxeLc2bNaHTm5S2@2pZKwobCZZ2Cf4q2n4K5TTLCK8kPq1eLrJhwnS4Ru7jR  (registered, then disconnected)
+2026-09-01T18:37:53.099105Z  INFO nym_client_core::client::real_messages_control::message_handler: using LzcdLgu2QfQVRQbJxQJVbc for all anonymous messages sent to 4cZbsCJamMx5YQc6yjAQ7bsqCxWebYEBWW1imy6RAd2X.Dcx49725s6PQYxip58hNcJhAZAzHatxeLc2bNaHTm5S2@2pZKwobCZZ2Cf4q2n4K5TTLCK8kPq1eLrJhwnS4Ru7jR
+   1  dead  no ack       15002 ms  no establishment acknowledgement within timeout (peer state unknown)
+   2  dead  no ack       15000 ms  no establishment acknowledgement within timeout (peer state unknown)
+   3  dead  no ack       15002 ms  no establishment acknowledgement within timeout (peer state unknown)
+   4  dead  no ack       15003 ms  no establishment acknowledgement within timeout (peer state unknown)
+   5  dead  no ack       15001 ms  no establishment acknowledgement within timeout (peer state unknown)
+   6  dead  no ack       15002 ms  no establishment acknowledgement within timeout (peer state unknown)
+   7  dead  no ack       15003 ms  no establishment acknowledgement within timeout (peer state unknown)
+   8  dead  no ack       15004 ms  no establishment acknowledgement within timeout (peer state unknown)
+   9  dead  no ack       15001 ms  no establishment acknowledgement within timeout (peer state unknown)
+  10  dead  no ack       15001 ms  no establishment acknowledgement within timeout (peer state unknown)
+dead peer: 10 dials | opens refused 0 | acknowledged 0
+
+2026-09-01T18:40:23.120130Z  INFO nym_client_core::client::real_messages_control::message_handler: using PGgY5ZaXm3yKyUGqEzLJPQ for all anonymous messages sent to 8885hReZi7cAbGp9oqm356WBWCDoCun8GrWaZCCc8RXi.DB6MkmH9kJdmk2tYZVxWYQRFboDpbfgF86NKkTwieVPs@7B5tMBbndS1cgb9NQh8wijEfqUk7512adoGJCLFMx4pf
+   1  bdef  ok           4109 ms  ack  2968 ms
+   2  b10   ok           2933 ms  ack  1470 ms
+   3  bdef  ok           3996 ms  ack  2143 ms
+   4  b10   ok           3182 ms  ack  1510 ms
+2026-09-01T18:40:37.461412Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 4, avg delay: 20ms (1)
+   5  bdef  ok           2933 ms  ack  1653 ms
+   6  b10   ok           2920 ms  ack  1457 ms
+   7  bdef  ok           2793 ms  ack  1487 ms
+   8  b10   ok           2998 ms  ack  1575 ms
+   9  bdef  ok           2902 ms  ack  1614 ms
+  10  b10   ok           2684 ms  ack  1240 ms
+  11  bdef  ok           4018 ms  ack  2661 ms
+  12  b10   ok           3069 ms  ack  1642 ms
+  13  bdef  ok           3251 ms  ack  1459 ms
+  14  b10   ok           3359 ms  ack  1787 ms
+  15  bdef  ok           3000 ms  ack  1574 ms
+  16  b10   ok           3044 ms  ack  1463 ms
+  17  bdef  ok           3226 ms  ack  1779 ms
+  18  b10   ok           2981 ms  ack  1491 ms
+  19  bdef  ok           2924 ms  ack  1482 ms
+  20  b10   ok           2852 ms  ack  1414 ms
+  21  bdef  ok           3116 ms  ack  1651 ms
+  22  b10   ok           4178 ms  ack  1824 ms
+  23  bdef  ok           5150 ms  ack  2856 ms
+  24  b10   ok           3130 ms  ack  2006 ms
+  25  bdef  ok           2989 ms  ack  1587 ms
+  26  b10   ok           2801 ms  ack  1323 ms
+  27  bdef  ok           2587 ms  ack  1437 ms
+  28  b10   ok           2721 ms  ack  1328 ms
+  29  bdef  ok           2864 ms  ack  1587 ms
+  30  b10   ok           3705 ms  ack  1412 ms
+  31  bdef  ok           4191 ms  ack  2589 ms
+  32  b10   ok           5974 ms  ack  2972 ms
+  33  bdef  ok           3313 ms  ack  1666 ms
+  34  b10   ok           2850 ms  ack  1276 ms
+  35  bdef  ok           2959 ms  ack  1570 ms
+  36  b10   ok           3484 ms  ack  1595 ms
+2026-09-01T18:42:22.457393Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 1, avg delay: 20ms (1)
+  37  bdef  ok           2601 ms  ack  1319 ms
+  38  b10   ok           4853 ms  ack  1806 ms
+  39  bdef  ok           3149 ms  ack  1585 ms
+  40  b10   ok           3349 ms  ack  1508 ms
+  41  bdef  ok           3026 ms  ack  1476 ms
+  42  b10   ok           3426 ms  ack  1670 ms
+  43  bdef  ok           3273 ms  ack  1818 ms
+  44  b10   ok           2783 ms  ack  1323 ms
+  45  bdef  ok           2856 ms  ack  1454 ms
+  46  b10   ok           2960 ms  ack  1544 ms
+  47  bdef  ok           2754 ms  ack  1555 ms
+  48  b10   ok           2944 ms  ack  1449 ms
+  49  bdef  ok           2838 ms  ack  1614 ms
+  50  b10   ok           3180 ms  ack  1646 ms
+  51  bdef  ok           2675 ms  ack  1675 ms
+  52  b10   ok           3274 ms  ack  1442 ms
+  53  bdef  ok           2753 ms  ack  1509 ms
+  54  b10   ok           3214 ms  ack  1554 ms
+  55  bdef  ok           3264 ms  ack  1336 ms
+  56  b10   ok           3096 ms  ack  1732 ms
+  57  bdef  ok           3057 ms  ack  1396 ms
+  58  b10   ok           2892 ms  ack  1173 ms
+  59  bdef  ok           3135 ms  ack  1543 ms
+  60  b10   ok           2851 ms  ack  1395 ms
+  61  bdef  ok           3083 ms  ack  1706 ms
+  62  b10   ok           2435 ms  ack  1348 ms
+  63  bdef  ok           2801 ms  ack  1564 ms
+  64  b10   ok           2770 ms  ack  1233 ms
+  65  bdef  ok           3003 ms  ack  1558 ms
+2026-09-01T18:43:52.457430Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 2, avg delay: 20ms (1)
+  66  b10   ok           3143 ms  ack  1734 ms
+  67  bdef  ok           2731 ms  ack  1551 ms
+  68  b10   ok           2671 ms  ack  1507 ms
+  69  bdef  ok           2709 ms  ack  1343 ms
+  70  b10   ok           3787 ms  ack  1881 ms
+  71  bdef  ok           2871 ms  ack  1472 ms
+  72  b10   ok           2449 ms  ack  1216 ms
+  73  bdef  ok           2852 ms  ack  1386 ms
+  74  b10   ok           3140 ms  ack  1586 ms
+  75  bdef  ok           2766 ms  ack  1514 ms
+  76  b10   ok           3008 ms  ack  1344 ms
+  77  bdef  ok           3052 ms  ack  1866 ms
+  78  b10   ok           3235 ms  ack  1364 ms
+  79  bdef  ok           2883 ms  ack  1601 ms
+  80  b10   ok           2690 ms  ack  1216 ms
+  81  bdef  ok           2871 ms  ack  1638 ms
+  82  b10   ok           2935 ms  ack  1371 ms
+  83  bdef  ok           2862 ms  ack  1492 ms
+  84  b10   ok           3102 ms  ack  1598 ms
+  85  bdef  ok           2860 ms  ack  1572 ms
+  86  b10   ok           3954 ms  ack  1959 ms
+  87  bdef  ok           3036 ms  ack  1865 ms
+  88  b10   ok           3053 ms  ack  1547 ms
+  89  bdef  ok           3830 ms  ack  1561 ms
+  90  b10   ok           3409 ms  ack  1582 ms
+  91  bdef  ok           2417 ms  ack  1374 ms
+  92  b10   ok           3650 ms  ack  1377 ms
+  93  bdef  ok           3164 ms  ack  1835 ms
+  94  b10   ok           3581 ms  ack  2053 ms
+  95  bdef  ok           3227 ms  ack  1665 ms
+  96  b10   ok           2879 ms  ack  1262 ms
+  97  bdef  ok           3191 ms  ack  1576 ms
+  98  b10   ok           3027 ms  ack  1506 ms
+  99  bdef  ok           2724 ms  ack  1555 ms
+ 100  b10   ok           2733 ms  ack  1302 ms
+ 101  bdef  ok           2901 ms  ack  1483 ms
+ 102  b10   ok           3487 ms  ack  1837 ms
+ 103  bdef  ok           3172 ms  ack  1658 ms
+ 104  b10   ok           2641 ms  ack  1392 ms
+ 105  bdef  ok           3068 ms  ack  1678 ms
+2026-09-01T18:45:52.451925Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 2, avg delay: 20ms (1)
+ 106  b10   ok           3704 ms  ack  1995 ms
+ 107  bdef  ok           2740 ms  ack  1445 ms
+ 108  b10   ok           4193 ms  ack  1584 ms
+ 109  bdef  ok           2741 ms  ack  1587 ms
+ 110  b10   ok           3301 ms  ack  1440 ms
+ 111  bdef  ok           2970 ms  ack  1558 ms
+ 112  b10   ok           3125 ms  ack  1527 ms
+ 113  bdef  ok           3115 ms  ack  1523 ms
+ 114  b10   ok           3651 ms  ack  2304 ms
+ 115  bdef  ok           2717 ms  ack  1472 ms
+ 116  b10   ok           3277 ms  ack  1481 ms
+ 117  bdef  ok           3081 ms  ack  1693 ms
+ 118  b10   ok           2949 ms  ack  1407 ms
+ 119  bdef  ok           2881 ms  ack  1551 ms
+ 120  b10   ok           2670 ms  ack  1436 ms
+ 121  bdef  ok           2764 ms  ack  1688 ms
+ 122  b10   ok           3004 ms  ack  1487 ms
+ 123  bdef  ok           2553 ms  ack  1433 ms
+ 124  b10   ok           2949 ms  ack  1436 ms
+ 125  bdef  ok           3003 ms  ack  1759 ms
+ 126  b10   ok           2818 ms  ack  1320 ms
+ 127  bdef  ok           2702 ms  ack  1399 ms
+ 128  b10   ok           3032 ms  ack  1292 ms
+2026-09-01T18:47:02.560416Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 1, avg delay: 20ms (1)
+ 129  bdef  ok           2744 ms  ack  1457 ms
+ 130  b10   ok           2776 ms  ack  1393 ms
+ 131  bdef  ok           3246 ms  ack  1602 ms
+ 132  b10   ok           2908 ms  ack  1550 ms
+ 133  bdef  ok           2764 ms  ack  1626 ms
+ 134  b10   ok           3093 ms  ack  1197 ms
+ 135  bdef  ok           3014 ms  ack  1789 ms
+ 136  b10   ok           3000 ms  ack  1551 ms
+ 137  bdef  ok           2877 ms  ack  1527 ms
+ 138  b10   ok           2920 ms  ack  1390 ms
+ 139  bdef  ok           3031 ms  ack  1460 ms
+ 140  b10   ok           2863 ms  ack  1501 ms
+ 141  bdef  ok           2863 ms  ack  1516 ms
+ 142  b10   ok           3491 ms  ack  1675 ms
+ 143  bdef  ok           2925 ms  ack  1571 ms
+ 144  b10   ok           3027 ms  ack  1665 ms
+ 145  bdef  ok           2985 ms  ack  1719 ms
+ 146  b10   ok           3021 ms  ack  1479 ms
+ 147  bdef  ok           2802 ms  ack  1612 ms
+ 148  b10   ok           3014 ms  ack  1545 ms
+ 149  bdef  ok           5777 ms  ack  2081 ms
+ 150  b10   ok           3069 ms  ack  1425 ms
+ 151  bdef  ok           2979 ms  ack  1464 ms
+ 152  b10   ok           3132 ms  ack  1728 ms
+ 153  bdef  ok           2807 ms  ack  1719 ms
+ 154  b10   ok           2926 ms  ack  1355 ms
+ 155  bdef  ok           2911 ms  ack  1601 ms
+ 156  b10   ok           3061 ms  ack  1653 ms
+ 157  bdef  ok           2790 ms  ack  1588 ms
+ 158  b10   ok           2959 ms  ack  1453 ms
+ 159  bdef  ok           3961 ms  ack  2805 ms
+ 160  b10   ok           2940 ms  ack  1329 ms
+ 161  bdef  ok           3175 ms  ack  1746 ms
+ 162  b10   ok           3091 ms  ack  1607 ms
+ 163  bdef  ok           2631 ms  ack  1424 ms
+ 164  b10   ok           2602 ms  ack  1291 ms
+ 165  bdef  ok           3004 ms  ack  1681 ms
+ 166  b10   ok           2996 ms  ack  1380 ms
+ 167  bdef  ok           3095 ms  ack  1895 ms
+ 168  b10   ok           2713 ms  ack  1276 ms
+ 169  bdef  ok           2872 ms  ack  1415 ms
+ 170  b10   ok           2888 ms  ack  1500 ms
+ 171  bdef  ok           2707 ms  ack  1294 ms
+ 172  b10   ok           3432 ms  ack  1579 ms
+ 173  bdef  ok           5142 ms  ack  2394 ms
+ 174  b10   ok           3899 ms  ack  2164 ms
+ 175  bdef  ok           3000 ms  ack  1583 ms
+ 176  b10   ok           3122 ms  ack  1620 ms
+ 177  bdef  ok           3366 ms  ack  2026 ms
+ 178  b10   ok           2737 ms  ack  1591 ms
+ 179  bdef  ok           2868 ms  ack  1421 ms
+ 180  b10   ok           3270 ms  ack  1643 ms
+ 181  bdef  ok           3090 ms  ack  1752 ms
+ 182  b10   ok           3330 ms  ack  1420 ms
+ 183  bdef  ok           2781 ms  ack  1577 ms
+ 184  b10   ok           3259 ms  ack  1749 ms
+ 185  bdef  ok           2730 ms  ack  1542 ms
+ 186  b10   ok           3374 ms  ack  1903 ms
+ 187  bdef  ok           3787 ms  ack  1808 ms
+ 188  b10   ok           3742 ms  ack  2012 ms
+ 189  bdef  ok           2741 ms  ack  1488 ms
+ 190  b10   ok           2855 ms  ack  1434 ms
+ 191  bdef  ok           2996 ms  ack  1431 ms
+ 192  b10   ok           3254 ms  ack  1574 ms
+ 193  bdef  ok           4700 ms  ack  3073 ms
+ 194  b10   ok           3338 ms  ack  1656 ms
+ 195  bdef  ok           2943 ms  ack  1657 ms
+ 196  b10   ok           3042 ms  ack  1722 ms
+ 197  bdef  ok           3250 ms  ack  2037 ms
+ 198  b10   ok           3022 ms  ack  1402 ms
+ 199  bdef  ok           3357 ms  ack  1757 ms
+ 200  b10   ok           3218 ms  ack  1780 ms
+ 201  bdef  ok           3250 ms  ack  1847 ms
+ 202  b10   ok           2703 ms  ack  1431 ms
+ 203  bdef  ok           2988 ms  ack  1658 ms
+ 204  b10   ok           3949 ms  ack  1185 ms
+ 205  bdef  ok           2870 ms  ack  1683 ms
+ 206  b10   ok           3116 ms  ack  1314 ms
+2026-09-01T18:51:07.561426Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 5, avg delay: 20ms (1)
+ 207  bdef  ok           3981 ms  ack  2744 ms
+ 208  b10   ok           3010 ms  ack  1684 ms
+ 209  bdef  ok           2697 ms  ack  1475 ms
+ 210  b10   ok           3185 ms  ack  1676 ms
+ 211  bdef  ok           2950 ms  ack  1444 ms
+ 212  b10   ok           3144 ms  ack  1469 ms
+ 213  bdef  ok           3342 ms  ack  1904 ms
+ 214  b10   ok           3121 ms  ack  1575 ms
+ 215  bdef  ok           2698 ms  ack  1457 ms
+ 216  b10   ok           3176 ms  ack  1534 ms
+ 217  bdef  ok           2945 ms  ack  1481 ms
+ 218  b10   ok           3468 ms  ack  1729 ms
+ 219  bdef  ok           2639 ms  ack  1627 ms
+ 220  b10   ok           3002 ms  ack  1542 ms
+ 221  bdef  ok           2773 ms  ack  1670 ms
+ 222  b10   ok           3175 ms  ack  1761 ms
+ 223  bdef  ok           3009 ms  ack  1596 ms
+ 224  b10   ok           3206 ms  ack  1749 ms
+ 225  bdef  ok           3231 ms  ack  1610 ms
+ 226  b10   ok           2909 ms  ack  1052 ms
+ 227  bdef  ok           2837 ms  ack  1437 ms
+ 228  b10   ok           2938 ms  ack  1539 ms
+ 229  bdef  ok           2947 ms  ack  1457 ms
+ 230  b10   ok           3133 ms  ack  1519 ms
+ 231  bdef  ok           3290 ms  ack  1843 ms
+ 232  b10   ok           2667 ms  ack  1389 ms
+ 233  bdef  ok           2702 ms  ack  1446 ms
+ 234  b10   ok           2591 ms  ack  1340 ms
+ 235  bdef  ok           2922 ms  ack  1638 ms
+ 236  b10   ok           3206 ms  ack  1553 ms
+ 237  bdef  ok           3277 ms  ack  1551 ms
+ 238  b10   ok           3138 ms  ack  1541 ms
+ 239  bdef  ok           2738 ms  ack  1429 ms
+ 240  b10   ok           3678 ms  ack  1488 ms
+ 241  bdef  ok           3705 ms  ack  1671 ms
+ 242  b10   ok           3521 ms  ack  2273 ms
+ 243  bdef  ok           3097 ms  ack  1261 ms
+ 244  b10   ok           3368 ms  ack  1668 ms
+ 245  bdef  ok           3308 ms  ack  1879 ms
+ 246  b10   ok           2601 ms  ack  1281 ms
+ 247  bdef  ok           2912 ms  ack  1653 ms
+ 248  b10   ok           2632 ms  ack  1248 ms
+ 249  bdef  ok           2633 ms  ack  1560 ms
+ 250  b10   ok           3361 ms  ack  1801 ms
+ 251  bdef  ok           2704 ms  ack  1508 ms
+ 252  b10   ok           3215 ms  ack  1507 ms
+ 253  bdef  ok           3064 ms  ack  1956 ms
+ 254  b10   ok           2947 ms  ack  1267 ms
+ 255  bdef  ok           2887 ms  ack  1519 ms
+ 256  b10   ok           2855 ms  ack  1236 ms
+ 257  bdef  ok           2445 ms  ack  1318 ms
+2026-09-01T18:53:42.558626Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 2, avg delay: 20ms (1)
+ 258  b10   ok           2974 ms  ack  1547 ms
+ 259  bdef  ok           3001 ms  ack  1553 ms
+ 260  b10   ok           3077 ms  ack  1376 ms
+ 261  bdef  ok           2875 ms  ack  1435 ms
+ 262  b10   ok           2724 ms  ack  1397 ms
+ 263  bdef  ok           3153 ms  ack  1449 ms
+ 264  b10   ok           3076 ms  ack  1566 ms
+ 265  bdef  ok           4730 ms  ack  2625 ms
+ 266  b10   ok           3652 ms  ack  1925 ms
+ 267  bdef  ok           2787 ms  ack  1669 ms
+ 268  b10   ok           2607 ms  ack  1207 ms
+ 269  bdef  ok           2682 ms  ack  1507 ms
+ 270  b10   ok           3203 ms  ack  1408 ms
+ 271  bdef  ok           3520 ms  ack  2323 ms
+ 272  b10   ok           2744 ms  ack  1346 ms
+ 273  bdef  ok           3047 ms  ack  1601 ms
+ 274  b10   ok           4141 ms  ack  2245 ms
+ 275  bdef  ok           2969 ms  ack  1406 ms
+ 276  b10   ok           2956 ms  ack  1489 ms
+ 277  bdef  ok           2972 ms  ack  1617 ms
+ 278  b10   ok           3041 ms  ack  1574 ms
+ 279  bdef  ok           3004 ms  ack  1455 ms
+ 280  b10   ok           2843 ms  ack  1439 ms
+ 281  bdef  ok           2911 ms  ack  1376 ms
+ 282  b10   ok           2667 ms  ack  1305 ms
+ 283  bdef  ok           3295 ms  ack  1515 ms
+ 284  b10   ok           4968 ms  ack  2122 ms
+ 285  bdef  ok           4111 ms  ack  2083 ms
+ 286  b10   ok           3561 ms  ack  1741 ms
+ 287  bdef  ok           2977 ms  ack  1744 ms
+ 288  b10   ok           2890 ms  ack  1545 ms
+ 289  bdef  ok           3093 ms  ack  1702 ms
+ 290  b10   ok           2701 ms  ack  1276 ms
+2026-09-01T18:55:27.561471Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 3, avg delay: 20ms (1)
+ 291  bdef  ok           2683 ms  ack  1363 ms
+ 292  b10   ok           3073 ms  ack  1625 ms
+ 293  bdef  ok           2659 ms  ack  1556 ms
+ 294  b10   ok           3124 ms  ack  1759 ms
+ 295  bdef  ok           2968 ms  ack  1813 ms
+ 296  b10   ok           2646 ms  ack  1296 ms
+ 297  bdef  ok           2878 ms  ack  1600 ms
+2026-09-01T18:55:47.563172Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 2, avg delay: 20ms (1)
+ 298  b10   ok           2849 ms  ack  1586 ms
+ 299  bdef  ok           2818 ms  ack  1657 ms
+ 300  b10   ok           2559 ms  ack  1154 ms
+ 301  bdef  ok           2787 ms  ack  1458 ms
+ 302  b10   ok           2757 ms  ack  1476 ms
+ 303  bdef  ok           3760 ms  ack  2453 ms
+ 304  b10   ok           2710 ms  ack  1268 ms
+ 305  bdef  ok           3240 ms  ack  1723 ms
+ 306  b10   ok           3170 ms  ack  1450 ms
+ 307  bdef  ok           2904 ms  ack  1514 ms
+ 308  b10   ok           2948 ms  ack  1673 ms
+ 309  bdef  ok           2828 ms  ack  1611 ms
+ 310  b10   ok           2704 ms  ack  1253 ms
+ 311  bdef  ok           2678 ms  ack  1550 ms
+ 312  b10   ok           3275 ms  ack  1612 ms
+ 313  bdef  ok           2899 ms  ack  1547 ms
+ 314  b10   ok           2894 ms  ack  1278 ms
+ 315  bdef  ok           2615 ms  ack  1487 ms
+ 316  b10   ok           3077 ms  ack  1587 ms
+ 317  bdef  ok           3216 ms  ack  1557 ms
+ 318  b10   ok           2652 ms  ack  1317 ms
+ 319  bdef  ok           2542 ms  ack  1403 ms
+ 320  b10   ok           2879 ms  ack  1378 ms
+ 321  bdef  ok           2934 ms  ack  1553 ms
+ 322  b10   ok           3229 ms  ack  1660 ms
+ 323  bdef  ok           2893 ms  ack  1647 ms
+ 324  b10   ok           4664 ms  ack  1644 ms
+ 325  bdef  ok           2923 ms  ack  1504 ms
+ 326  b10   ok           3130 ms  ack  1797 ms
+ 327  bdef  ok           5909 ms  ack  4530 ms
+ 328  b10   ok           3113 ms  ack  1471 ms
+ 329  bdef  ok           3056 ms  ack  1599 ms
+ 330  b10   ok           2972 ms  ack  1524 ms
+ 331  bdef  ok           4563 ms  ack  1710 ms
+ 332  b10   ok           2709 ms  ack  1327 ms
+ 333  bdef  ok           2909 ms  ack  1602 ms
+ 334  b10   ok           6221 ms  ack  4792 ms
+ 335  bdef  ok           3181 ms  ack  1839 ms
+ 336  b10   ok           2652 ms  ack  1226 ms
+ 337  bdef  ok           2877 ms  ack  1543 ms
+ 338  b10   ok           2942 ms  ack  1514 ms
+ 339  bdef  ok           2665 ms  ack  1607 ms
+ 340  b10   ok           3540 ms  ack  1284 ms
+ 341  bdef  ok           2650 ms  ack  1441 ms
+ 342  b10   ok           2912 ms  ack  1214 ms
+ 343  bdef  ok           3275 ms  ack  1754 ms
+ 344  b10   ok           2949 ms  ack  1528 ms
+ 345  bdef  ok           3019 ms  ack  1618 ms
+ 346  b10   ok           2794 ms  ack  1226 ms
+ 347  bdef  ok           3175 ms  ack  1744 ms
+ 348  b10   ok           2710 ms  ack  1157 ms
+ 349  bdef  ok           2830 ms  ack  1744 ms
+ 350  b10   ok           2913 ms  ack  1483 ms
+ 351  bdef  ok           2775 ms  ack  1467 ms
+ 352  b10   ok           3169 ms  ack  1618 ms
+ 353  bdef  ok           3239 ms  ack  1852 ms
+ 354  b10   ok           2990 ms  ack  1561 ms
+ 355  bdef  ok           3233 ms  ack  1622 ms
+ 356  b10   ok           2602 ms  ack  1444 ms
+ 357  bdef  ok           2874 ms  ack  1566 ms
+ 358  b10   ok           3149 ms  ack  1368 ms
+ 359  bdef  ok           2922 ms  ack  1569 ms
+ 360  b10   ok           2815 ms  ack  1344 ms
+ 361  bdef  ok           2726 ms  ack  1460 ms
+ 362  b10   ok           2643 ms  ack  1448 ms
+ 363  bdef  ok           2953 ms  ack  1520 ms
+ 364  b10   ok           2708 ms  ack  1294 ms
+ 365  bdef  ok           2947 ms  ack  1674 ms
+ 366  b10   ok           2857 ms  ack  1553 ms
+ 367  bdef  ok           3172 ms  ack  1548 ms
+ 368  b10   ok           3308 ms  ack  1741 ms
+ 369  bdef  ok           3023 ms  ack  1585 ms
+ 370  b10   ok           3352 ms  ack  1559 ms
+ 371  bdef  ok           2705 ms  ack  1390 ms
+ 372  b10   ok           2745 ms  ack  1513 ms
+2026-09-01T18:59:37.564704Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 4, avg delay: 20ms (1)
+ 373  bdef  ok           2730 ms  ack  1501 ms
+ 374  b10   ok           3349 ms  ack  1479 ms
+ 375  bdef  ok           4239 ms  ack  1932 ms
+ 376  b10   ok           2773 ms  ack  1350 ms
+ 377  bdef  ok           2809 ms  ack  1503 ms
+ 378  b10   ok           2808 ms  ack  1430 ms
+ 379  bdef  ok           3610 ms  ack  2364 ms
+ 380  b10   ok           3283 ms  ack  1332 ms
+ 381  bdef  ok           3150 ms  ack  1831 ms
+ 382  b10   ok           2512 ms  ack  1304 ms
+2026-09-01T19:00:10.970803Z  WARN nym_sphinx_chunking::reconstruction: duplicate fragment received! - frag - 2 (set id: 1419101119)
+ 383  bdef  ok           4127 ms  ack  2880 ms
+ 384  b10   ok           5210 ms  ack  3713 ms
+ 385  bdef  ok           3757 ms  ack  2507 ms
+ 386  b10   ok           2717 ms  ack  1383 ms
+ 387  bdef  ok           3041 ms  ack  1729 ms
+ 388  b10   ok           3838 ms  ack  1795 ms
+ 389  bdef  ok           3816 ms  ack  1999 ms
+ 390  b10   ok           2615 ms  ack  1372 ms
+ 391  bdef  ok           3066 ms  ack  1801 ms
+ 392  b10   ok           2800 ms  ack  1473 ms
+ 393  bdef  ok           2947 ms  ack  1642 ms
+ 394  b10   ok           3225 ms  ack  1785 ms
+ 395  bdef  ok           2974 ms  ack  1658 ms
+ 396  b10   ok           2637 ms  ack  1143 ms
+ 397  bdef  ok           2765 ms  ack  1502 ms
+ 398  b10   ok           3245 ms  ack  1508 ms
+ 399  bdef  ok           2766 ms  ack  1730 ms
+ 400  b10   ok           3030 ms  ack  1494 ms
+ 401  bdef  ok           3369 ms  ack  1859 ms
+ 402  b10   ok           3089 ms  ack  1508 ms
+ 403  bdef  ok           2991 ms  ack  1526 ms
+ 404  b10   ok           3035 ms  ack  1546 ms
+ 405  bdef  ok           3057 ms  ack  1768 ms
+ 406  b10   ok           2850 ms  ack  1166 ms
+ 407  bdef  ok           4049 ms  ack  1955 ms
+ 408  b10   ok           3911 ms  ack  2185 ms
+ 409  bdef  ok           3143 ms  ack  1752 ms
+ 410  b10   ok           2786 ms  ack  1331 ms
+ 411  bdef  ok           2997 ms  ack  1648 ms
+ 412  b10   ok           2775 ms  ack  1380 ms
+ 413  bdef  ok           2580 ms  ack  1358 ms
+ 414  b10   ok           3822 ms  ack  2301 ms
+ 415  bdef  ok           2990 ms  ack  1557 ms
+ 416  b10   ok           3205 ms  ack  1508 ms
+ 417  bdef  ok           3012 ms  ack  1768 ms
+ 418  b10   ok           3026 ms  ack  1595 ms
+ 419  bdef  ok           3294 ms  ack  1933 ms
+ 420  b10   ok           2828 ms  ack  1507 ms
+ 421  bdef  ok           3058 ms  ack  1600 ms
+ 422  b10   ok           2692 ms  ack  1287 ms
+ 423  bdef  ok           2749 ms  ack  1528 ms
+ 424  b10   ok           3186 ms  ack  1458 ms
+ 425  bdef  ok           2602 ms  ack  1254 ms
+ 426  b10   ok           3122 ms  ack  1633 ms
+ 427  bdef  ok           2843 ms  ack  1444 ms
+ 428  b10   ok           2937 ms  ack  1450 ms
+ 429  bdef  ok           3258 ms  ack  1486 ms
+ 430  b10   ok           2974 ms  ack  1574 ms
+ 431  bdef  ok           3003 ms  ack  1557 ms
+ 432  b10   ok           3238 ms  ack  1500 ms
+ 433  bdef  ok           2603 ms  ack  1544 ms
+ 434  b10   ok           3122 ms  ack  1597 ms
+ 435  bdef  ok           3129 ms  ack  1626 ms
+ 436  b10   ok           3178 ms  ack  1566 ms
+ 437  bdef  ok           4299 ms  ack  3018 ms
+ 438  b10   ok           3120 ms  ack  1426 ms
+ 439  bdef  ok           3764 ms  ack  1948 ms
+ 440  b10   ok           2938 ms  ack  1490 ms
+ 441  bdef  ok           3224 ms  ack  1766 ms
+ 442  b10   ok           2627 ms  ack  1247 ms
+ 443  bdef  ok           2974 ms  ack  1522 ms
+ 444  b10   ok           4080 ms  ack  2533 ms
+ 445  bdef  ok           2791 ms  ack  1695 ms
+ 446  b10   ok           2649 ms  ack  1278 ms
+ 447  bdef  ok           3029 ms  ack  1628 ms
+ 448  b10   ok           3080 ms  ack  1505 ms
+ 449  bdef  ok           3190 ms  ack  1718 ms
+ 450  b10   ok           3265 ms  ack  1651 ms
+ 451  bdef  ok           2573 ms  ack  1463 ms
+ 452  b10   ok           2556 ms  ack  1318 ms
+ 453  bdef  ok           2664 ms  ack  1377 ms
+ 454  b10   ok           3353 ms  ack  1498 ms
+ 455  bdef  ok           3419 ms  ack  1476 ms
+2026-09-01T19:03:57.563548Z  INFO nym_client_core::client::real_messages_control::real_traffic_stream: Packet backlog: General: 2, avg delay: 20ms (1)
+ 456  b10   ok           2731 ms  ack  1421 ms
+ 457  bdef  ok           2761 ms  ack  1483 ms
+ 458  b10   ok           3064 ms  ack  1422 ms
+ 459  bdef  ok           2734 ms  ack  1551 ms
+ 460  b10   ok           3323 ms  ack  1679 ms
+ 461  bdef  ok           2881 ms  ack  1690 ms
+ 462  b10   ok           2739 ms  ack  1447 ms
+ 463  bdef  ok           3136 ms  ack  1898 ms
+ 464  b10   ok           3006 ms  ack  1447 ms
+ 465  bdef  ok           3728 ms  ack  2012 ms
+ 466  b10   ok           3171 ms  ack  1342 ms
+ 467  bdef  ok           2502 ms  ack  1409 ms
+ 468  b10   ok           2788 ms  ack  1431 ms
+ 469  bdef  ok           3136 ms  ack  1787 ms
+ 470  b10   ok           3505 ms  ack  1568 ms
+ 471  bdef  ok           3369 ms  ack  1731 ms
+ 472  b10   ok           2785 ms  ack  1413 ms
+ 473  bdef  ok           3354 ms  ack  1722 ms
+ 474  b10   ok           3993 ms  ack  1910 ms
+ 475  bdef  ok           4009 ms  ack  2456 ms
+ 476  b10   ok           3058 ms  ack  1283 ms
+ 477  bdef  ok           4674 ms  ack  3259 ms
+ 478  b10   ok           2916 ms  ack  1304 ms
+ 479  bdef  ok           2721 ms  ack  1268 ms
+ 480  b10   ok           2562 ms  ack  1242 ms
+ 481  bdef  ok           3075 ms  ack  1724 ms
+ 482  b10   ok           3355 ms  ack  1893 ms
+ 483  bdef  ok           2996 ms  ack  1833 ms
+ 484  b10   ok           3320 ms  ack  1510 ms
+ 485  bdef  ok           2967 ms  ack  1608 ms
+ 486  b10   ok           3630 ms  ack  1959 ms
+ 487  bdef  ok           2856 ms  ack  1466 ms
+ 488  b10   ok           3119 ms  ack  1607 ms
+ 489  bdef  ok           3592 ms  ack  2388 ms
+ 490  b10   ok           3149 ms  ack  1208 ms
+ 491  bdef  ok           3236 ms  ack  1713 ms
+ 492  b10   ok           2956 ms  ack  1511 ms
+ 493  bdef  ok           3028 ms  ack  1531 ms
+ 494  b10   ok           4069 ms  ack  1472 ms
+ 495  bdef  ok           3891 ms  ack  2126 ms
+ 496  b10   ok           3628 ms  ack  1499 ms
+ 497  bdef  ok           4172 ms  ack  2557 ms
+ 498  b10   ok           2914 ms  ack  1604 ms
+ 499  bdef  ok           4978 ms  ack  3170 ms
+ 500  b10   ok           2999 ms  ack  1537 ms
+
+--- summary ---
+trials                       500
+ok                           500
+lost outbound                0
+echo failed to write         0
+lost on the way back         0
+dialler errors               0
+failure rate                 0.0%  (0/500)
+ok latency   p50 3003 ms | p90 3705 ms | p99 5150 ms
+
+--- establishment ack against outcome ---
+                    echo ok  echo failed
+     acknowledged       500            0
+           no ack         0            0
+ack latency  p50 1551 ms | p90 1932 ms | p99 3073 ms | max 4792 ms
+
+--- by reply-block budget (interleaved) ---
+budget    trials   ok   fails    rate        p50
+   b10       250  250       0    0.0%    3035 ms
+  bdef       250  250       0    0.0%    2985 ms
+echo stages: accepted 500 | read 500 | written 500
+# finished 2026-09-01T19:06:24Z
