@@ -209,6 +209,23 @@ The 150 repetitions of the `packet_router` panic at the foot of run 2b are the c
 reporting the same event once per task. Nothing is redacted in any of the three: the rig's clients
 are ephemeral and die with their containers.
 
+## Keepalive
+
+One file sits behind [`../2026-09-02-keepalive.md`](../2026-09-02-keepalive.md), stdout from the
+`keepalive` binary in `contrib/nym/`, built against `nym-sdk` at commit `693201bf`.
+
+| file | what it is |
+|---|---|
+| `2026-09-02-keepalive-arms.txt` | four containers in the order they ran: one rig check, then the three arms of three trials each, each with its own summary |
+
+Trial lines carry the arm, the outcome and the seconds between the kill and the error. The SDK's
+`INFO` and `DEBUG` noise is dropped, which here is client startup and shutdown. Every `WARN` and
+`ERROR` is kept: 35 warnings, and one error, at the foot of the first container. Successful pings and pongs are not in
+here because the SDK does not log them at any level.
+
+The first container is the check run before the batch. Its single trial is in the file and in no
+table.
+
 ## Midnight heartbeat (forum user Lowo88)
 
 Two files sit behind [`../2026-08-19-midnight-heartbeat.md`](../2026-08-19-midnight-heartbeat.md):

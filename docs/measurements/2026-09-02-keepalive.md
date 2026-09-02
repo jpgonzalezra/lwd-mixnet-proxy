@@ -1,0 +1,115 @@
+# The keepalive finds a stream nobody closed
+
+Date: 2026-09-02. Three arms of three trials each against `nym-sdk` at `max/stream-keepalive`,
+commit `693201bf14092f4445f1417e86051d3b4ebdb20a`.
+
+The day after the establishment acknowledgement landed, its author put ping/pong keepalive on top of
+it and asked whether that covers what this project needs. It does, and one arm answers a question
+open here since [ADR 0004](../decisions/0004-deadlines-are-the-only-close.md): what a dialler can
+know about a stream the far side has thrown away.
+
+## What is being tested
+
+An armed stream that has heard nothing for 60 seconds gets a `Ping`. After three consecutive
+unanswered pings the stream fails in band with `StreamFailure::PeerUnresponsive`, which reaches a
+caller as `io::Error` of kind `TimedOut` and the text `stream peer unresponsive: keepalive pings
+unanswered`. A stream arms only once the peer has sent a liveness frame of its own, so a peer on an
+older SDK is never pinged and never fails.
+
+## Method
+
+The rig gained a `keepalive` binary next to `repro`. Every trial builds an accepting client, opens
+one stream to it, waits for the establishment acknowledgement, which is also what arms keepalive,
+and then writes nothing ever again. The dialling client is reused across trials; a fresh acceptor
+per trial keeps the arms comparable and gives `peer-gone` one to spend.
+
+The accepting side holds what it accepts. A dropped stream deregisters, and that is the third arm's
+whole subject, so it must not happen by accident in the other two.
+
+| arm | what happens after the acknowledgement | what it stands for |
+|---|---|---|
+| `alive` | nothing | a quiet stream between two live peers |
+| `peer-gone` | the accepting client disconnects | a process that stopped, its gateway still accepting for it |
+| `stream-gone` | the accepting client stays up and drops the stream | teardown: no close frame exists to send |
+
+The clock starts at the kill and stops at the error the caller reads.
+
+## What happened
+
+| arm | trials | reported unresponsive | time to report |
+|---|---|---|---|
+| `alive` | 3 | 0, all survived 420 s | |
+| `peer-gone` | 3 | 3 | 252, 258, 260 s |
+| `stream-gone` | 3 | 3 | 257, 258, 262 s |
+
+A single earlier trial of `stream-gone`, run to check the rig before the batch, reported at 267 s.
+It is in the raw file, and it is not in the table or in any range quoted below.
+
+Seven ping intervals of silence did not cost the live arm its stream, in any of its three trials.
+The two ways of dying are not distinguishable by the clock, which is what you would expect: in both,
+the peer stops answering.
+
+## Why four intervals and not three
+
+The sweep runs on the router's cleanup tick. The first pass after 60 seconds of silence sends a ping
+without counting a miss, because nothing is outstanding yet. The misses land on the passes at 120,
+180 and 240 seconds, so three unanswered pings cost four intervals rather than three.
+
+240 seconds is therefore the earliest this can fire, and it is a floor rather than a prediction.
+Each of those four waits ends on a tick rather than on the second, and a tick is up to ten seconds,
+so the schedule can slip by as much as forty seconds before anything else is counted. The six
+failures measured 252 to 262 seconds, which sits inside that. Nothing here separates the slip from
+whatever delivering the error to the caller costs on top.
+
+Four and a half minutes covers every failure seen here, which is not the same as bounding one. The
+model above allows 240 seconds plus as much as forty of slip before anything is counted for
+delivering the error, so a budget meant to hold rather than to describe starts above 280 seconds.
+
+## The stream nobody closed
+
+`stream-gone` is the arm this project has been waiting for. There is no close frame in this
+transport, so a stream discarded by one side stays registered on the other until its idle reaper
+fires half an hour later. Both halves of this proxy discard streams on their failure path, which
+means each of them has been leaving work on the far side for thirty minutes at a time.
+
+Keepalive does not close anything, and it is not a teardown. What it does is make the far side's
+silence legible: the peer's router answers pings only for streams it still holds, so a stream that
+was dropped stops answering exactly like a peer that died. Four and a half minutes is a long time
+next to a wallet's deadline and a short one next to thirty.
+
+## What the live arm does not show
+
+It shows no false positive over seven intervals. It does not show a single ping or pong, because
+neither is logged at any level: the code logs only the exceptional paths, a stale nonce, a full
+channel, an unknown stream. So the live arm measures an outcome, and the two dying arms are what
+prove the machinery runs at all. Between them the reading is safe, but a run that had to prove pings
+were flowing could not do it from the logs.
+
+## Two things from the same runs
+
+The branch renamed `wait_established_with_timeout` to `wait_established`, which now takes the
+timeout as its argument, between the commit measured in [the establishment
+handshake](2026-09-01-establishment-handshake.md) and this one. Nothing about that report changes,
+since it pins the commit it ran against, but code written against the older name does not build
+here.
+
+One run, the check before the batch, ends with `failed to send mixnet packet due to closed channel
+(outside of shutdown!)` as the process exits. The three batch runs do not, so whatever it needs is
+not simply exiting. It reads like the same shape as the panic seen on 1 September, teardown against
+traffic still arriving, but one occurrence is a note rather than a finding.
+
+## Limitations
+
+- Three trials an arm, one machine, one afternoon. Six of the nine produced a failure time and those
+  six agree to within ten seconds. The other three are right-censored at 420 seconds: their failure
+  times, if any, are longer than the hold.
+- Only a peer on the same branch was tested. The case where a false positive would matter most is a
+  new dialler against a peer that has never heard of keepalive, and that is a two-build test this
+  one does not perform.
+- The dialler is the only side that pings. Nothing here measures what an accepting client sees when
+  the dialler is the one that dies.
+- The clock starts when the rig kills the far side, which is instant. A gateway that fades rather
+  than stops would start the count somewhere less definite.
+
+
+

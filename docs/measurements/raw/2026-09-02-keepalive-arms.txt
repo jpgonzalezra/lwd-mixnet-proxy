@@ -1,0 +1,95 @@
+# nym-sdk rev 693201bf14092f4445f1417e86051d3b4ebdb20a (max/stream-keepalive)
+# Four containers: one rig check, then three arms of three trials, run one after another.
+
+=== container nym-ka-smoke ===
+2026-09-02T14:24:21.130745Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   2qhiu8F8GqYZQMmFyZyfQ6xR5kjjDHbWZZKVeUfu3o12.3v2A9EfDJ5TuHQRBuZoAGf7NTfeLjq4U6aUsoSwgWatz@9jid5yGFCJSRuMDd5YD6FweL8G9srDJsZ1yrUEsi6ibv
+arm stream-gone | trials 1 | hold 300s
+
+2026-09-02T14:24:26.303491Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T14:28:56.574993Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x7e953386beae2bfc): peer unresponsive, 3 consecutive pings unanswered
+  1  stream-gone failed        267 s  timed out / stream peer unresponsive: keepalive pings unanswered
+
+--- summary ---
+arm                  stream-gone
+trials               1
+survived the hold    0
+reported unresponsive 1
+time to report       min 267 s | median 267 s | max 267 s
+2026-09-02T14:28:56.585832Z ERROR nym_client_core::client::real_messages_control::real_traffic_stream: failed to send mixnet packet due to closed channel (outside of shutdown!)
+
+=== container nym-ka-alive ===
+2026-09-02T14:29:37.344566Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   6kug6J9TbVGa6vYznKUGXCSTSgrvjgcESjV2sFsmbfb5.DHFqp1cHcKmv6KxiKYX4Ly6V7UV1iaa1LoSdjyepw9MS@89bwd5pEpKUUCeUiysy7J1dR6uADMZ3ANra8jA3ZwUrq
+arm alive | trials 3 | hold 420s
+
+2026-09-02T14:29:42.702012Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  1  alive       survived      420 s
+2026-09-02T14:36:51.908395Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  2  alive       survived      420 s
+2026-09-02T14:43:57.324858Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-02T14:43:57.324979Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-de02.hermes-stakepool.de:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://152.53.137.91:9000/
+2026-09-02T14:44:00.356344Z  WARN perform_initial_authentication{gateway=6sL9w3iRYaf599rQ5QzGfecG8yoH9zci1BsbMqR6uyQP gateway_address=ws://nym-exit-de02.hermes-stakepool.de:9000/}: nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-02T14:44:00.356470Z  WARN perform_initial_authentication{gateway=6sL9w3iRYaf599rQ5QzGfecG8yoH9zci1BsbMqR6uyQP gateway_address=ws://nym-exit-de02.hermes-stakepool.de:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit-de02.hermes-stakepool.de:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://152.53.137.91:9000/
+2026-09-02T14:44:01.418074Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  3  alive       survived      420 s
+
+--- summary ---
+arm                  alive
+trials               3
+survived the hold    3
+reported unresponsive 0
+
+=== container nym-ka-peer-gone ===
+2026-09-02T14:51:10.350274Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   AMesvFJSnEShud3RTZ5R3JMWePrSNC54xM3DHZwUinGn.8jCrQjuomkABEpcpePiWZgtuyWEW27ER4e5KKJugJZL@B3Ec1NMSU11eNPvttmWbzcHBW56xbmX9nHo1zPb9i9Ti
+arm peer-gone | trials 3 | hold 360s
+
+2026-09-02T14:51:15.756095Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T14:55:36.012727Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x48c27a89774b84ee): peer unresponsive, 3 consecutive pings unanswered
+  1  peer-gone   failed        252 s  timed out / stream peer unresponsive: keepalive pings unanswered
+2026-09-02T14:55:40.999874Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T15:00:06.047834Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x412feea910661e60): peer unresponsive, 3 consecutive pings unanswered
+  2  peer-gone   failed        260 s  timed out / stream peer unresponsive: keepalive pings unanswered
+2026-09-02T15:00:07.335757Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-02T15:00:07.335914Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.dk-node2.p17o.com:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://81.27.109.65:9000/
+2026-09-02T15:00:10.464937Z  WARN perform_initial_authentication{gateway=HNgsKSepn3FeMf8d2LEtzJbTVHLV85TpwpJ5h9QPWeis gateway_address=ws://nym-exit.dk-node2.p17o.com:9000/}: nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-02T15:00:10.465059Z  WARN perform_initial_authentication{gateway=HNgsKSepn3FeMf8d2LEtzJbTVHLV85TpwpJ5h9QPWeis gateway_address=ws://nym-exit.dk-node2.p17o.com:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.dk-node2.p17o.com:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://81.27.109.65:9000/
+2026-09-02T15:00:11.528048Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T15:01:09.678997Z  WARN nym_http_api_client: Retrying request due to http error on attempt (1/3): error sending request for url (https://validator.nymtech.net/api/v2/unstable/nym-nodes/skimmed/entry-gateways?page=0)
+2026-09-02T15:04:36.053530Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x5549827ac1a050c5): peer unresponsive, 3 consecutive pings unanswered
+  3  peer-gone   failed        258 s  timed out / stream peer unresponsive: keepalive pings unanswered
+
+--- summary ---
+arm                  peer-gone
+trials               3
+survived the hold    0
+reported unresponsive 3
+time to report       min 252 s | median 258 s | max 260 s
+
+=== container nym-ka-stream-gone ===
+2026-09-02T15:04:38.446341Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.us-node3.p17o.com:9000/ : connection failed: ws://nym-exit.us-node3.p17o.com:9000/: IO error: Network is unreachable (os error 101), trying fallback : ws://134.195.89.101:9000/
+2026-09-02T15:04:41.873349Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   34Wq1UerU5XTxHTxCir3aTB27Mco35r3VbgX3WUoLFvR.64S5Y31LkeKdC25wiTejfUXJBZGHQSTrXKbWPvTVd2R3@3hWtFJbVVPbZZ9iNZuSHPnShHG5AUiFpTPnvJmUibNp9
+arm stream-gone | trials 3 | hold 360s
+
+2026-09-02T15:04:48.238489Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T15:09:08.649258Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x6b47535b6049b195): peer unresponsive, 3 consecutive pings unanswered
+  1  stream-gone failed        257 s  timed out / stream peer unresponsive: keepalive pings unanswered
+2026-09-02T15:09:14.438238Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T15:13:38.652819Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x913d1de8e826d2a2): peer unresponsive, 3 consecutive pings unanswered
+  2  stream-gone failed        258 s  timed out / stream peer unresponsive: keepalive pings unanswered
+2026-09-02T15:13:39.908942Z  WARN nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-02T15:13:39.909005Z  WARN nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.nl-11.silentriver.foo:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://185.246.188.211:9000/
+2026-09-02T15:13:42.906541Z  WARN perform_initial_authentication{gateway=3tuJuL3gjewLDpCykR4aivwjfDnci4cHZ6uaRSYuLrdu gateway_address=ws://nym-exit.nl-11.silentriver.foo:9000/}: nym_http_api_client::dns: primary DNS failed w/ error: receiver was canceled
+2026-09-02T15:13:42.906574Z  WARN perform_initial_authentication{gateway=3tuJuL3gjewLDpCykR4aivwjfDnci4cHZ6uaRSYuLrdu gateway_address=ws://nym-exit.nl-11.silentriver.foo:9000/}: nym_gateway_client::client::websockets: Main endpoint failed ws://nym-exit.nl-11.silentriver.foo:9000/ : resolution failed: hickory-dns resolver error: receiver was canceled, trying fallback : ws://185.246.188.211:9000/
+2026-09-02T15:13:43.886650Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-02T15:18:08.675135Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x914ec03f7c08adaa): peer unresponsive, 3 consecutive pings unanswered
+  3  stream-gone failed        262 s  timed out / stream peer unresponsive: keepalive pings unanswered
+
+--- summary ---
+arm                  stream-gone
+trials               3
+survived the hold    0
+reported unresponsive 3
+time to report       min 257 s | median 258 s | max 262 s

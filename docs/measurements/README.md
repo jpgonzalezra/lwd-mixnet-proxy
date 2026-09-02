@@ -17,6 +17,7 @@ report says how it was taken, so the numbers can be argued with. Raw output for 
 | [A thousand trials on the branch that answers two of these reports](2026-08-26-branch-under-test.md) | what the rig sees once the SDK returns an error for an unroutable recipient and for reorder-buffer loss | 2026-08-26 |
 | [The reply-block reserve costs nothing this could measure](2026-08-27-surb-reserve-costs-nothing.md) | whether two SDK defaults landing on the same number costs a round trip before every first reply | 2026-08-27, amended 2026-09-02 |
 | [The establishment handshake, and what a fresh dialler does to a serving client](2026-09-01-establishment-handshake.md) | whether the SDK's new acknowledgement tells a caller its stream reached something alive, and what it costs | 2026-09-01 |
+| [The keepalive finds a stream nobody closed](2026-09-02-keepalive.md) | whether ping/pong keepalive catches a peer that stopped, a stream that was dropped, and neither when both sides are alive | 2026-09-02 |
 
 The first is a bench run against a purpose-built harness ([ADR 0005](../decisions/0005-what-the-measurement-has-to-show.md)
 sets what such a run has to show). The second reads the public testnet deployment in place, which is
@@ -30,7 +31,8 @@ failure mode all of this was built around is a race the SDK has since fixed upst
 runs that tree fifteen times longer and finds nothing left to catch. The ninth tests the branch that
 turns two of these findings into errors a caller can see. The tenth answers a question asked upstream
 about two constants. The eleventh tests the acknowledgement that closes the last gap on that branch,
-and its control run retracts what the tenth thought it had found on the side.
+and its control run retracts what the tenth thought it had found on the side. The twelfth times the
+keepalive built on top of it, and finds that it reaches a case this project had written off.
 
 A rate measured here is one machine and one pair of gateways in one window, and latencies move by
 more between hours than most of the effects being measured. Absolute numbers do not reproduce, and
