@@ -1,5 +1,15 @@
 # 0004. Deadlines are the only close
 
+> **Amended 2026-09-02.** Still true of every released SDK, and the decision stands. What changed is
+> that one direction of the far side's silence is no longer unreadable: on the SDK's keepalive
+> branch a dialler whose acceptor dropped the stream is told so in band, after about four and a half
+> minutes, in three trials. The reverse direction, an acceptor whose dialler walked away, follows
+> from how arming and pinging are written but was not measured. That is not a close, and it is far
+> too slow for the dialling half's stall deadline, but what this decision calls a conversation that
+> will never continue turned out to end, in minutes rather than in the reaper's half hour. Worth
+> revisiting the listening half's reaper when a release carries it.
+> Evidence: [the keepalive](../measurements/2026-09-02-keepalive.md).
+
 ## Context
 
 A mixnet stream cannot be closed. Dropping one deregisters it locally and tells the far side nothing;
