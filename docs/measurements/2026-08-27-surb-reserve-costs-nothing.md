@@ -1,5 +1,14 @@
 # The reply-block reserve costs nothing this could measure
 
+> **Amended 2026-09-02.** The section below on first exchanges was wrong, and is retracted and
+> replaced in place. The 30% is not a failure rate for anything: every block ends in one unbroken
+> run of failures, each block was its own process, and each process began with working trials, so the
+> number records where each process fell over. The comparison between the two arms survives. Two
+> numbers in it did not: the p90 row gave each arm's slower block, 8,305 ms and 8,750 ms, rather than
+> the arm's own figure, and three of the block-to-block differences below were wrong. Both are
+> corrected in place, at the percentile definition the rig has always used. What degrades, and the run that isolates it, is in
+> [the establishment handshake](2026-09-01-establishment-handshake.md).
+
 Date: 2026-08-27. Two arms of 100 trials each against `nym-sdk` at `develop`, built to answer a
 question asked upstream: whether it matters that two SDK defaults are the same number.
 
@@ -27,8 +36,8 @@ runs are 100 trials rather than thousands.
 
 **Alternating blocks of 50**, arm A then B then A then B. The reserve is client configuration and
 lives in the process, so two arms cannot be interleaved trial by trial the way budgets are. Blocks
-are the next best thing: neither arm sits entirely in one window of an afternoon whose failure rate
-moves by an order of magnitude between hours.
+are the next best thing: neither arm sits entirely in one window of an afternoon whose latencies move
+by more between hours than anything being measured here.
 
 ## What it found
 
@@ -36,35 +45,50 @@ moves by an order of magnitude between hours.
 |---|---|---|
 | trials | 100 | 100 |
 | failures | 30% | 33% |
-| p50 | 4,188 ms | 4,662 ms |
-| p90 | 8,305 ms | 8,750 ms |
+| p50 | 4,192 ms | 4,662 ms |
+| p90 | 7,688 ms | 8,456 ms |
+
+The failure row does not mean what it looks like, and the section below replaces it. The percentiles
+are over successful trials, so they are unaffected by that: every success in this run falls before
+its block's collapse either way.
 
 A forced round trip before the first reply would cost roughly a second and a half at this budget. The
-gap is 474 ms and it does not hold its sign: the default arm was 490 ms slower in the first pair of
-blocks and 380 ms faster in the second. Each arm moved more between its own two blocks than the two
-arms differ from each other, 850 ms for threshold 0 and 1,720 ms for the default.
+gap is 470 ms and it does not hold its sign: the default arm was 489 ms slower in the first pair of
+blocks and 451 ms faster in the second. Each arm moved more between its own two blocks than the two
+arms differ from each other, 882 ms for threshold 0 and 1,822 ms for the default.
 
 So this run found no consistent difference. That is not the same as finding the reserve free, and the
 distinction matters here: in the default arm the replenishment certainly happens, since two stored
 blocks never exceed a reserve of ten. Whatever it costs is smaller than an afternoon's drift.
 
-## The finding nobody was looking for
+## The finding nobody was looking for, and what it really was
 
-A fresh client's first exchange at budget 1 fails about 30% of the time, in both arms. All four
-blocks report `accepted 50 | read 50 | written 50`, so the far side answered every one of the 200
-trials, and 62 of the 63 failures are replies that did not arrive before the dialler's 20 second
-deadline.
+*This section reported a 30% failure rate for a fresh client's first exchange. Retracted
+2026-09-02: there is no such rate.*
 
-An established client at the same budget fails almost never:
-[6,237 trials](2026-08-25-six-thousand-trials.md) produced one timeout. So something about a
-conversation's first exchange is fragile in a way its later ones are not.
+The 63 failures are not spread through the run. Each block ends in one unbroken run of them.
 
-The obvious guess is reply blocks again: a receiver holding two, or ten just requested, has very
-little left to retransmit with when the first attempt goes missing, while an established client
-carries thousands. The evidence available does not support it. An earlier fresh-client run across
-budgets 1, 20, 100 and 400 failed 3, 3, 1 and 2 of 20, and a budget of 400 should have been far safer
-than 1 if reply blocks were the whole story. Twenty trials a row settles nothing either way. The
-observation stands; the explanation does not.
+| block | arm | failures | trailing run |
+|---|---|---|---|
+| 1 | threshold 0 | 18/50 | 16, trials 35 to 50 |
+| 2 | default 10 | 22/50 | 21, trials 30 to 50 |
+| 3 | threshold 0 | 12/50 | 10, trials 41 to 50 |
+| 4 | default 10 | 11/50 | 11, trials 40 to 50 |
+
+58 of the 63 are those four runs. Each block was a separate invocation of the tool, and each one
+worked for its first 29 to 40 trials before entering its terminal run. Blocks 1 to 3 do carry a
+failure or two before that point, five across the 142 trials that ran before a collapse, which is
+the sort of rate the rest of these reports see. The per-arm figures are two numbers recording where a
+process stopped working, added together. Two fresh-client runs on 2026-09-01, close in shape rather
+than identical, failed 0 and 1 in their first hundred trials.
+
+What does happen is a degradation that has only ever been seen in this configuration, one dialling
+client built per trial, and never in 500 trials through a reused one.
+[The establishment handshake](2026-09-01-establishment-handshake.md) has the runs and what they do
+and do not settle.
+
+So the explanation this section reached for, a receiver too short of reply blocks to retransmit with,
+was answering a question that was never posed. The budget sweep that refused to support it was right.
 
 ## Limitations
 
