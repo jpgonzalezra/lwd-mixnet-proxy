@@ -82,23 +82,44 @@ next to a wallet's deadline and a short one next to thirty.
 The runs above measured outcomes and not the pings behind them, because no ping or pong is logged at
 any level: the code logs only the exceptional paths, a stale nonce, a full channel, an unknown
 stream. Reading the logs was the wrong place to look. `MixnetStream::last_peer_activity()` returns
-when the peer was last heard from, and reads local state without sending anything, so polling it
-every five seconds shows the exchange directly.
-
-A second pass did that.
+when the peer was last heard from, and reads local state without sending anything, so a second pass
+polled it every five seconds.
 
 | arm | trials | oldest the last inbound frame got | times that age fell back |
 |---|---|---|---|
 | `alive` | 2 | 71.4 s, 76.9 s | 6, 5 |
 | `stream-gone` | 1 | 265.1 s | 0 |
 
-On a stream nobody writes to, the age can only fall if a frame arrived, and the only frame that
-arrives on an idle stream is a pong. The live arm's peak sits a little above the 60 second interval,
-which is that interval plus the tick it waits for plus the trip out and back, and it falls back five
-or six times across the hold. The dying arm climbs to its failure without one.
+The getter reports that the peer was heard from, not what it said. What makes this readable is the
+setup rather than the getter: after the acknowledgement neither side writes, and an acceptor never
+pings, so on the live arm the only frame that can arrive is a pong. Under those conditions a fall in
+the age is a pong landing. None of them was identified as one.
 
-That is the mechanism, and it also confirms the schedule the section above derives from the
-constants rather than assuming it.
+The live arm's peak sits a little above the 60 second interval, which is that interval plus the tick
+it waits for plus the trip out and back, and the age falls five or six times across the hold. The
+dying arm climbs to its failure without falling once. That is consistent with the schedule the
+section above derives from the constants, and it is as close to watching the exchange as this gets.
+
+The two figures per trial are the rig's own arithmetic over its polls, and the polls themselves are
+not in the raw file, so they can be read but not recomputed from it.
+
+## One direction of the version question, from the deployment
+
+The public testnet serving half moved to this commit on 2026-09-03, keeping its state directory and
+therefore its published address. Its dialling half did not move: the released `1.21.5-rc.3` build
+was pointed at it for twelve trials, and all twelve answered on the first round, p50 1,418 ms.
+
+That is twelve trials in one deployment on one afternoon, and the bench prints its own warning that
+a rate this low cannot separate a design property from a quiet afternoon. What it says is that the
+released dialler worked against this upgraded acceptor every time it tried.
+
+The code says why, which is a separate argument from the run: the `OpenAck` an old peer cannot parse
+is dropped on the unknown discriminant, and only the dialling side pings, so keepalive never enters
+a conversation an old dialler starts. Twelve trials are consistent with that. They do not establish
+it.
+
+The reverse, a new dialler against an acceptor that has never heard of keepalive, is the one where a
+false positive would cost something, and it is still untested here.
 
 ## Two things from the same runs
 
@@ -118,9 +139,10 @@ against traffic still arriving, but one occurrence is a note rather than a findi
 - Three trials an arm, one machine, one afternoon. Six of the nine produced a failure time and those
   six agree to within ten seconds. The other three are right-censored at 420 seconds: their failure
   times, if any, are longer than the hold.
-- Only a peer on the same branch was tested. The case where a false positive would matter most is a
-  new dialler against a peer that has never heard of keepalive, and that is a two-build test this
-  one does not perform.
+- The arms all ran between two peers on the same branch. Mixed versions were only exercised in one
+  direction, and by a deployment rather than by a rig: an old dialler against a new acceptor. The
+  direction where a false positive would cost something, a new dialler against an old acceptor, is
+  not tested here.
 - The dialler is the only side that pings. Nothing here measures what an accepting client sees when
   the dialler is the one that dies.
 - The clock starts when the rig kills the far side, which is instant. A gateway that fades rather

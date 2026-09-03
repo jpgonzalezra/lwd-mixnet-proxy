@@ -1,0 +1,33 @@
+# lwd-mixnet-bench from the released 1.21.5-rc.3 image against the public serving half after it
+# moved to nym-sdk 693201bf. Old dialler, new acceptor.
+
+dialling HDfv77FgcWJTf4NFrxCvHRzZx4Zppc2pLiFUx6g2Lt3v.6VqPTWwZdmdFKEAyGW93hsPULp5XwEiVZh3GwHoXoqoK@6PkVkJ8nq882V1C95uCHUUoBWgo1ZzWHVpDtrhSjwDVn
+trials 12 | attempts 6 | round sizes 1 interleaved | probe timeout 10s | reply blocks SDK default
+
+    1  r1       answered  1 rounds   0 unanswered   0 refused    1253 ms
+    2  r1       answered  1 rounds   0 unanswered   0 refused     846 ms
+    3  r1       answered  1 rounds   0 unanswered   0 refused    3858 ms
+    4  r1       answered  1 rounds   0 unanswered   0 refused    2729 ms
+    5  r1       answered  1 rounds   0 unanswered   0 refused    3596 ms
+    6  r1       answered  1 rounds   0 unanswered   0 refused    1358 ms
+    7  r1       answered  1 rounds   0 unanswered   0 refused    2621 ms
+    8  r1       answered  1 rounds   0 unanswered   0 refused    1107 ms
+    9  r1       answered  1 rounds   0 unanswered   0 refused    1935 ms
+   10  r1       answered  1 rounds   0 unanswered   0 refused    1418 ms
+   11  r1       answered  1 rounds   0 unanswered   0 refused    1240 ms
+   12  r1       answered  1 rounds   0 unanswered   0 refused    1004 ms
+
+=== rounds of 1 (sequential retry) ===
+trials                       12
+first-round failure rate       0.00%  (0/12)   the stream's probe went unanswered
+wallet-visible failure rate    0.00%  (0/12)   no stream answered at all
+streams opened               12   (1.0 per trial, 0 cancelled once another answered)
+
+NOTE: a rate this low cannot separate the design from a quiet afternoon. Treat any reduction above as unmeasured, not as passing.
+
+latency
+round that answered                p50   1418 ms | p90   3596 ms | p99   3858 ms | max   3858 ms
+establishment seen by the wallet   p50   1418 ms | p90   3596 ms | p99   3858 ms | max   3858 ms
+time spent on a discarded stream   no samples
+a discarded stream costs the whole probe timeout (10s), because the failure is silent
+2026-09-03T16:00:22.728964Z ERROR nym_client_core::client::real_messages_control::real_traffic_stream: failed to send mixnet packet due to closed channel (outside of shutdown!)
