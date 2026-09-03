@@ -1,7 +1,7 @@
 # The keepalive finds a stream nobody closed
 
-Date: 2026-09-02. Three arms of three trials each against `nym-sdk` at `max/stream-keepalive`,
-commit `693201bf14092f4445f1417e86051d3b4ebdb20a`.
+Date: 2026-09-02, with a second pass on 2026-09-03. Three arms of three trials each against
+`nym-sdk` at `max/stream-keepalive`, commit `693201bf14092f4445f1417e86051d3b4ebdb20a`.
 
 The day after the establishment acknowledgement landed, its author put ping/pong keepalive on top of
 it and asked whether that covers what this project needs. It does, and one arm answers a question
@@ -77,13 +77,28 @@ silence legible: the peer's router answers pings only for streams it still holds
 was dropped stops answering exactly like a peer that died. Four and a half minutes is a long time
 next to a wallet's deadline and a short one next to thirty.
 
-## What the live arm does not show
+## Watching the exchange from outside
 
-It shows no false positive over seven intervals. It does not show a single ping or pong, because
-neither is logged at any level: the code logs only the exceptional paths, a stale nonce, a full
-channel, an unknown stream. So the live arm measures an outcome, and the two dying arms are what
-prove the machinery runs at all. Between them the reading is safe, but a run that had to prove pings
-were flowing could not do it from the logs.
+The runs above measured outcomes and not the pings behind them, because no ping or pong is logged at
+any level: the code logs only the exceptional paths, a stale nonce, a full channel, an unknown
+stream. Reading the logs was the wrong place to look. `MixnetStream::last_peer_activity()` returns
+when the peer was last heard from, and reads local state without sending anything, so polling it
+every five seconds shows the exchange directly.
+
+A second pass did that.
+
+| arm | trials | oldest the last inbound frame got | times that age fell back |
+|---|---|---|---|
+| `alive` | 2 | 71.4 s, 76.9 s | 6, 5 |
+| `stream-gone` | 1 | 265.1 s | 0 |
+
+On a stream nobody writes to, the age can only fall if a frame arrived, and the only frame that
+arrives on an idle stream is a pong. The live arm's peak sits a little above the 60 second interval,
+which is that interval plus the tick it waits for plus the trip out and back, and it falls back five
+or six times across the hold. The dying arm climbs to its failure without one.
+
+That is the mechanism, and it also confirms the schedule the section above derives from the
+constants rather than assuming it.
 
 ## Two things from the same runs
 
@@ -94,9 +109,9 @@ since it pins the commit it ran against, but code written against the older name
 here.
 
 One run, the check before the batch, ends with `failed to send mixnet packet due to closed channel
-(outside of shutdown!)` as the process exits. The three batch runs do not, so whatever it needs is
-not simply exiting. It reads like the same shape as the panic seen on 1 September, teardown against
-traffic still arriving, but one occurrence is a note rather than a finding.
+(outside of shutdown!)` as the process exits. The three batch runs do not, so exiting is not on its
+own enough to produce it. It reads like the same shape as the panic seen on 1 September, teardown
+against traffic still arriving, but one occurrence is a note rather than a finding.
 
 ## Limitations
 
@@ -110,6 +125,3 @@ traffic still arriving, but one occurrence is a note rather than a finding.
   the dialler is the one that dies.
 - The clock starts when the rig kills the far side, which is instant. A gateway that fades rather
   than stops would start the count somewhere less definite.
-
-
-

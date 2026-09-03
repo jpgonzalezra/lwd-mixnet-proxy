@@ -1,0 +1,34 @@
+# nym-sdk rev 693201bf14092f4445f1417e86051d3b4ebdb20a (max/stream-keepalive)
+# Second pass: the same arms with MixnetStream::last_peer_activity() polled every 5 s.
+
+=== container nym-kw-alive ===
+2026-09-03T12:54:17.958331Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   F4UrHdhbFFuLKxGy3af2pYsMnCZixac4aCsoDXFQcSjC.36eCreNmQkztSe77sGAe24theuaD7P4Amt5bY2ybDkj3@9Dv3cRjaLgLNZM1zV4XNwjsjEqMmJ43VMbBabkDXwMff
+arm alive | trials 2 | hold 420s | polling last_peer_activity every 5s
+
+2026-09-03T12:54:23.201324Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  1  alive       survived      420 s  oldest inbound  71.4 s | refreshed  6x
+2026-09-03T13:01:31.205115Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+  2  alive       survived      420 s  oldest inbound  76.9 s | refreshed  5x
+
+--- summary ---
+arm                   alive
+trials                2
+survived the hold     2
+reported unresponsive 0
+
+=== container nym-kw-stream-gone ===
+2026-09-03T13:08:42.844489Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   ANYQueGQfheQiufTdoG7MhguoFdygCaTe2SM7Qb3yFCy.H5B4bfMCpjXcoz3Kz94R2phBW42MFh2NAjWYbviTCKjv@C9d9qoQXefAf7osLjNxas82tq3J6BeDbFvGewAz6rEPZ
+arm stream-gone | trials 1 | hold 420s | polling last_peer_activity every 5s
+
+2026-09-03T13:08:47.476672Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+2026-09-03T13:13:17.722885Z  WARN nym_sdk::mixnet::stream: Stream StreamId(0x2cdb802768f81cd7): peer unresponsive, 3 consecutive pings unanswered
+  1  stream-gone failed        267 s  oldest inbound 265.1 s | refreshed  0x  timed out / stream peer unresponsive: keepalive pings unanswered
+
+--- summary ---
+arm                   stream-gone
+trials                1
+survived the hold     0
+reported unresponsive 1
+time to report        min 267 s | median 267 s | max 267 s

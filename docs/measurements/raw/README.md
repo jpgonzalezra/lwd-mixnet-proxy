@@ -217,6 +217,7 @@ One file sits behind [`../2026-09-02-keepalive.md`](../2026-09-02-keepalive.md),
 | file | what it is |
 |---|---|
 | `2026-09-02-keepalive-arms.txt` | four containers in the order they ran: one rig check, then the three arms of three trials each, each with its own summary |
+| `2026-09-03-keepalive-watched.txt` | the second pass, two containers, with `last_peer_activity()` polled every five seconds while each trial waits |
 
 Trial lines carry the arm, the outcome and the seconds between the kill and the error. The SDK's
 `INFO` and `DEBUG` noise is dropped, which here is client startup and shutdown. Every `WARN` and
