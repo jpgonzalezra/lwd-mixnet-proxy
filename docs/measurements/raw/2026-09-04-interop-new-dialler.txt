@@ -1,0 +1,30 @@
+# Dialler built from nym-sdk 693201bf (max/stream-keepalive) against an acceptor built from
+# the released =1.21.5-rc.3. Two images, two containers, talking over the mixnet.
+
+=== container nym-hold-rc3 (acceptor, released pin) ===
+2026-09-04T12:49:18.050556Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+NYM_ADDRESS=Ex9RYEcLCo6VPFYfbGGtHcXVyJHBsBFunkiJYPcVSHB2.3GS9gYtM3gJF1s42eLhbyj1KS7PypmJRRjFHpiP5RbSL@5wF5wN7T2UuSsiUcQyL77NwdnXwAXxFttpZ1dR1nu4kR
+accepted and holding 1
+accepted and holding 2
+accepted and holding 3
+2026-09-04T13:29:19.257529Z ERROR nym_client_core::client::topology_control::nym_api_provider: failed to retrieve network topology after retry: failed to resolve request to https://validator.nymtech.net/api/ due to data inconsistency: retrieved rewarded set information for different epoch than the nodes details 33332 and 33331
+2026-09-04T13:29:19.257666Z  WARN nym_client_core::client::topology_control: failed to obtain new network topology
+2026-09-04T13:29:19.257670Z  WARN nym_client_core::client::topology_control: we're going to keep on using the old topology for this iteration
+
+=== container nym-dial-branch (dialler, branch pin) ===
+2026-09-04T12:49:34.796172Z  WARN nym_gateway_client::client: Not enough bandwidth. Trying to get more bandwidth, this might take a while
+dial   i9FGPY71JhGm8b3Fa16ieEGyFkWkN8UWKf2nyJSfe3V.47TcN6fVMTJeie6hws1McfqYvvFBZt1XES7QJouzd98M@8UhUrSJ15NTywqwdXYXM9fdjrCRgMdCt1mQkPUqGMkyB
+arm alive | trials 3 | hold 420s | polling last_peer_activity every 5s
+
+  1  peer       established no (timed out)
+  1  alive       survived      420 s  oldest inbound 450.2 s | refreshed  0x
+  2  peer       established no (timed out)
+  2  alive       survived      420 s  oldest inbound 450.2 s | refreshed  0x
+  3  peer       established no (timed out)
+  3  alive       survived      420 s  oldest inbound 450.2 s | refreshed  0x
+
+--- summary ---
+arm                   alive
+trials                3
+survived the hold     3
+reported unresponsive 0

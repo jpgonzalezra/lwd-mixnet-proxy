@@ -1,7 +1,8 @@
 # The keepalive finds a stream nobody closed
 
-Date: 2026-09-02, with a second pass on 2026-09-03. Three arms of three trials each against
-`nym-sdk` at `max/stream-keepalive`, commit `693201bf14092f4445f1417e86051d3b4ebdb20a`.
+Date: 2026-09-02, with a second pass on 2026-09-03 and a mixed-version pass on 2026-09-04. Three
+arms of three trials each against `nym-sdk` at `max/stream-keepalive`, commit
+`693201bf14092f4445f1417e86051d3b4ebdb20a`.
 
 The day after the establishment acknowledgement landed, its author put ping/pong keepalive on top of
 it and asked whether that covers what this project needs. It does, and one arm answers a question
@@ -118,8 +119,32 @@ is dropped on the unknown discriminant, and only the dialling side pings, so kee
 a conversation an old dialler starts. Twelve trials are consistent with that. They do not establish
 it.
 
-The reverse, a new dialler against an acceptor that has never heard of keepalive, is the one where a
-false positive would cost something, and it is still untested here.
+## The other direction, where a false positive would cost something
+
+A new dialler against an acceptor that has never heard of keepalive is the case that decides whether
+this can fail a stream it should not. It needs two builds, so it got them: an acceptor from the
+released `=1.21.5-rc.3` that accepts streams and holds them without ever writing, and a dialler from
+`693201bf` that opens one, waits, and watches.
+
+| trials | establishment | outcome | oldest the last inbound frame got | times that age fell back |
+|---|---|---|---|---|
+| 3 | timed out, 3 of 3 | survived 420 s, 3 of 3 | 450.2 s | 0 |
+
+Nothing arrived, ever. The age of the last inbound frame climbed from the moment the stream was
+registered to the end of the hold and never once fell, which is what a peer that cannot send a
+liveness frame looks like from here.
+
+That is what makes three trials enough. Arming needs a frame whose discriminant a released peer
+cannot produce, and a stream that armed anyway would be pinged and fail about four and a half
+minutes after the last thing it heard. These sat silent for 450 seconds and none of them failed, so
+they never armed. The property is not a rate to be estimated; one trial that survives already
+contradicts it, and three did not.
+
+The same run puts a number on the first half of the advice this project would otherwise be giving
+from the source: against a peer with no acknowledgement to send, `wait_established` runs out, three
+times out of three. The stream was then held for 420 seconds past that without reporting an error,
+which is not the same as having used it. Nothing was read or written after the timeout, so whether
+it still carries bytes is still the SDK's claim rather than this run's.
 
 ## Two things from the same runs
 
@@ -139,10 +164,10 @@ against traffic still arriving, but one occurrence is a note rather than a findi
 - Three trials an arm, one machine, one afternoon. Six of the nine produced a failure time and those
   six agree to within ten seconds. The other three are right-censored at 420 seconds: their failure
   times, if any, are longer than the hold.
-- The arms all ran between two peers on the same branch. Mixed versions were only exercised in one
-  direction, and by a deployment rather than by a rig: an old dialler against a new acceptor. The
-  direction where a false positive would cost something, a new dialler against an old acceptor, is
-  not tested here.
+- The three arms all ran between two peers on the same branch. Both mixed-version directions were
+  measured separately and by different means: the old dialler against a new acceptor by the
+  deployment, twelve trials, and the new dialler against an old acceptor by two images, three
+  trials.
 - The dialler is the only side that pings. Nothing here measures what an accepting client sees when
   the dialler is the one that dies.
 - The clock starts when the rig kills the far side, which is instant. A gateway that fades rather
